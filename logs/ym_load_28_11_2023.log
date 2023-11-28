@@ -1,0 +1,297 @@
+root 2023-11-28 09:51:04,979 INFO Step_1_hits. Creating a log.
+root 2023-11-28 09:51:05,507 INFO Code status 200
+NoneType: None
+root 2023-11-28 09:51:05,508 INFO Step_1_hits. Successful log request.
+root 2023-11-28 09:51:05,508 INFO Step_1_hits. Request number 32792373.
+root 2023-11-28 09:51:05,508 INFO Step_1_hits. Request status created.
+root 2023-11-28 09:51:05,508 INFO Step_2_hits. Log processing status.
+root 2023-11-28 09:51:05,744 INFO Step_2_hits. Loading data. Code 200.
+root 2023-11-28 09:52:13,777 INFO Step_2_hits. Number of parts - 1.
+root 2023-11-28 09:52:13,777 INFO Step_2_hits. Request status processed.
+root 2023-11-28 09:52:13,778 INFO Step_3_hits. Loading the log.
+root 2023-11-28 09:52:14,193 INFO Step_3_hits. Loading a log from one part.
+root 2023-11-28 09:52:14,194 INFO Step_4_hits. Deleting a log.
+root 2023-11-28 09:52:14,372 INFO Step_4_hits. Successful log deletion # 32792373.
+root 2023-11-28 09:52:14,372 INFO Step_4_hits. Deleting variables.
+root 2023-11-28 09:52:14,373 INFO Start clearing data HITS.
+root 2023-11-28 09:52:14,374 INFO Reading data HITS and writing to a dataframe.
+root 2023-11-28 09:52:14,442 INFO Renaming columns HITS.
+root 2023-11-28 09:52:14,480 INFO Clearing data HITS.
+root 2023-11-28 10:00:42,932 INFO Step_1_hits. Creating a log.
+root 2023-11-28 10:00:43,442 INFO Code status 200
+NoneType: None
+root 2023-11-28 10:00:43,442 INFO Step_1_hits. Successful log request.
+root 2023-11-28 10:00:43,442 INFO Step_1_hits. Request number 32792512.
+root 2023-11-28 10:00:43,442 INFO Step_1_hits. Request status created.
+root 2023-11-28 10:00:43,442 INFO Step_2_hits. Log processing status.
+root 2023-11-28 10:00:43,684 INFO Step_2_hits. Loading data. Code 200.
+root 2023-11-28 10:01:51,886 INFO Step_2_hits. Number of parts - 1.
+root 2023-11-28 10:01:51,886 INFO Step_2_hits. Request status processed.
+root 2023-11-28 10:01:51,886 INFO Step_3_hits. Loading the log.
+root 2023-11-28 10:01:52,421 INFO Step_3_hits. Loading a log from one part.
+root 2023-11-28 10:01:52,422 INFO Step_4_hits. Deleting a log.
+root 2023-11-28 10:01:52,759 INFO Step_4_hits. Successful log deletion # 32792512.
+root 2023-11-28 10:01:52,759 INFO Step_4_hits. Deleting variables.
+root 2023-11-28 10:01:52,760 INFO Start clearing data HITS.
+root 2023-11-28 10:01:52,760 INFO Reading data HITS and writing to a dataframe.
+root 2023-11-28 10:01:52,813 INFO Renaming columns HITS.
+root 2023-11-28 10:01:52,815 INFO Clearing data HITS.
+root 2023-11-28 10:01:52,833 INFO Start zagruzka v bazu logs api HITS.
+root 2023-11-28 10:01:52,884 INFO Start zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-11-28 10:01:52,885 ERROR Error: oshibka zagruzki v tablitsu - ym_hits_stranitsi_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 35, in ya_hits_to_bd
+    col.to_sql('ym_hits_stranitsi_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-28 10:01:52,949 INFO Start zagruzka dannih - ym_hits_obshee_new.
+root 2023-11-28 10:01:52,951 ERROR Error: oshibka zagruzki v tablitsu - ym_hits_obshee_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 48, in ya_hits_to_bd
+    col.to_sql('ym_hits_obshee_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-28 10:01:52,952 INFO Start zagruzka dannih - ym_hits_deystviya_new.
+root 2023-11-28 10:01:52,965 ERROR Error: oshibka zagruzki v tablitsu - ym_hits_deystviya_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 61, in ya_hits_to_bd
+    col.to_sql('ym_hits_deystviya_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-28 10:01:52,966 INFO Start zagruzka dannih - ym_hits_ad_new.
+root 2023-11-28 10:01:52,968 ERROR Error: oshibka zagruzki v tablitsu - ym_hits_ad_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 74, in ya_hits_to_bd
+    col.to_sql('ym_hits_ad_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-28 10:08:56,921 INFO Step_1_hits. Creating a log.
+root 2023-11-28 10:08:57,244 INFO Code status 200
+NoneType: None
+root 2023-11-28 10:08:57,245 INFO Step_1_hits. Successful log request.
+root 2023-11-28 10:08:57,245 INFO Step_1_hits. Request number 32792928.
+root 2023-11-28 10:08:57,245 INFO Step_1_hits. Request status created.
+root 2023-11-28 10:08:57,245 INFO Step_2_hits. Log processing status.
+root 2023-11-28 10:08:57,554 INFO Step_2_hits. Loading data. Code 200.
+root 2023-11-28 10:09:07,973 INFO Step_2_hits. Number of parts - 1.
+root 2023-11-28 10:09:07,973 INFO Step_2_hits. Request status processed.
+root 2023-11-28 10:09:07,973 INFO Step_3_hits. Loading the log.
+root 2023-11-28 10:09:08,365 INFO Step_3_hits. Loading a log from one part.
+root 2023-11-28 10:09:08,365 INFO Step_4_hits. Deleting a log.
+root 2023-11-28 10:09:08,581 INFO Step_4_hits. Successful log deletion # 32792928.
+root 2023-11-28 10:09:08,581 INFO Step_4_hits. Deleting variables.
+root 2023-11-28 10:09:08,582 INFO Start clearing data HITS.
+root 2023-11-28 10:09:08,582 INFO Reading data HITS and writing to a dataframe.
+root 2023-11-28 10:09:08,596 INFO Renaming columns HITS.
+root 2023-11-28 10:09:08,597 INFO Clearing data HITS.
+root 2023-11-28 10:09:13,160 INFO Start zagruzka v bazu logs api HITS.
+root 2023-11-28 10:09:13,287 INFO Start zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-11-28 10:09:13,373 INFO End zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-11-28 10:09:13,373 INFO Start zagruzka dannih - ym_hits_obshee_new.
+root 2023-11-28 10:09:13,583 INFO End zagruzka dannih - ym_hits_obshee_new.
+root 2023-11-28 10:09:13,583 INFO Start zagruzka dannih - ym_hits_deystviya_new.
+root 2023-11-28 10:09:13,768 INFO End zagruzka dannih - ym_hits_deystviya_new.
+root 2023-11-28 10:09:13,768 INFO Start zagruzka dannih - ym_hits_ad_new.
+root 2023-11-28 10:09:13,891 INFO End zagruzka dannih - ym_hits_ad_new.
+root 2023-11-28 10:15:16,979 INFO Step_1_hits. Creating a log.
+root 2023-11-28 10:15:17,398 INFO Code status 200
+NoneType: None
+root 2023-11-28 10:15:17,398 INFO Step_1_hits. Successful log request.
+root 2023-11-28 10:15:17,398 INFO Step_1_hits. Request number 32792984.
+root 2023-11-28 10:15:17,398 INFO Step_1_hits. Request status created.
+root 2023-11-28 10:15:17,398 INFO Step_2_hits. Log processing status.
+root 2023-11-28 10:15:17,582 INFO Step_2_hits. Loading data. Code 200.
+root 2023-11-28 10:16:09,924 INFO Step_2_hits. Number of parts - 1.
+root 2023-11-28 10:16:09,924 INFO Step_2_hits. Request status processed.
+root 2023-11-28 10:16:09,924 INFO Step_3_hits. Loading the log.
+root 2023-11-28 10:16:10,245 INFO Step_3_hits. Loading a log from one part.
+root 2023-11-28 10:16:10,245 INFO Step_4_hits. Deleting a log.
+root 2023-11-28 10:16:10,518 INFO Step_4_hits. Successful log deletion # 32792984.
+root 2023-11-28 10:16:10,518 INFO Step_4_hits. Deleting variables.
+root 2023-11-28 10:16:10,520 INFO Start clearing data HITS.
+root 2023-11-28 10:16:10,520 INFO Reading data HITS and writing to a dataframe.
+root 2023-11-28 10:16:10,533 INFO Renaming columns HITS.
+root 2023-11-28 10:16:10,534 INFO Clearing data HITS.
+root 2023-11-28 10:16:10,539 INFO Start zagruzka v bazu logs api HITS.
+root 2023-11-28 10:16:10,588 INFO Start zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-11-28 10:16:10,636 INFO End zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-11-28 10:16:10,636 INFO Start zagruzka dannih - ym_hits_obshee_new.
+root 2023-11-28 10:16:10,702 INFO End zagruzka dannih - ym_hits_obshee_new.
+root 2023-11-28 10:16:10,703 INFO Start zagruzka dannih - ym_hits_deystviya_new.
+root 2023-11-28 10:16:10,767 INFO End zagruzka dannih - ym_hits_deystviya_new.
+root 2023-11-28 10:16:10,767 INFO Start zagruzka dannih - ym_hits_ad_new.
+root 2023-11-28 10:16:10,831 INFO End zagruzka dannih - ym_hits_ad_new.
+root 2023-11-28 10:18:05,473 INFO Step_1_visit. Creating a log.
+root 2023-11-28 10:18:05,718 INFO Code status 200
+NoneType: None
+root 2023-11-28 10:18:05,719 INFO Step_1_visit. Successful log request.
+root 2023-11-28 10:18:05,719 INFO Step_1_visit. Request number 32793010.
+root 2023-11-28 10:18:05,719 INFO Step_1_visit. Request status created.
+root 2023-11-28 10:18:05,719 INFO Step_2_visit. Log processing status.
+root 2023-11-28 10:18:05,889 INFO Step_2_visit. Loading data. Code 200.
+root 2023-11-28 10:19:13,613 INFO Step_2_visit. Number of parts - 0.
+root 2023-11-28 10:19:13,613 INFO Step_2_visit. Request status processed.
+root 2023-11-28 10:19:13,613 INFO Step_3_visit. Loading the log.
+root 2023-11-28 10:19:13,904 INFO Step_3_visit. Loading a log from one part.
+root 2023-11-28 10:19:13,904 INFO Step_3_visit. Loading 0 parts of the log.
+root 2023-11-28 10:19:13,904 INFO Step_4_visit. Deleting a log.
+root 2023-11-28 10:19:14,161 INFO Step_4_visit. Successful log deletion # 32793010.
+root 2023-11-28 10:19:14,161 INFO Step_4_visit. Deleting variables.
+root 2023-11-28 10:19:14,162 INFO Start clearing data VISITS.
+root 2023-11-28 10:19:14,162 INFO Reading data VISITS and writing to a dataframe.
+root 2023-11-28 10:19:14,171 INFO Renaming columns VISITS.
+root 2023-11-28 10:19:14,172 INFO Clearing data VISITS.
+root 2023-11-28 10:19:14,213 INFO Start zagruzka v bazu logs api VISITS.
+root 2023-11-28 10:19:14,304 INFO Start zagruzka dannih - ym_visits_obshee_new.
+root 2023-11-28 10:19:14,387 INFO End zagruzka dannih - ym_visits_obshee_new.
+root 2023-11-28 10:19:14,387 INFO Start zagruzka dannih - # ym_visits_detali_new.
+root 2023-11-28 10:19:14,460 INFO End zagruzka dannih - ym_visits_detali_new.
+root 2023-11-28 10:41:49,491 INFO Step_1_visit. Creating a log.
+root 2023-11-28 10:41:49,793 INFO Code status 200
+NoneType: None
+root 2023-11-28 10:41:49,793 INFO Step_1_visit. Successful log request.
+root 2023-11-28 10:41:49,793 INFO Step_1_visit. Request number 32793340.
+root 2023-11-28 10:41:49,793 INFO Step_1_visit. Request status created.
+root 2023-11-28 10:41:49,793 INFO Step_2_visit. Log processing status.
+root 2023-11-28 10:41:50,022 INFO Step_2_visit. Loading data. Code 200.
+root 2023-11-28 10:43:18,847 INFO Step_2_visit. Number of parts - 0.
+root 2023-11-28 10:43:18,847 INFO Step_2_visit. Request status processed.
+root 2023-11-28 10:43:18,847 INFO Step_3_visit. Loading the log.
+root 2023-11-28 10:43:19,303 INFO Step_3_visit. Loading a log from one part.
+root 2023-11-28 10:43:19,303 INFO Step_3_visit. Loading 0 parts of the log.
+root 2023-11-28 10:43:19,303 INFO Step_4_visit. Deleting a log.
+root 2023-11-28 10:43:19,719 INFO Step_4_visit. Successful log deletion # 32793340.
+root 2023-11-28 10:43:19,719 INFO Step_4_visit. Deleting variables.
+root 2023-11-28 10:43:19,720 INFO Start clearing data VISITS.
+root 2023-11-28 10:43:19,720 INFO Reading data VISITS and writing to a dataframe.
+root 2023-11-28 10:43:19,740 INFO Renaming columns VISITS.
+root 2023-11-28 10:43:19,743 INFO Clearing data VISITS.
+root 2023-11-28 10:43:19,839 INFO Start zagruzka v bazu logs api VISITS.
+root 2023-11-28 10:43:19,915 INFO Start zagruzka dannih - ym_visits_obshee_new.
+root 2023-11-28 10:43:19,917 ERROR Error: oshibka zagruzki v tablitsu - ym_visits_obshee_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 100, in ya_visits_to_bd
+    logging.info("End zagruzka dannih - ym_visits_obshee_new.")
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-28 10:43:19,917 INFO Start zagruzka dannih - # ym_visits_detali_new.
+root 2023-11-28 10:43:19,919 ERROR Error: oshibka zagruzki v tablitsu - ym_visits_detali_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 114, in ya_visits_to_bd
+    logging.info("End zagruzka dannih - ym_visits_detali_new.")
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported

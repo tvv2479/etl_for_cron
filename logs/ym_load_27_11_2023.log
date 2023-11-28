@@ -1,0 +1,995 @@
+root 2023-11-27 12:06:04,213 INFO Step_1_hits. Creating a log.
+root 2023-11-27 12:06:05,064 INFO Code status 200
+NoneType: None
+root 2023-11-27 12:06:05,064 INFO Step_1_hits. Successful log request.
+root 2023-11-27 12:06:05,064 INFO Step_1_hits. Request number 32782189.
+root 2023-11-27 12:06:05,064 INFO Step_1_hits. Request status created.
+root 2023-11-27 12:06:05,064 INFO Step_2_hits. Log processing status.
+root 2023-11-27 12:06:05,265 INFO Step_2_hits. Loading data. Code 200.
+root 2023-11-27 12:07:13,169 INFO Step_2_hits. Number of parts - 1.
+root 2023-11-27 12:07:13,169 INFO Step_2_hits. Request status processed.
+root 2023-11-27 12:07:13,169 INFO Step_3_hits. Loading the log.
+root 2023-11-27 12:07:13,640 INFO Step_3_hits. Loading a log from one part.
+root 2023-11-27 12:07:13,640 INFO Step_4_hits. Deleting a log.
+root 2023-11-27 12:07:13,819 INFO Step_4_hits. Successful log deletion # 32782189.
+root 2023-11-27 12:07:13,819 INFO Step_4_hits. Deleting variables.
+root 2023-11-27 12:07:13,820 INFO Start clearing data HITS.
+root 2023-11-27 12:07:13,820 INFO Reading data HITS and writing to a dataframe.
+root 2023-11-27 12:07:13,987 INFO Renaming columns HITS.
+root 2023-11-27 12:07:14,064 INFO Clearing data HITS.
+root 2023-11-27 12:07:14,086 INFO Start zagruzka v bazu logs api HITS.
+root 2023-11-27 12:07:14,313 INFO Start zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-11-27 12:07:14,441 ERROR Error: oshibka zagruzki v tablitsu - ym_hits_stranitsi_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 37, in ya_hits_to_bd
+    col.to_sql('ym_hits_stranitsi_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 12:07:14,932 INFO Start zagruzka dannih - ym_hits_obshee_new.
+root 2023-11-27 12:07:14,934 ERROR Error: oshibka zagruzki v tablitsu - ym_hits_obshee_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 52, in ya_hits_to_bd
+    col.to_sql('ym_hits_obshee_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 12:07:14,934 INFO Start zagruzka dannih - ym_hits_deystviya_new.
+root 2023-11-27 12:07:14,961 ERROR Error: oshibka zagruzki v tablitsu - ym_hits_deystviya_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 67, in ya_hits_to_bd
+    col.to_sql('ym_hits_deystviya_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 12:07:14,962 INFO Start zagruzka dannih - ym_hits_ad_new.
+root 2023-11-27 12:07:14,965 ERROR Error: oshibka zagruzki v tablitsu - ym_hits_ad_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 82, in ya_hits_to_bd
+    col.to_sql('ym_hits_ad_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 12:07:32,730 INFO Step_1_visit. Creating a log.
+root 2023-11-27 12:07:33,037 INFO Code status 200
+NoneType: None
+root 2023-11-27 12:07:33,038 INFO Step_1_visit. Successful log request.
+root 2023-11-27 12:07:33,038 INFO Step_1_visit. Request number 32782196.
+root 2023-11-27 12:07:33,038 INFO Step_1_visit. Request status created.
+root 2023-11-27 12:07:33,038 INFO Step_2_visit. Log processing status.
+root 2023-11-27 12:07:33,247 INFO Step_2_visit. Loading data. Code 200.
+root 2023-11-27 12:08:15,289 INFO Step_2_visit. Number of parts - 0.
+root 2023-11-27 12:08:15,289 INFO Step_2_visit. Request status processed.
+root 2023-11-27 12:08:15,289 INFO Step_3_visit. Loading the log.
+root 2023-11-27 12:08:15,634 INFO Step_3_visit. Loading a log from one part.
+root 2023-11-27 12:08:15,634 INFO Step_3_visit. Loading 0 parts of the log.
+root 2023-11-27 12:08:15,634 INFO Step_4_visit. Deleting a log.
+root 2023-11-27 12:08:15,999 INFO Step_4_visit. Successful log deletion # 32782196.
+root 2023-11-27 12:08:15,999 INFO Step_4_visit. Deleting variables.
+root 2023-11-27 12:08:16,000 INFO Start clearing data VISITS.
+root 2023-11-27 12:08:16,000 INFO Reading data VISITS and writing to a dataframe.
+root 2023-11-27 12:08:16,016 INFO Renaming columns VISITS.
+root 2023-11-27 12:08:16,017 INFO Clearing data VISITS.
+root 2023-11-27 12:08:16,081 INFO Start zagruzka v bazu logs api VISITS.
+root 2023-11-27 12:08:16,140 INFO Start zagruzka dannih - ym_visits_obshee_new.
+root 2023-11-27 12:08:16,142 ERROR Error: oshibka zagruzki v tablitsu - ym_visits_obshee_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 110, in ya_visits_to_bd
+    col.to_sql('ym_visits_obshee_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 12:08:16,143 INFO Start zagruzka dannih - # ym_visits_detali_new.
+root 2023-11-27 12:08:16,145 ERROR Error: oshibka zagruzki v tablitsu - ym_visits_detali_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 126, in ya_visits_to_bd
+    col.to_sql('ym_visits_detali_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 12:08:30,201 INFO Otpravka soobsheniya v telegram.
+root 2023-11-27 12:08:30,663 INFO Soobshenie v telegram otpravleno.
+root 2023-11-27 12:34:43,314 INFO Step_1_hits. Creating a log.
+root 2023-11-27 12:34:43,925 INFO Code status 200
+NoneType: None
+root 2023-11-27 12:34:43,925 INFO Step_1_hits. Successful log request.
+root 2023-11-27 12:34:43,925 INFO Step_1_hits. Request number 32782287.
+root 2023-11-27 12:34:43,925 INFO Step_1_hits. Request status created.
+root 2023-11-27 12:34:43,925 INFO Step_2_hits. Log processing status.
+root 2023-11-27 12:34:44,162 INFO Step_2_hits. Loading data. Code 200.
+root 2023-11-27 12:35:15,527 INFO Step_2_hits. Number of parts - 1.
+root 2023-11-27 12:35:15,527 INFO Step_2_hits. Request status processed.
+root 2023-11-27 12:35:15,527 INFO Step_3_hits. Loading the log.
+root 2023-11-27 12:35:16,003 INFO Step_3_hits. Loading a log from one part.
+root 2023-11-27 12:35:16,003 INFO Step_4_hits. Deleting a log.
+root 2023-11-27 12:35:16,489 INFO Step_4_hits. Successful log deletion # 32782287.
+root 2023-11-27 12:35:16,489 INFO Step_4_hits. Deleting variables.
+root 2023-11-27 12:35:16,490 INFO Start clearing data HITS.
+root 2023-11-27 12:35:16,492 INFO Reading data HITS and writing to a dataframe.
+root 2023-11-27 12:35:16,533 INFO Renaming columns HITS.
+root 2023-11-27 12:35:16,535 INFO Clearing data HITS.
+root 2023-11-27 12:35:16,548 INFO Start zagruzka v bazu logs api HITS.
+root 2023-11-27 12:35:16,615 INFO Start zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-11-27 12:35:16,617 ERROR Error: oshibka zagruzki v tablitsu - ym_hits_stranitsi_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 37, in ya_hits_to_bd
+    col.to_sql('ym_hits_stranitsi_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 12:35:16,618 INFO Start zagruzka dannih - ym_hits_obshee_new.
+root 2023-11-27 12:35:16,620 ERROR Error: oshibka zagruzki v tablitsu - ym_hits_obshee_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 52, in ya_hits_to_bd
+    col.to_sql('ym_hits_obshee_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 12:35:16,620 INFO Start zagruzka dannih - ym_hits_deystviya_new.
+root 2023-11-27 12:35:16,622 ERROR Error: oshibka zagruzki v tablitsu - ym_hits_deystviya_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 67, in ya_hits_to_bd
+    col.to_sql('ym_hits_deystviya_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 12:35:16,622 INFO Start zagruzka dannih - ym_hits_ad_new.
+root 2023-11-27 12:35:16,626 ERROR Error: oshibka zagruzki v tablitsu - ym_hits_ad_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 82, in ya_hits_to_bd
+    col.to_sql('ym_hits_ad_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 12:35:29,948 INFO Step_1_visit. Creating a log.
+root 2023-11-27 12:35:30,234 INFO Code status 200
+NoneType: None
+root 2023-11-27 12:35:30,234 INFO Step_1_visit. Successful log request.
+root 2023-11-27 12:35:30,234 INFO Step_1_visit. Request number 32782291.
+root 2023-11-27 12:35:30,234 INFO Step_1_visit. Request status created.
+root 2023-11-27 12:35:30,234 INFO Step_2_visit. Log processing status.
+root 2023-11-27 12:35:30,421 INFO Step_2_visit. Loading data. Code 200.
+root 2023-11-27 12:36:22,698 INFO Step_2_visit. Number of parts - 0.
+root 2023-11-27 12:36:22,698 INFO Step_2_visit. Request status processed.
+root 2023-11-27 12:36:22,698 INFO Step_3_visit. Loading the log.
+root 2023-11-27 12:36:23,065 INFO Step_3_visit. Loading a log from one part.
+root 2023-11-27 12:36:23,065 INFO Step_3_visit. Loading 0 parts of the log.
+root 2023-11-27 12:36:23,065 INFO Step_4_visit. Deleting a log.
+root 2023-11-27 12:36:23,416 INFO Step_4_visit. Successful log deletion # 32782291.
+root 2023-11-27 12:36:23,416 INFO Step_4_visit. Deleting variables.
+root 2023-11-27 12:36:23,417 INFO Start clearing data VISITS.
+root 2023-11-27 12:36:23,417 INFO Reading data VISITS and writing to a dataframe.
+root 2023-11-27 12:36:23,433 INFO Renaming columns VISITS.
+root 2023-11-27 12:36:23,434 INFO Clearing data VISITS.
+root 2023-11-27 12:36:23,499 INFO Start zagruzka v bazu logs api VISITS.
+root 2023-11-27 12:36:23,559 INFO Start zagruzka dannih - ym_visits_obshee_new.
+root 2023-11-27 12:36:23,561 ERROR Error: oshibka zagruzki v tablitsu - ym_visits_obshee_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 110, in ya_visits_to_bd
+    col.to_sql('ym_visits_obshee_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 12:36:23,561 INFO Start zagruzka dannih - # ym_visits_detali_new.
+root 2023-11-27 12:36:23,563 ERROR Error: oshibka zagruzki v tablitsu - ym_visits_detali_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 126, in ya_visits_to_bd
+    col.to_sql('ym_visits_detali_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 12:36:37,218 INFO Otpravka soobsheniya v telegram.
+root 2023-11-27 12:36:37,580 INFO Soobshenie v telegram otpravleno.
+root 2023-11-27 12:43:25,352 INFO Step_1_hits. Creating a log.
+root 2023-11-27 12:43:25,798 INFO Code status 200
+NoneType: None
+root 2023-11-27 12:43:25,798 INFO Step_1_hits. Successful log request.
+root 2023-11-27 12:43:25,798 INFO Step_1_hits. Request number 32782326.
+root 2023-11-27 12:43:25,798 INFO Step_1_hits. Request status created.
+root 2023-11-27 12:43:25,798 INFO Step_2_hits. Log processing status.
+root 2023-11-27 12:43:26,013 INFO Step_2_hits. Loading data. Code 200.
+root 2023-11-27 12:44:13,504 INFO Step_2_hits. Number of parts - 1.
+root 2023-11-27 12:44:13,504 INFO Step_2_hits. Request status processed.
+root 2023-11-27 12:44:13,504 INFO Step_3_hits. Loading the log.
+root 2023-11-27 12:44:13,976 INFO Step_3_hits. Loading a log from one part.
+root 2023-11-27 12:44:13,976 INFO Step_4_hits. Deleting a log.
+root 2023-11-27 12:44:14,155 INFO Step_4_hits. Successful log deletion # 32782326.
+root 2023-11-27 12:44:14,155 INFO Step_4_hits. Deleting variables.
+root 2023-11-27 12:44:14,156 INFO Start clearing data HITS.
+root 2023-11-27 12:44:14,157 INFO Reading data HITS and writing to a dataframe.
+root 2023-11-27 12:44:14,190 INFO Renaming columns HITS.
+root 2023-11-27 12:44:14,192 INFO Clearing data HITS.
+root 2023-11-27 12:44:14,204 INFO Start zagruzka v bazu logs api HITS.
+root 2023-11-27 12:44:14,265 INFO Start zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-11-27 12:44:14,267 ERROR Error: oshibka zagruzki v tablitsu - ym_hits_stranitsi_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 37, in ya_hits_to_bd
+    col.to_sql('ym_hits_stranitsi_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 12:44:14,314 INFO Start zagruzka dannih - ym_hits_obshee_new.
+root 2023-11-27 12:44:14,316 ERROR Error: oshibka zagruzki v tablitsu - ym_hits_obshee_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 52, in ya_hits_to_bd
+    col.to_sql('ym_hits_obshee_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 12:44:14,316 INFO Start zagruzka dannih - ym_hits_deystviya_new.
+root 2023-11-27 12:44:14,318 ERROR Error: oshibka zagruzki v tablitsu - ym_hits_deystviya_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 67, in ya_hits_to_bd
+    col.to_sql('ym_hits_deystviya_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 12:44:14,319 INFO Start zagruzka dannih - ym_hits_ad_new.
+root 2023-11-27 12:44:14,322 ERROR Error: oshibka zagruzki v tablitsu - ym_hits_ad_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 82, in ya_hits_to_bd
+    col.to_sql('ym_hits_ad_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 12:44:23,972 INFO Step_1_visit. Creating a log.
+root 2023-11-27 12:44:24,215 INFO Code status 200
+NoneType: None
+root 2023-11-27 12:44:24,215 INFO Step_1_visit. Successful log request.
+root 2023-11-27 12:44:24,215 INFO Step_1_visit. Request number 32782327.
+root 2023-11-27 12:44:24,215 INFO Step_1_visit. Request status created.
+root 2023-11-27 12:44:24,215 INFO Step_2_visit. Log processing status.
+root 2023-11-27 12:44:24,403 INFO Step_2_visit. Loading data. Code 200.
+root 2023-11-27 12:45:11,481 INFO Step_2_visit. Number of parts - 0.
+root 2023-11-27 12:45:11,481 INFO Step_2_visit. Request status processed.
+root 2023-11-27 12:45:11,481 INFO Step_3_visit. Loading the log.
+root 2023-11-27 12:45:11,864 INFO Step_3_visit. Loading a log from one part.
+root 2023-11-27 12:45:11,864 INFO Step_3_visit. Loading 0 parts of the log.
+root 2023-11-27 12:45:11,864 INFO Step_4_visit. Deleting a log.
+root 2023-11-27 12:45:12,247 INFO Step_4_visit. Successful log deletion # 32782327.
+root 2023-11-27 12:45:12,247 INFO Step_4_visit. Deleting variables.
+root 2023-11-27 12:45:12,248 INFO Start clearing data VISITS.
+root 2023-11-27 12:45:12,248 INFO Reading data VISITS and writing to a dataframe.
+root 2023-11-27 12:45:12,263 INFO Renaming columns VISITS.
+root 2023-11-27 12:45:12,265 INFO Clearing data VISITS.
+root 2023-11-27 12:45:12,330 INFO Start zagruzka v bazu logs api VISITS.
+root 2023-11-27 12:45:12,391 INFO Start zagruzka dannih - ym_visits_obshee_new.
+root 2023-11-27 12:45:12,393 ERROR Error: oshibka zagruzki v tablitsu - ym_visits_obshee_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 110, in ya_visits_to_bd
+    col.to_sql('ym_visits_obshee_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 12:45:12,394 INFO Start zagruzka dannih - # ym_visits_detali_new.
+root 2023-11-27 12:45:12,395 ERROR Error: oshibka zagruzki v tablitsu - ym_visits_detali_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 126, in ya_visits_to_bd
+    col.to_sql('ym_visits_detali_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 12:45:28,346 INFO Otpravka soobsheniya v telegram.
+root 2023-11-27 12:45:28,782 INFO Soobshenie v telegram otpravleno.
+root 2023-11-27 14:41:48,981 INFO Step_1_hits. Creating a log.
+root 2023-11-27 14:41:56,818 INFO Code status 200
+NoneType: None
+root 2023-11-27 14:41:56,819 INFO Step_1_hits. Successful log request.
+root 2023-11-27 14:41:56,819 INFO Step_1_hits. Request number 32784102.
+root 2023-11-27 14:41:56,819 INFO Step_1_hits. Request status created.
+root 2023-11-27 14:41:56,819 INFO Step_2_hits. Log processing status.
+root 2023-11-27 14:41:57,010 INFO Step_2_hits. Loading data. Code 200.
+root 2023-11-27 14:42:28,511 INFO Step_2_hits. Number of parts - 1.
+root 2023-11-27 14:42:28,511 INFO Step_2_hits. Request status processed.
+root 2023-11-27 14:42:28,511 INFO Step_3_hits. Loading the log.
+root 2023-11-27 14:42:29,010 INFO Step_3_hits. Loading a log from one part.
+root 2023-11-27 14:42:29,010 INFO Step_4_hits. Deleting a log.
+root 2023-11-27 14:42:29,267 INFO Step_4_hits. Successful log deletion # 32784102.
+root 2023-11-27 14:42:29,268 INFO Step_4_hits. Deleting variables.
+root 2023-11-27 14:42:29,269 INFO Start clearing data HITS.
+root 2023-11-27 14:42:29,269 INFO Reading data HITS and writing to a dataframe.
+root 2023-11-27 14:42:29,376 INFO Renaming columns HITS.
+root 2023-11-27 14:42:29,418 INFO Clearing data HITS.
+root 2023-11-27 14:42:29,430 INFO Start zagruzka v bazu logs api HITS.
+root 2023-11-27 14:42:29,538 INFO Start zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-11-27 14:42:29,542 ERROR Error: oshibka zagruzki v tablitsu - ym_hits_stranitsi_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 35, in ya_hits_to_bd
+    col.to_sql('ym_hits_stranitsi_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 14:42:29,653 INFO Start zagruzka dannih - ym_hits_obshee_new.
+root 2023-11-27 14:42:29,654 ERROR Error: oshibka zagruzki v tablitsu - ym_hits_obshee_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 50, in ya_hits_to_bd
+    col.to_sql('ym_hits_obshee_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 14:42:29,655 INFO Start zagruzka dannih - ym_hits_deystviya_new.
+root 2023-11-27 14:42:29,657 ERROR Error: oshibka zagruzki v tablitsu - ym_hits_deystviya_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 65, in ya_hits_to_bd
+    col.to_sql('ym_hits_deystviya_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 14:42:29,658 INFO Start zagruzka dannih - ym_hits_ad_new.
+root 2023-11-27 14:42:29,659 ERROR Error: oshibka zagruzki v tablitsu - ym_hits_ad_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 80, in ya_hits_to_bd
+    col.to_sql('ym_hits_ad_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 14:42:41,668 INFO Step_1_visit. Creating a log.
+root 2023-11-27 14:42:41,953 INFO Code status 200
+NoneType: None
+root 2023-11-27 14:42:41,953 INFO Step_1_visit. Successful log request.
+root 2023-11-27 14:42:41,953 INFO Step_1_visit. Request number 32784105.
+root 2023-11-27 14:42:41,953 INFO Step_1_visit. Request status created.
+root 2023-11-27 14:42:41,953 INFO Step_2_visit. Log processing status.
+root 2023-11-27 14:42:42,191 INFO Step_2_visit. Loading data. Code 200.
+root 2023-11-27 14:43:18,852 INFO Step_2_visit. Number of parts - 0.
+root 2023-11-27 14:43:18,852 INFO Step_2_visit. Request status processed.
+root 2023-11-27 14:43:18,852 INFO Step_3_visit. Loading the log.
+root 2023-11-27 14:43:19,482 INFO Step_3_visit. Loading a log from one part.
+root 2023-11-27 14:43:19,482 INFO Step_3_visit. Loading 0 parts of the log.
+root 2023-11-27 14:43:19,482 INFO Step_4_visit. Deleting a log.
+root 2023-11-27 14:43:19,733 INFO Step_4_visit. Successful log deletion # 32784105.
+root 2023-11-27 14:43:19,733 INFO Step_4_visit. Deleting variables.
+root 2023-11-27 14:43:19,735 INFO Start clearing data VISITS.
+root 2023-11-27 14:43:19,735 INFO Reading data VISITS and writing to a dataframe.
+root 2023-11-27 14:43:19,750 INFO Renaming columns VISITS.
+root 2023-11-27 14:43:19,751 INFO Clearing data VISITS.
+root 2023-11-27 14:43:19,812 INFO Start zagruzka v bazu logs api VISITS.
+root 2023-11-27 14:43:19,860 INFO Start zagruzka dannih - ym_visits_obshee_new.
+root 2023-11-27 14:43:19,862 ERROR Error: oshibka zagruzki v tablitsu - ym_visits_obshee_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 108, in ya_visits_to_bd
+    col.to_sql('ym_visits_obshee_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 14:43:19,863 INFO Start zagruzka dannih - # ym_visits_detali_new.
+root 2023-11-27 14:43:19,864 ERROR Error: oshibka zagruzki v tablitsu - ym_visits_detali_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 124, in ya_visits_to_bd
+    col.to_sql('ym_visits_detali_new', engine, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 14:43:37,323 INFO Otpravka soobsheniya v telegram.
+root 2023-11-27 14:43:37,722 INFO Soobshenie v telegram otpravleno.
+root 2023-11-27 14:59:46,646 INFO Step_1_hits. Creating a log.
+root 2023-11-27 14:59:47,353 INFO Code status 200
+NoneType: None
+root 2023-11-27 14:59:47,353 INFO Step_1_hits. Successful log request.
+root 2023-11-27 14:59:47,353 INFO Step_1_hits. Request number 32784163.
+root 2023-11-27 14:59:47,353 INFO Step_1_hits. Request status created.
+root 2023-11-27 14:59:47,353 INFO Step_2_hits. Log processing status.
+root 2023-11-27 14:59:47,565 INFO Step_2_hits. Loading data. Code 200.
+root 2023-11-27 15:03:16,988 INFO Step_2_hits. Number of parts - 1.
+root 2023-11-27 15:03:16,988 INFO Step_2_hits. Request status processed.
+root 2023-11-27 15:03:16,988 INFO Step_3_hits. Loading the log.
+root 2023-11-27 15:03:17,413 INFO Step_3_hits. Loading a log from one part.
+root 2023-11-27 15:03:17,413 INFO Step_4_hits. Deleting a log.
+root 2023-11-27 15:03:17,725 INFO Step_4_hits. Successful log deletion # 32784163.
+root 2023-11-27 15:03:17,725 INFO Step_4_hits. Deleting variables.
+root 2023-11-27 15:03:17,727 INFO Start clearing data HITS.
+root 2023-11-27 15:03:17,727 INFO Reading data HITS and writing to a dataframe.
+root 2023-11-27 15:03:17,764 INFO Renaming columns HITS.
+root 2023-11-27 15:03:17,766 INFO Clearing data HITS.
+root 2023-11-27 15:03:17,777 INFO Start zagruzka v bazu logs api HITS.
+root 2023-11-27 15:03:17,841 INFO Start zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-11-27 15:03:17,861 ERROR Error: oshibka zagruzki v tablitsu - ym_hits_stranitsi_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "G:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 35, in ya_hits_to_bd
+    col.to_sql('ym_hits_stranitsi_new', engine, schema='public', if_exists='append', index=False)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 15:03:17,864 INFO Start zagruzka dannih - ym_hits_obshee_new.
+root 2023-11-27 15:03:17,866 ERROR Error: oshibka zagruzki v tablitsu - ym_hits_obshee_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "G:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 50, in ya_hits_to_bd
+    col.to_sql('ym_hits_obshee_new', engine, schema='public', if_exists='append', index=False)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 15:03:17,866 INFO Start zagruzka dannih - ym_hits_deystviya_new.
+root 2023-11-27 15:03:17,868 ERROR Error: oshibka zagruzki v tablitsu - ym_hits_deystviya_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "G:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 65, in ya_hits_to_bd
+    col.to_sql('ym_hits_deystviya_new', engine, schema='public', if_exists='append', index=False)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 15:03:17,869 INFO Start zagruzka dannih - ym_hits_ad_new.
+root 2023-11-27 15:03:17,870 ERROR Error: oshibka zagruzki v tablitsu - ym_hits_ad_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "G:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 80, in ya_hits_to_bd
+    col.to_sql('ym_hits_ad_new', engine, schema='public', if_exists='append', index=False)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 15:03:17,874 INFO Step_1_visit. Creating a log.
+root 2023-11-27 15:03:18,198 INFO Code status 200
+NoneType: None
+root 2023-11-27 15:03:18,199 INFO Step_1_visit. Successful log request.
+root 2023-11-27 15:03:18,199 INFO Step_1_visit. Request number 32784171.
+root 2023-11-27 15:03:18,199 INFO Step_1_visit. Request status created.
+root 2023-11-27 15:03:18,199 INFO Step_2_visit. Log processing status.
+root 2023-11-27 15:03:18,387 INFO Step_2_visit. Loading data. Code 200.
+root 2023-11-27 15:05:18,878 INFO Step_2_visit. Number of parts - 0.
+root 2023-11-27 15:05:18,878 INFO Step_2_visit. Request status processed.
+root 2023-11-27 15:05:18,878 INFO Step_3_visit. Loading the log.
+root 2023-11-27 15:05:19,279 INFO Step_3_visit. Loading a log from one part.
+root 2023-11-27 15:05:19,279 INFO Step_3_visit. Loading 0 parts of the log.
+root 2023-11-27 15:05:19,279 INFO Step_4_visit. Deleting a log.
+root 2023-11-27 15:05:19,469 INFO Step_4_visit. Successful log deletion # 32784171.
+root 2023-11-27 15:05:19,469 INFO Step_4_visit. Deleting variables.
+root 2023-11-27 15:05:19,470 INFO Start clearing data VISITS.
+root 2023-11-27 15:05:19,470 INFO Reading data VISITS and writing to a dataframe.
+root 2023-11-27 15:05:19,484 INFO Renaming columns VISITS.
+root 2023-11-27 15:05:19,486 INFO Clearing data VISITS.
+root 2023-11-27 15:05:19,552 INFO Start zagruzka v bazu logs api VISITS.
+root 2023-11-27 15:05:19,619 INFO Start zagruzka dannih - ym_visits_obshee_new.
+root 2023-11-27 15:05:19,621 ERROR Error: oshibka zagruzki v tablitsu - ym_visits_obshee_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "G:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 108, in ya_visits_to_bd
+    col.to_sql('ym_visits_obshee_new', engine, schema='public', if_exists='append', index=False)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 15:05:19,643 INFO Start zagruzka dannih - # ym_visits_detali_new.
+root 2023-11-27 15:05:19,645 ERROR Error: oshibka zagruzki v tablitsu - ym_visits_detali_new - Unsigned 64 bit integer datatype is not supported
+Traceback (most recent call last):
+  File "G:\py.projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 124, in ya_visits_to_bd
+    col.to_sql('ym_visits_detali_new', engine, schema='public', if_exists='append', index=False)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1948, in to_sql
+    table = self.prep_table(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1842, in prep_table
+    table = SQLTable(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 899, in __init__
+    self.table = self._create_table_setup()
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1205, in _create_table_setup
+    column_names_and_types = self._get_column_names_and_types(self._sqlalchemy_type)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1190, in _get_column_names_and_types
+    column_names_and_types += [
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1191, in <listcomp>
+    (str(self.frame.columns[i]), dtype_mapper(self.frame.iloc[:, i]), False)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1339, in _sqlalchemy_type
+    raise ValueError("Unsigned 64 bit integer datatype is not supported")
+ValueError: Unsigned 64 bit integer datatype is not supported
+root 2023-11-27 15:05:19,647 INFO Otpravka soobsheniya v telegram.
+root 2023-11-27 15:05:20,036 INFO Soobshenie v telegram otpravleno.

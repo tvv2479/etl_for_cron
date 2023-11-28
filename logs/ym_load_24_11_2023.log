@@ -1,0 +1,153 @@
+root 2023-11-24 10:13:10,079 INFO Step_1_hits. Creating a log.
+root 2023-11-24 10:13:10,774 INFO Code status 200
+NoneType: None
+root 2023-11-24 10:13:10,774 INFO Step_1_hits. Successful log request.
+root 2023-11-24 10:13:10,774 INFO Step_1_hits. Request number 32748658.
+root 2023-11-24 10:13:10,775 INFO Step_1_hits. Request status created.
+root 2023-11-24 10:13:10,775 INFO Step_2_hits. Log processing status.
+root 2023-11-24 10:13:10,966 INFO Step_2_hits. Loading data. Code 200.
+root 2023-11-24 10:14:14,135 INFO Step_2_hits. Number of parts - 1.
+root 2023-11-24 10:14:14,135 INFO Step_2_hits. Request status processed.
+root 2023-11-24 10:14:14,137 INFO Step_3_hits. Loading the log.
+root 2023-11-24 10:14:14,477 INFO Step_3_hits. Loading a log from one part.
+root 2023-11-24 10:14:14,477 INFO Step_4_hits. Deleting a log.
+root 2023-11-24 10:14:14,730 INFO Step_4_hits. Successful log deletion # 32748658.
+root 2023-11-24 10:14:14,730 INFO Step_4_hits. Deleting variables.
+root 2023-11-24 10:14:14,731 INFO Step_1_visit. Creating a log.
+root 2023-11-24 10:14:15,015 INFO Code status 200
+NoneType: None
+root 2023-11-24 10:14:15,015 INFO Step_1_visit. Successful log request.
+root 2023-11-24 10:14:15,015 INFO Step_1_visit. Request number 32748670.
+root 2023-11-24 10:14:15,015 INFO Step_1_visit. Request status created.
+root 2023-11-24 10:14:15,016 INFO Step_2_visit. Log processing status.
+root 2023-11-24 10:14:15,203 INFO Step_2_visit. Loading data. Code 200.
+root 2023-11-24 10:15:13,040 INFO Step_2_visit. Number of parts - 0.
+root 2023-11-24 10:15:13,041 INFO Step_2_visit. Request status processed.
+root 2023-11-24 10:15:13,041 INFO Step_3_visit. Loading the log.
+root 2023-11-24 10:15:13,343 INFO Step_3_visit. Loading a log from one part.
+root 2023-11-24 10:15:13,343 INFO Step_3_visit. Loading 0 parts of the log.
+root 2023-11-24 10:15:13,343 INFO Step_4_visit. Deleting a log.
+root 2023-11-24 10:15:13,525 INFO Step_4_visit. Successful log deletion # 32748670.
+root 2023-11-24 10:15:13,525 INFO Step_4_visit. Deleting variables.
+root 2023-11-24 10:15:55,705 INFO Start clearing data HITS.
+root 2023-11-24 10:15:55,705 INFO Reading data HITS and writing to a dataframe.
+root 2023-11-24 10:15:56,100 INFO Renaming columns HITS.
+root 2023-11-24 10:15:56,153 INFO Clearing data HITS.
+root 2023-11-24 10:15:56,172 INFO Start clearing data VISITS.
+root 2023-11-24 10:15:56,172 INFO Reading data VISITS and writing to a dataframe.
+root 2023-11-24 10:15:56,180 INFO Renaming columns VISITS.
+root 2023-11-24 10:15:56,182 INFO Clearing data VISITS.
+root 2023-11-24 10:16:02,678 INFO Start zagruzka v bazu logs api HITS.
+root 2023-11-24 10:16:49,283 INFO Start zagruzka v bazu logs api HITS.
+root 2023-11-24 10:26:20,600 INFO Step_1_hits. Creating a log.
+root 2023-11-24 10:26:21,240 INFO Code status 200
+NoneType: None
+root 2023-11-24 10:26:21,241 INFO Step_1_hits. Successful log request.
+root 2023-11-24 10:26:21,241 INFO Step_1_hits. Request number 32748796.
+root 2023-11-24 10:26:21,242 INFO Step_1_hits. Request status created.
+root 2023-11-24 10:26:21,242 INFO Step_2_hits. Log processing status.
+root 2023-11-24 10:26:21,468 INFO Step_2_hits. Loading data. Code 200.
+root 2023-11-24 10:29:10,793 INFO Step_2_hits. Number of parts - 1.
+root 2023-11-24 10:29:10,793 INFO Step_2_hits. Request status processed.
+root 2023-11-24 10:29:10,793 INFO Step_3_hits. Loading the log.
+root 2023-11-24 10:29:13,615 INFO Step_3_hits. Loading a log from one part.
+root 2023-11-24 10:29:13,615 INFO Step_4_hits. Deleting a log.
+root 2023-11-24 10:29:14,348 INFO Step_4_hits. Successful log deletion # 32748796.
+root 2023-11-24 10:29:14,349 INFO Step_4_hits. Deleting variables.
+root 2023-11-24 10:29:14,351 INFO Step_1_visit. Creating a log.
+root 2023-11-24 10:29:14,602 INFO Code status 200
+NoneType: None
+root 2023-11-24 10:29:14,602 INFO Step_1_visit. Successful log request.
+root 2023-11-24 10:29:14,602 INFO Step_1_visit. Request number 32748810.
+root 2023-11-24 10:29:14,602 INFO Step_1_visit. Request status created.
+root 2023-11-24 10:29:14,602 INFO Step_2_visit. Log processing status.
+root 2023-11-24 10:29:16,299 INFO Step_2_visit. Loading data. Code 200.
+root 2023-11-24 10:31:09,234 INFO Step_2_visit. Number of parts - 0.
+root 2023-11-24 10:31:09,234 INFO Step_2_visit. Request status processed.
+root 2023-11-24 10:31:09,234 INFO Step_3_visit. Loading the log.
+root 2023-11-24 10:31:09,614 INFO Step_3_visit. Loading a log from one part.
+root 2023-11-24 10:31:09,614 INFO Step_3_visit. Loading 0 parts of the log.
+root 2023-11-24 10:31:09,614 INFO Step_4_visit. Deleting a log.
+root 2023-11-24 10:31:09,870 INFO Step_4_visit. Successful log deletion # 32748810.
+root 2023-11-24 10:31:09,870 INFO Step_4_visit. Deleting variables.
+root 2023-11-24 10:31:21,275 INFO Start clearing data HITS.
+root 2023-11-24 10:31:21,275 INFO Reading data HITS and writing to a dataframe.
+root 2023-11-24 10:31:21,294 INFO Renaming columns HITS.
+root 2023-11-24 10:31:21,295 INFO Clearing data HITS.
+root 2023-11-24 10:31:21,301 INFO Start clearing data VISITS.
+root 2023-11-24 10:31:21,301 INFO Reading data VISITS and writing to a dataframe.
+root 2023-11-24 10:31:21,311 INFO Renaming columns VISITS.
+root 2023-11-24 10:31:21,313 INFO Clearing data VISITS.
+root 2023-11-24 10:31:23,530 INFO Start zagruzka v bazu logs api HITS.
+root 2023-11-24 10:31:23,933 INFO Start zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-11-24 10:31:24,595 INFO End zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-11-24 10:31:24,595 INFO Start zagruzka dannih - ym_hits_obshee_new.
+root 2023-11-24 10:31:24,828 INFO End zagruzka dannih - ym_hits_obshee_new.
+root 2023-11-24 10:31:24,828 INFO Start zagruzka dannih - ym_hits_deystviya_new.
+root 2023-11-24 10:31:25,173 INFO End zagruzka dannih - ym_hits_deystviya_new.
+root 2023-11-24 10:31:25,173 INFO Start zagruzka dannih - ym_hits_ad_new.
+root 2023-11-24 10:31:25,445 INFO End zagruzka dannih - ym_hits_ad_new.
+root 2023-11-24 10:32:28,896 INFO Start zagruzka v bazu logs api HITS.
+root 2023-11-24 10:32:29,021 INFO Start zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-11-24 10:32:29,131 INFO End zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-11-24 10:32:29,132 INFO Start zagruzka dannih - ym_hits_obshee_new.
+root 2023-11-24 10:32:29,404 INFO End zagruzka dannih - ym_hits_obshee_new.
+root 2023-11-24 10:32:29,404 INFO Start zagruzka dannih - ym_hits_deystviya_new.
+root 2023-11-24 10:32:29,485 INFO End zagruzka dannih - ym_hits_deystviya_new.
+root 2023-11-24 10:32:29,485 INFO Start zagruzka dannih - ym_hits_ad_new.
+root 2023-11-24 10:32:29,608 INFO End zagruzka dannih - ym_hits_ad_new.
+root 2023-11-24 11:15:27,650 INFO Step_1_hits. Creating a log.
+root 2023-11-24 11:15:28,044 INFO Code status 200
+NoneType: None
+root 2023-11-24 11:15:28,044 INFO Step_1_hits. Successful log request.
+root 2023-11-24 11:15:28,044 INFO Step_1_hits. Request number 32749367.
+root 2023-11-24 11:15:28,044 INFO Step_1_hits. Request status created.
+root 2023-11-24 11:15:28,044 INFO Step_2_hits. Log processing status.
+root 2023-11-24 11:15:28,334 INFO Step_2_hits. Loading data. Code 200.
+root 2023-11-24 11:16:10,328 INFO Step_2_hits. Number of parts - 1.
+root 2023-11-24 11:16:10,328 INFO Step_2_hits. Request status processed.
+root 2023-11-24 11:16:10,328 INFO Step_3_hits. Loading the log.
+root 2023-11-24 11:16:10,737 INFO Step_3_hits. Loading a log from one part.
+root 2023-11-24 11:16:10,738 INFO Step_4_hits. Deleting a log.
+root 2023-11-24 11:16:10,926 INFO Step_4_hits. Successful log deletion # 32749367.
+root 2023-11-24 11:16:10,926 INFO Step_4_hits. Deleting variables.
+root 2023-11-24 11:16:10,927 INFO Step_1_visit. Creating a log.
+root 2023-11-24 11:16:11,169 INFO Code status 200
+NoneType: None
+root 2023-11-24 11:16:11,169 INFO Step_1_visit. Successful log request.
+root 2023-11-24 11:16:11,169 INFO Step_1_visit. Request number 32749372.
+root 2023-11-24 11:16:11,169 INFO Step_1_visit. Request status created.
+root 2023-11-24 11:16:11,169 INFO Step_2_visit. Log processing status.
+root 2023-11-24 11:16:11,467 INFO Step_2_visit. Loading data. Code 200.
+root 2023-11-24 11:17:14,051 INFO Step_2_visit. Number of parts - 0.
+root 2023-11-24 11:17:14,051 INFO Step_2_visit. Request status processed.
+root 2023-11-24 11:17:14,051 INFO Step_3_visit. Loading the log.
+root 2023-11-24 11:17:14,387 INFO Step_3_visit. Loading a log from one part.
+root 2023-11-24 11:17:14,387 INFO Step_3_visit. Loading 0 parts of the log.
+root 2023-11-24 11:17:14,387 INFO Step_4_visit. Deleting a log.
+root 2023-11-24 11:17:14,610 INFO Step_4_visit. Successful log deletion # 32749372.
+root 2023-11-24 11:17:14,611 INFO Step_4_visit. Deleting variables.
+root 2023-11-24 11:18:44,667 INFO Start clearing data HITS.
+root 2023-11-24 11:18:44,668 INFO Reading data HITS and writing to a dataframe.
+root 2023-11-24 11:18:44,779 INFO Renaming columns HITS.
+root 2023-11-24 11:18:44,850 INFO Clearing data HITS.
+root 2023-11-24 11:18:44,855 INFO Start clearing data VISITS.
+root 2023-11-24 11:18:44,855 INFO Reading data VISITS and writing to a dataframe.
+root 2023-11-24 11:18:44,864 INFO Renaming columns VISITS.
+root 2023-11-24 11:18:44,866 INFO Clearing data VISITS.
+root 2023-11-24 11:18:48,727 INFO Start zagruzka v bazu logs api HITS.
+root 2023-11-24 11:18:49,061 INFO Start zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-11-24 11:18:49,398 INFO End zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-11-24 11:18:49,398 INFO Start zagruzka dannih - ym_hits_obshee_new.
+root 2023-11-24 11:18:49,575 INFO End zagruzka dannih - ym_hits_obshee_new.
+root 2023-11-24 11:18:49,575 INFO Start zagruzka dannih - ym_hits_deystviya_new.
+root 2023-11-24 11:18:49,746 INFO End zagruzka dannih - ym_hits_deystviya_new.
+root 2023-11-24 11:18:49,746 INFO Start zagruzka dannih - ym_hits_ad_new.
+root 2023-11-24 11:18:49,836 INFO End zagruzka dannih - ym_hits_ad_new.
+root 2023-11-24 11:18:49,836 INFO Start zagruzka v bazu logs api VISITS.
+root 2023-11-24 11:18:49,901 INFO Start zagruzka dannih - ym_visits_obshee_new.
+root 2023-11-24 11:18:49,981 INFO End zagruzka dannih - ym_visits_obshee_new.
+root 2023-11-24 11:18:49,981 INFO Start zagruzka dannih - # ym_visits_detali_new.
+root 2023-11-24 11:18:50,263 INFO End zagruzka dannih - ym_visits_detali_new.
+root 2023-11-24 11:19:10,651 INFO Otpravka soobsheniya v telegram.
+root 2023-11-24 11:19:11,004 INFO Soobshenie v telegram otpravleno.

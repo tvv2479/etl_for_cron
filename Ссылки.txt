@@ -1,0 +1,3 @@
+# https://yandex.ru/dev/connect/directory/api/concepts/query-format.html
+# https://yandex.ru/dev/metrika/doc/api2/intro/authorization.html 
+# https://habr.com/ru/companies/digitalleague/articles/742156/
