@@ -8,13 +8,16 @@ from sqlalchemy import text
 import psycopg2
 from datetime import datetime, date, timedelta
 
+import pandas as pd
+from io import StringIO
+
 #%%
 # данные для запросов
 TOKEN = 'y0_AgAEA7qiSjdCAArJCwAAAADxWZyxBecwQ4LuQ_S8XoBPdw6D-8DNi7Y'
 COUNTER = '31318467'
 
-DATE1 = '2023-11-26'
-DATE2 = '2023-11-26'
+DATE1 = '2023-11-27'
+DATE2 = '2023-11-27'
 #%%
 log_load = load_data_ym.Logsapi(TOKEN, COUNTER, DATE1, DATE2)
 data_hit = load_data_ym.Logsapi.download_hits(log_load)
@@ -24,4 +27,3 @@ zagruzka_v_db.ya_hits_to_bd(clean_hit)
 data_visit = load_data_ym.Logsapi.download_visits(log_load)
 clean_visit = clearing_data_ym.clean_logs_visits(data_visit)
 zagruzka_v_db.ya_visits_to_bd(clean_visit)
-# %%

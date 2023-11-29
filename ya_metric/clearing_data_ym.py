@@ -125,6 +125,8 @@ def clean_logs_hits(data):
         df_hit = df_hit.replace({'': None})
         # Изменить тип столбца
         df_hit['counter_user_id_hash'] = df_hit['counter_user_id_hash'].astype(str)
+        df_hit['client_id'] = df_hit['client_id'].astype(str)
+        df_hit['watch_id'] = df_hit['watch_id'].astype(str)
         df_hit['ip_address'] = df_hit['ip_address'].astype(str)
     except Exception as err:
         logging.error(f"Data Clearing HITS error - {err}", exc_info=True)
@@ -285,6 +287,8 @@ def clean_logs_visits(data):
 
     # Изменить тип столбца
     df_visit['counter_user_id_hash'] = df_visit['counter_user_id_hash'].astype(str)
+    df_visit['client_id'] = df_visit['client_id'].astype(str)
+    df_visit['visit_id'] = df_visit['visit_id'].astype(str)
     df_visit['ip_address'] = df_visit['ip_address'].astype(str)
     
     # Делаем замену в столбцах.

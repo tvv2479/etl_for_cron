@@ -8,21 +8,17 @@ from sqlalchemy import text
 import psycopg2
 from datetime import datetime, date, timedelta
 import datetime
+#%%
+# данные для запросов
+TOKEN = 'y0_AgAEA7qiSjdCAArJCwAAAADxWZyxBecwQ4LuQ_S8XoBPdw6D-8DNi7Y'
+COUNTER = '31318467'
 
-# %%
 # https://habr.com/ru/companies/domclick/articles/581304/
 # https://docs.sqlalchemy.org/en/20/core/connections.html
 # Подключение к базе
 engine = create_engine('postgresql+psycopg2://postgres:listopad@localhost/test_char')
 # Дата на вчера
 end_date = date.today() - timedelta(days=1)
-
-# данные для запросов
-TOKEN = 'y0_AgAEA7qiSjdCAArJCwAAAADxWZyxBecwQ4LuQ_S8XoBPdw6D-8DNi7Y'
-COUNTER = '31318467'
-
-# DATE1 = start_date.strftime('%Y-%m-%d')
-DATE2 = end_date.strftime('%Y-%m-%d')
 #%%
 # Проверка максимальной даты Hits в базе
 with engine.connect() as conn:
@@ -31,7 +27,9 @@ with engine.connect() as conn:
         row
         
 start_date = row[0] + timedelta(days=1)
+
 DATE1 = start_date.strftime('%Y-%m-%d')
+DATE2 = end_date.strftime('%Y-%m-%d')
 
 dateDelta = int((end_date - start_date).total_seconds()/86400)
 
@@ -64,7 +62,7 @@ if dateDelta > 0:
 # Удаление файлов логов
 logs = glob(fr"G:/py.projects/tb/data_collection/logs/*.log")
 clean_logs.logs_clean(logs, 4) 
-#%%
+
 # Запрос к базе 
 with engine.connect() as conn:
     result1 = conn.execute(text('select max(date_event) from ym_hits_obshee_new'))
@@ -98,3 +96,13 @@ else:
 # Отправка сообщения в Телеграм
 bot.bot_maccege(MSG)
 
+del log_load, data_hit, clean_hit, data_visit, clean_visit
+
+
+# %%
+DATE1
+# %%
+DATE2
+# %%
+row[0]
+# %%
