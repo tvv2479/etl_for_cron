@@ -892,3 +892,37 @@ root 2023-11-29 12:02:10,941 INFO Start zagruzka dannih - ym_visits_obshee_new.
 root 2023-11-29 12:02:10,987 INFO End zagruzka dannih - ym_visits_obshee_new.
 root 2023-11-29 12:02:10,987 INFO Start zagruzka dannih - # ym_visits_detali_new.
 root 2023-11-29 12:02:11,015 INFO End zagruzka dannih - ym_visits_detali_new.
+root 2023-11-29 12:02:44,780 INFO Otpravka soobsheniya v telegram.
+root 2023-11-29 12:02:45,167 INFO Soobshenie v telegram otpravleno.
+root 2023-11-29 13:22:24,350 INFO Step_1_hits. Creating a log.
+root 2023-11-29 13:22:24,804 INFO Code status 200
+NoneType: None
+root 2023-11-29 13:22:24,804 INFO Step_1_hits. Successful log request.
+root 2023-11-29 13:22:24,804 INFO Step_1_hits. Request number 32808275.
+root 2023-11-29 13:22:24,804 INFO Step_1_hits. Request status created.
+root 2023-11-29 13:22:24,804 INFO Step_2_hits. Log processing status.
+root 2023-11-29 13:22:25,011 INFO Step_2_hits. Loading data. Code 200.
+root 2023-11-29 13:23:11,915 INFO Step_2_hits. Number of parts - 1.
+root 2023-11-29 13:23:11,916 INFO Step_2_hits. Request status processed.
+root 2023-11-29 13:23:11,916 INFO Step_3_hits. Loading the log.
+root 2023-11-29 13:23:12,416 INFO Step_3_hits. Loading a log from one part.
+root 2023-11-29 13:23:12,416 INFO Step_4_hits. Deleting a log.
+root 2023-11-29 13:23:12,611 INFO Step_4_hits. Successful log deletion # 32808275.
+root 2023-11-29 13:23:12,611 INFO Step_4_hits. Deleting variables.
+root 2023-11-29 13:23:12,612 INFO Start clearing data HITS.
+root 2023-11-29 13:23:12,612 INFO Reading data HITS and writing to a dataframe.
+root 2023-11-29 13:23:12,636 INFO Renaming columns HITS.
+root 2023-11-29 13:23:12,640 INFO Clearing data HITS.
+root 2023-11-29 13:23:12,649 INFO Start zagruzka v bazu logs api HITS.
+root 2023-11-29 13:23:12,734 INFO Start zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-11-29 13:23:12,859 INFO End zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-11-29 13:23:12,859 INFO Start zagruzka dannih - ym_hits_obshee_new.
+root 2023-11-29 13:23:12,959 INFO End zagruzka dannih - ym_hits_obshee_new.
+root 2023-11-29 13:23:12,959 INFO Start zagruzka dannih - ym_hits_deystviya_new.
+root 2023-11-29 13:23:13,031 INFO End zagruzka dannih - ym_hits_deystviya_new.
+root 2023-11-29 13:23:13,031 INFO Start zagruzka dannih - ym_hits_ad_new.
+root 2023-11-29 13:23:13,121 INFO End zagruzka dannih - ym_hits_ad_new.
+root 2023-11-29 13:23:26,680 INFO Otpravka soobsheniya v telegram.
+root 2023-11-29 13:23:27,061 INFO Soobshenie v telegram otpravleno.
+root 2023-11-29 13:23:40,044 INFO Otpravka soobsheniya v telegram.
+root 2023-11-29 13:23:40,377 INFO Soobshenie v telegram otpravleno.

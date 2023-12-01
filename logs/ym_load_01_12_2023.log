@@ -1,0 +1,361 @@
+root 2023-12-01 10:53:44,056 INFO Step_1_hits. Creating a log.
+root 2023-12-01 10:53:44,508 INFO Code status 200
+NoneType: None
+root 2023-12-01 10:53:44,508 INFO Step_1_hits. Successful log request.
+root 2023-12-01 10:53:44,508 INFO Step_1_hits. Request number 32834153.
+root 2023-12-01 10:53:44,508 INFO Step_1_hits. Request status created.
+root 2023-12-01 10:53:44,508 INFO Step_2_hits. Log processing status.
+root 2023-12-01 10:53:44,773 INFO Step_2_hits. Loading data. Code 200.
+root 2023-12-01 10:54:10,990 INFO Step_2_hits. Number of parts - 1.
+root 2023-12-01 10:54:10,990 INFO Step_2_hits. Request status processed.
+root 2023-12-01 10:54:10,990 INFO Step_3_hits. Loading the log.
+root 2023-12-01 10:54:11,409 INFO Step_3_hits. Loading a log from one part.
+root 2023-12-01 10:54:11,410 INFO Step_4_hits. Deleting a log.
+root 2023-12-01 10:54:11,642 INFO Step_4_hits. Successful log deletion # 32834153.
+root 2023-12-01 10:54:11,642 INFO Step_4_hits. Deleting variables.
+root 2023-12-01 10:54:11,647 INFO Start clearing data HITS.
+root 2023-12-01 10:54:11,648 INFO Reading data HITS and writing to a dataframe.
+root 2023-12-01 10:54:11,718 INFO Renaming columns HITS.
+root 2023-12-01 10:54:11,758 INFO Clearing data HITS.
+root 2023-12-01 10:54:11,783 INFO Start zagruzka v bazu logs api HITS.
+root 2023-12-01 10:54:11,836 INFO Start zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-12-01 10:54:11,916 INFO End zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-12-01 10:54:11,916 INFO Start zagruzka dannih - ym_hits_obshee_new.
+root 2023-12-01 10:54:11,972 ERROR Error: oshibka zagruzki v tablitsu - ym_hits_obshee_new - (psycopg2.errors.ForeignKeyViolation) insert or update on table "ym_hits_obshee_new" violates foreign key constraint "fk_devises"
+DETAIL:  Key (device_category)=(1) is not present in table "devices".
+
+[SQL: INSERT INTO public.ym_hits_obshee_new (counter_user_id_hash, client_id, watch_id, date_event, datetime_event, counter_id, device_category, region_city, region_city_id, region_country, region_country_id, last_traffic_source, referer, ip_address, is_pa ... 328160 characters truncated ... ic_source__872)s, %(referer__872)s, %(ip_address__872)s, %(is_page_view__872)s, %(artificial__872)s)]
+[parameters: {'referer__0': None, 'artificial__0': 1, 'last_traffic_source__0': 'direct', 'is_page_view__0': 0, 'date_event__0': '2023-11-28', 'region_country_id__0': 225, 'counter_user_id_hash__0': '6611529775365587763', 'client_id__0': '170118045483037940', 'watch_id__0': '7079900461671383586', 'counter_id__0': 31318467, 'datetime_event__0': '2023-11-28 21:07:56', 'region_city_id__0': 65, 'device_category__0': 1, 'region_city__0': 'Novosibirsk', 'ip_address__0': '212.164.65.xxx', 'region_country__0': 'Russia', 'referer__1': 'https://google.com/', 'artificial__1': 0, 'last_traffic_source__1': 'organic', 'is_page_view__1': 1, 'date_event__1': '2023-11-28', 'region_country_id__1': 225, 'counter_user_id_hash__1': '16356220029038759093', 'client_id__1': '170118574713764671', 'watch_id__1': '7081281809959878823', 'counter_id__1': 31318467, 'datetime_event__1': '2023-11-28 22:35:46', 'region_city_id__1': 62, 'device_category__1': 2, 'region_city__1': 'Krasnoyarsk', 'ip_address__1': '188.162.11.xxx', 'region_country__1': 'Russia', 'referer__2': None, 'artificial__2': 1, 'last_traffic_source__2': 'direct', 'is_page_view__2': 0, 'date_event__2': '2023-11-28', 'region_country_id__2': 225, 'counter_user_id_hash__2': '16356220029038759093', 'client_id__2': '170118574713764671', 'watch_id__2': '7081285702460899508', 'counter_id__2': 31318467, 'datetime_event__2': '2023-11-28 22:36:01', 'region_city_id__2': 62, 'device_category__2': 2, 'region_city__2': 'Krasnoyarsk', 'ip_address__2': '188.162.11.xxx', 'region_country__2': 'Russia', 'referer__3': 'https://yandex.ru/', 'artificial__3': 0 ... 13868 parameters truncated ... 'ip_address__869': '2a09:bac3:50d5:2dc::xxx', 'region_country__869': 'Russia', 'referer__870': 'https://sz154.com/', 'artificial__870': 0, 'last_traffic_source__870': 'internal', 'is_page_view__870': 1, 'date_event__870': '2023-11-28', 'region_country_id__870': 225, 'counter_user_id_hash__870': '698488964590337556', 'client_id__870': '1701158708471515544', 'watch_id__870': '7074206047231541582', 'counter_id__870': 31318467, 'datetime_event__870': '2023-11-28 15:05:54', 'region_city_id__870': 65, 'device_category__870': 2, 'region_city__870': 'Novosibirsk', 'ip_address__870': '2a09:bac3:50d5:2dc::xxx', 'region_country__870': 'Russia', 'referer__871': 'https://yandex.ru/', 'artificial__871': 0, 'last_traffic_source__871': 'organic', 'is_page_view__871': 1, 'date_event__871': '2023-11-28', 'region_country_id__871': 225, 'counter_user_id_hash__871': '16916755927204545567', 'client_id__871': '1701164482296225137', 'watch_id__871': '7075707397818286155', 'counter_id__871': 31318467, 'datetime_event__871': '2023-11-28 16:41:21', 'region_city_id__871': 2, 'device_category__871': 2, 'region_city__871': 'Saint Petersburg', 'ip_address__871': '188.170.75.xxx', 'region_country__871': 'Russia', 'referer__872': 'https://yandex.ru/', 'artificial__872': 0, 'last_traffic_source__872': 'organic', 'is_page_view__872': 1, 'date_event__872': '2023-11-28', 'region_country_id__872': 225, 'counter_user_id_hash__872': '16404592214308901884', 'client_id__872': '1701150510453722097', 'watch_id__872': '7072041713443012707', 'counter_id__872': 31318467, 'datetime_event__872': '2023-11-28 12:48:18', 'region_city_id__872': 65, 'device_category__872': 1, 'region_city__872': 'Novosibirsk', 'ip_address__872': '109.202.20.xxx', 'region_country__872': 'Russia'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2112, in _exec_insertmany_context
+    dialect.do_execute(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.ForeignKeyViolation: insert or update on table "ym_hits_obshee_new" violates foreign key constraint "fk_devises"
+DETAIL:  Key (device_category)=(1) is not present in table "devices".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "e:\Projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 47, in ya_hits_to_bd
+    col.to_sql('ym_hits_obshee_new', engine, schema='public', if_exists='append', index=False)
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1958, in to_sql
+    total_inserted = sql_engine.insert_records(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1507, in insert_records
+    raise err
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1498, in insert_records
+    return table.insert(chunksize=chunksize, method=method)
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1059, in insert
+    num_inserted = exec_insert(conn, keys, chunk_iter)
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 951, in _execute_insert
+    result = conn.execute(self.table.insert(), data)
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\sql\elements.py", line 516, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1639, in _execute_clauseelement
+    ret = self._execute_context(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_insertmany_context(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2120, in _exec_insertmany_context
+    self._handle_dbapi_exception(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2343, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2112, in _exec_insertmany_context
+    dialect.do_execute(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.ForeignKeyViolation) insert or update on table "ym_hits_obshee_new" violates foreign key constraint "fk_devises"
+DETAIL:  Key (device_category)=(1) is not present in table "devices".
+
+[SQL: INSERT INTO public.ym_hits_obshee_new (counter_user_id_hash, client_id, watch_id, date_event, datetime_event, counter_id, device_category, region_city, region_city_id, region_country, region_country_id, last_traffic_source, referer, ip_address, is_pa ... 328160 characters truncated ... ic_source__872)s, %(referer__872)s, %(ip_address__872)s, %(is_page_view__872)s, %(artificial__872)s)]
+[parameters: {'referer__0': None, 'artificial__0': 1, 'last_traffic_source__0': 'direct', 'is_page_view__0': 0, 'date_event__0': '2023-11-28', 'region_country_id__0': 225, 'counter_user_id_hash__0': '6611529775365587763', 'client_id__0': '170118045483037940', 'watch_id__0': '7079900461671383586', 'counter_id__0': 31318467, 'datetime_event__0': '2023-11-28 21:07:56', 'region_city_id__0': 65, 'device_category__0': 1, 'region_city__0': 'Novosibirsk', 'ip_address__0': '212.164.65.xxx', 'region_country__0': 'Russia', 'referer__1': 'https://google.com/', 'artificial__1': 0, 'last_traffic_source__1': 'organic', 'is_page_view__1': 1, 'date_event__1': '2023-11-28', 'region_country_id__1': 225, 'counter_user_id_hash__1': '16356220029038759093', 'client_id__1': '170118574713764671', 'watch_id__1': '7081281809959878823', 'counter_id__1': 31318467, 'datetime_event__1': '2023-11-28 22:35:46', 'region_city_id__1': 62, 'device_category__1': 2, 'region_city__1': 'Krasnoyarsk', 'ip_address__1': '188.162.11.xxx', 'region_country__1': 'Russia', 'referer__2': None, 'artificial__2': 1, 'last_traffic_source__2': 'direct', 'is_page_view__2': 0, 'date_event__2': '2023-11-28', 'region_country_id__2': 225, 'counter_user_id_hash__2': '16356220029038759093', 'client_id__2': '170118574713764671', 'watch_id__2': '7081285702460899508', 'counter_id__2': 31318467, 'datetime_event__2': '2023-11-28 22:36:01', 'region_city_id__2': 62, 'device_category__2': 2, 'region_city__2': 'Krasnoyarsk', 'ip_address__2': '188.162.11.xxx', 'region_country__2': 'Russia', 'referer__3': 'https://yandex.ru/', 'artificial__3': 0 ... 13868 parameters truncated ... 'ip_address__869': '2a09:bac3:50d5:2dc::xxx', 'region_country__869': 'Russia', 'referer__870': 'https://sz154.com/', 'artificial__870': 0, 'last_traffic_source__870': 'internal', 'is_page_view__870': 1, 'date_event__870': '2023-11-28', 'region_country_id__870': 225, 'counter_user_id_hash__870': '698488964590337556', 'client_id__870': '1701158708471515544', 'watch_id__870': '7074206047231541582', 'counter_id__870': 31318467, 'datetime_event__870': '2023-11-28 15:05:54', 'region_city_id__870': 65, 'device_category__870': 2, 'region_city__870': 'Novosibirsk', 'ip_address__870': '2a09:bac3:50d5:2dc::xxx', 'region_country__870': 'Russia', 'referer__871': 'https://yandex.ru/', 'artificial__871': 0, 'last_traffic_source__871': 'organic', 'is_page_view__871': 1, 'date_event__871': '2023-11-28', 'region_country_id__871': 225, 'counter_user_id_hash__871': '16916755927204545567', 'client_id__871': '1701164482296225137', 'watch_id__871': '7075707397818286155', 'counter_id__871': 31318467, 'datetime_event__871': '2023-11-28 16:41:21', 'region_city_id__871': 2, 'device_category__871': 2, 'region_city__871': 'Saint Petersburg', 'ip_address__871': '188.170.75.xxx', 'region_country__871': 'Russia', 'referer__872': 'https://yandex.ru/', 'artificial__872': 0, 'last_traffic_source__872': 'organic', 'is_page_view__872': 1, 'date_event__872': '2023-11-28', 'region_country_id__872': 225, 'counter_user_id_hash__872': '16404592214308901884', 'client_id__872': '1701150510453722097', 'watch_id__872': '7072041713443012707', 'counter_id__872': 31318467, 'datetime_event__872': '2023-11-28 12:48:18', 'region_city_id__872': 65, 'device_category__872': 1, 'region_city__872': 'Novosibirsk', 'ip_address__872': '109.202.20.xxx', 'region_country__872': 'Russia'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+root 2023-12-01 10:54:12,157 INFO Start zagruzka dannih - ym_hits_deystviya_new.
+root 2023-12-01 10:54:12,208 INFO End zagruzka dannih - ym_hits_deystviya_new.
+root 2023-12-01 10:54:12,208 INFO Start zagruzka dannih - ym_hits_ad_new.
+root 2023-12-01 10:54:12,257 INFO End zagruzka dannih - ym_hits_ad_new.
+root 2023-12-01 10:54:12,257 INFO Step_1_visit. Creating a log.
+root 2023-12-01 10:54:12,505 INFO Code status 200
+NoneType: None
+root 2023-12-01 10:54:12,506 INFO Step_1_visit. Successful log request.
+root 2023-12-01 10:54:12,506 INFO Step_1_visit. Request number 32834161.
+root 2023-12-01 10:54:12,506 INFO Step_1_visit. Request status created.
+root 2023-12-01 10:54:12,506 INFO Step_2_visit. Log processing status.
+root 2023-12-01 10:54:12,801 INFO Step_2_visit. Loading data. Code 200.
+root 2023-12-01 10:59:11,689 INFO Step_2_visit. Number of parts - 0.
+root 2023-12-01 10:59:11,689 INFO Step_2_visit. Request status processed.
+root 2023-12-01 10:59:11,690 INFO Step_3_visit. Loading the log.
+root 2023-12-01 10:59:12,002 INFO Step_3_visit. Loading a log from one part.
+root 2023-12-01 10:59:12,002 INFO Step_3_visit. Loading 0 parts of the log.
+root 2023-12-01 10:59:12,003 INFO Step_4_visit. Deleting a log.
+root 2023-12-01 10:59:12,206 INFO Step_4_visit. Successful log deletion # 32834161.
+root 2023-12-01 10:59:12,207 INFO Step_4_visit. Deleting variables.
+root 2023-12-01 10:59:12,211 INFO Start clearing data VISITS.
+root 2023-12-01 10:59:12,211 INFO Reading data VISITS and writing to a dataframe.
+root 2023-12-01 10:59:12,232 INFO Renaming columns VISITS.
+root 2023-12-01 10:59:12,235 INFO Clearing data VISITS.
+root 2023-12-01 10:59:12,260 INFO Start zagruzka v bazu logs api VISITS.
+root 2023-12-01 10:59:12,302 INFO Start zagruzka dannih - ym_visits_obshee_new.
+root 2023-12-01 10:59:12,324 ERROR Error: oshibka zagruzki v tablitsu - ym_visits_obshee_new - (psycopg2.errors.ForeignKeyViolation) insert or update on table "ym_visits_obshee_new" violates foreign key constraint "fk_devises_2"
+DETAIL:  Key (device_category)=(2) is not present in table "devices".
+
+[SQL: INSERT INTO public.ym_visits_obshee_new (counter_user_id_hash, client_id, visit_id, date_event, datetime_event, counter_id, is_new_user, start_url, end_url, page_views, visit_duration, device_category, region_country, region_country_id, region_city,  ... 58493 characters truncated ... ntry_id__147)s, %(region_city__147)s, %(region_city_id__147)s, %(bounce__147)s, %(ip_address__147)s)]
+[parameters: {'date_event__0': '2023-11-28', 'region_country_id__0': 225, 'counter_user_id_hash__0': '3333268038079580313', 'is_new_user__0': 0, 'page_views__0': 2, 'client_id__0': '1701018750269839142', 'counter_id__0': 31318467, 'start_url__0': 'https://sz154.com/products/konsol-tsentralnaya---probox-ncp51---_2#modal-img-2', 'datetime_event__0': '2023-11-28 16:50:29', 'end_url__0': 'https://sz154.com/products/konsol-tsentralnaya---probox-ncp51---_2#modal-img-2', 'visit_duration__0': 31, 'visit_id__0': '7075850934401630463', 'device_category__0': 2, 'region_city__0': None, 'region_city_id__0': 0, 'ip_address__0': '176.59.150.xxx', 'region_country__0': 'Russia', 'bounce__0': 0, 'date_event__1': '2023-11-28', 'region_country_id__1': 225, 'counter_user_id_hash__1': '3114238906075147658', 'is_new_user__1': 1, 'page_views__1': 1, 'client_id__1': '1701104048114193702', 'counter_id__1': 31318467, 'start_url__1': 'https://sz154.com/products/kolpak-zapasnogo-kolesa---pajero-io-h72w---', 'datetime_event__1': '2023-11-28 03:54:08', 'end_url__1': 'https://sz154.com/products/kolpak-zapasnogo-kolesa---pajero-io-h72w---', 'visit_duration__1': 14, 'visit_id__1': '7063639951616246257', 'device_category__1': 1, 'region_city__1': None, 'region_city_id__1': 0, 'ip_address__1': '62.217.188.xxx', 'region_country__1': 'Russia', 'bounce__1': 0, 'date_event__2': '2023-11-28', 'region_country_id__2': 225, 'counter_user_id_hash__2': '14846806938302209559', 'is_new_user__2': 0, 'page_views__2': 7, 'client_id__2': '1700800494609300463', 'counter_id__2': 31318467, 'start_url__2': 'https://sz154.com/catalog/toyota', 'datetime_event__2': '2023-11-28 15:31:16', 'end_url__2': 'https://sz154.com/products/zerkalo---bluebird-eu14-5k-levo---serebro-kl0---', 'visit_duration__2': 729, 'visit_id__2': '7074605029264195949', 'device_category__2': 1, 'region_city__2': 'Tomsk' ... 2564 parameters truncated ... 'page_views__145': 1, 'client_id__145': '1701158573579142032', 'counter_id__145': 31318467, 'start_url__145': 'https://sz154.com/yekaterinburg/catalog/honda', 'datetime_event__145': '2023-11-28 15:02:52', 'end_url__145': 'https://sz154.com/yekaterinburg/catalog/honda', 'visit_duration__145': 24, 'visit_id__145': '7074158443303010793', 'device_category__145': 2, 'region_city__145': 'Yekaterinburg', 'region_city_id__145': 54, 'ip_address__145': '2a00:1fa2:4217:ec2e::xxx', 'region_country__145': 'Russia', 'bounce__145': 0, 'date_event__146': '2023-11-28', 'region_country_id__146': 149, 'counter_user_id_hash__146': '16151753402372894439', 'is_new_user__146': 1, 'page_views__146': 1, 'client_id__146': '1701162288651236370', 'counter_id__146': 31318467, 'start_url__146': 'https://sz154.com/samara/products/katushka-zazhiganiya---cooper-r50-w10b16d-w11b16a---vynosnaya---05269670ab--', 'datetime_event__146': '2023-11-28 16:04:47', 'end_url__146': 'https://sz154.com/samara/products/katushka-zazhiganiya---cooper-r50-w10b16d-w11b16a---vynosnaya---05269670ab--', 'visit_duration__146': 15, 'visit_id__146': '7075132210619875534', 'device_category__146': 2, 'region_city__146': 'Minsk', 'region_city_id__146': 157, 'ip_address__146': '178.163.154.xxx', 'region_country__146': 'Belarus', 'bounce__146': 0, 'date_event__147': '2023-11-28', 'region_country_id__147': 225, 'counter_user_id_hash__147': '17514239866474619368', 'is_new_user__147': 1, 'page_views__147': 5, 'client_id__147': '1701189195910092068', 'counter_id__147': 31318467, 'start_url__147': 'https://sz154.com/', 'datetime_event__147': '2023-11-28 23:33:16', 'end_url__147': 'https://sz154.com/', 'visit_duration__147': 457, 'visit_id__147': '7082186351280390512', 'device_category__147': 2, 'region_city__147': None, 'region_city_id__147': 0, 'ip_address__147': '176.59.150.xxx', 'region_country__147': 'Russia', 'bounce__147': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2112, in _exec_insertmany_context
+    dialect.do_execute(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.ForeignKeyViolation: insert or update on table "ym_visits_obshee_new" violates foreign key constraint "fk_devises_2"
+DETAIL:  Key (device_category)=(2) is not present in table "devices".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "e:\Projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 99, in ya_visits_to_bd
+    col.to_sql('ym_visits_obshee_new', engine, schema='public', if_exists='append', index=False)
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1958, in to_sql
+    total_inserted = sql_engine.insert_records(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1507, in insert_records
+    raise err
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1498, in insert_records
+    return table.insert(chunksize=chunksize, method=method)
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1059, in insert
+    num_inserted = exec_insert(conn, keys, chunk_iter)
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 951, in _execute_insert
+    result = conn.execute(self.table.insert(), data)
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\sql\elements.py", line 516, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1639, in _execute_clauseelement
+    ret = self._execute_context(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_insertmany_context(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2120, in _exec_insertmany_context
+    self._handle_dbapi_exception(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2343, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2112, in _exec_insertmany_context
+    dialect.do_execute(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.ForeignKeyViolation) insert or update on table "ym_visits_obshee_new" violates foreign key constraint "fk_devises_2"
+DETAIL:  Key (device_category)=(2) is not present in table "devices".
+
+[SQL: INSERT INTO public.ym_visits_obshee_new (counter_user_id_hash, client_id, visit_id, date_event, datetime_event, counter_id, is_new_user, start_url, end_url, page_views, visit_duration, device_category, region_country, region_country_id, region_city,  ... 58493 characters truncated ... ntry_id__147)s, %(region_city__147)s, %(region_city_id__147)s, %(bounce__147)s, %(ip_address__147)s)]
+[parameters: {'date_event__0': '2023-11-28', 'region_country_id__0': 225, 'counter_user_id_hash__0': '3333268038079580313', 'is_new_user__0': 0, 'page_views__0': 2, 'client_id__0': '1701018750269839142', 'counter_id__0': 31318467, 'start_url__0': 'https://sz154.com/products/konsol-tsentralnaya---probox-ncp51---_2#modal-img-2', 'datetime_event__0': '2023-11-28 16:50:29', 'end_url__0': 'https://sz154.com/products/konsol-tsentralnaya---probox-ncp51---_2#modal-img-2', 'visit_duration__0': 31, 'visit_id__0': '7075850934401630463', 'device_category__0': 2, 'region_city__0': None, 'region_city_id__0': 0, 'ip_address__0': '176.59.150.xxx', 'region_country__0': 'Russia', 'bounce__0': 0, 'date_event__1': '2023-11-28', 'region_country_id__1': 225, 'counter_user_id_hash__1': '3114238906075147658', 'is_new_user__1': 1, 'page_views__1': 1, 'client_id__1': '1701104048114193702', 'counter_id__1': 31318467, 'start_url__1': 'https://sz154.com/products/kolpak-zapasnogo-kolesa---pajero-io-h72w---', 'datetime_event__1': '2023-11-28 03:54:08', 'end_url__1': 'https://sz154.com/products/kolpak-zapasnogo-kolesa---pajero-io-h72w---', 'visit_duration__1': 14, 'visit_id__1': '7063639951616246257', 'device_category__1': 1, 'region_city__1': None, 'region_city_id__1': 0, 'ip_address__1': '62.217.188.xxx', 'region_country__1': 'Russia', 'bounce__1': 0, 'date_event__2': '2023-11-28', 'region_country_id__2': 225, 'counter_user_id_hash__2': '14846806938302209559', 'is_new_user__2': 0, 'page_views__2': 7, 'client_id__2': '1700800494609300463', 'counter_id__2': 31318467, 'start_url__2': 'https://sz154.com/catalog/toyota', 'datetime_event__2': '2023-11-28 15:31:16', 'end_url__2': 'https://sz154.com/products/zerkalo---bluebird-eu14-5k-levo---serebro-kl0---', 'visit_duration__2': 729, 'visit_id__2': '7074605029264195949', 'device_category__2': 1, 'region_city__2': 'Tomsk' ... 2564 parameters truncated ... 'page_views__145': 1, 'client_id__145': '1701158573579142032', 'counter_id__145': 31318467, 'start_url__145': 'https://sz154.com/yekaterinburg/catalog/honda', 'datetime_event__145': '2023-11-28 15:02:52', 'end_url__145': 'https://sz154.com/yekaterinburg/catalog/honda', 'visit_duration__145': 24, 'visit_id__145': '7074158443303010793', 'device_category__145': 2, 'region_city__145': 'Yekaterinburg', 'region_city_id__145': 54, 'ip_address__145': '2a00:1fa2:4217:ec2e::xxx', 'region_country__145': 'Russia', 'bounce__145': 0, 'date_event__146': '2023-11-28', 'region_country_id__146': 149, 'counter_user_id_hash__146': '16151753402372894439', 'is_new_user__146': 1, 'page_views__146': 1, 'client_id__146': '1701162288651236370', 'counter_id__146': 31318467, 'start_url__146': 'https://sz154.com/samara/products/katushka-zazhiganiya---cooper-r50-w10b16d-w11b16a---vynosnaya---05269670ab--', 'datetime_event__146': '2023-11-28 16:04:47', 'end_url__146': 'https://sz154.com/samara/products/katushka-zazhiganiya---cooper-r50-w10b16d-w11b16a---vynosnaya---05269670ab--', 'visit_duration__146': 15, 'visit_id__146': '7075132210619875534', 'device_category__146': 2, 'region_city__146': 'Minsk', 'region_city_id__146': 157, 'ip_address__146': '178.163.154.xxx', 'region_country__146': 'Belarus', 'bounce__146': 0, 'date_event__147': '2023-11-28', 'region_country_id__147': 225, 'counter_user_id_hash__147': '17514239866474619368', 'is_new_user__147': 1, 'page_views__147': 5, 'client_id__147': '1701189195910092068', 'counter_id__147': 31318467, 'start_url__147': 'https://sz154.com/', 'datetime_event__147': '2023-11-28 23:33:16', 'end_url__147': 'https://sz154.com/', 'visit_duration__147': 457, 'visit_id__147': '7082186351280390512', 'device_category__147': 2, 'region_city__147': None, 'region_city_id__147': 0, 'ip_address__147': '176.59.150.xxx', 'region_country__147': 'Russia', 'bounce__147': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+root 2023-12-01 10:59:12,325 INFO Start zagruzka dannih - # ym_visits_detali_new.
+root 2023-12-01 10:59:12,340 INFO End zagruzka dannih - ym_visits_detali_new.
+root 2023-12-01 11:04:20,565 INFO Step_1_hits. Creating a log.
+root 2023-12-01 11:04:20,826 INFO Code status 200
+NoneType: None
+root 2023-12-01 11:04:20,827 INFO Step_1_hits. Successful log request.
+root 2023-12-01 11:04:20,827 INFO Step_1_hits. Request number 32834306.
+root 2023-12-01 11:04:20,827 INFO Step_1_hits. Request status created.
+root 2023-12-01 11:04:20,827 INFO Step_2_hits. Log processing status.
+root 2023-12-01 11:04:21,063 INFO Step_2_hits. Loading data. Code 200.
+root 2023-12-01 11:06:11,231 INFO Step_2_hits. Number of parts - 1.
+root 2023-12-01 11:06:11,231 INFO Step_2_hits. Request status processed.
+root 2023-12-01 11:06:11,232 INFO Step_3_hits. Loading the log.
+root 2023-12-01 11:06:11,606 INFO Step_3_hits. Loading a log from one part.
+root 2023-12-01 11:06:11,606 INFO Step_4_hits. Deleting a log.
+root 2023-12-01 11:06:11,822 INFO Step_4_hits. Successful log deletion # 32834306.
+root 2023-12-01 11:06:11,822 INFO Step_4_hits. Deleting variables.
+root 2023-12-01 11:06:11,822 INFO Start clearing data HITS.
+root 2023-12-01 11:06:11,822 INFO Reading data HITS and writing to a dataframe.
+root 2023-12-01 11:06:11,837 INFO Renaming columns HITS.
+root 2023-12-01 11:06:11,837 INFO Clearing data HITS.
+root 2023-12-01 11:06:11,837 INFO Start zagruzka v bazu logs api HITS.
+root 2023-12-01 11:06:11,887 INFO Start zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-12-01 11:06:11,936 INFO End zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-12-01 11:06:11,937 INFO Start zagruzka dannih - ym_hits_obshee_new.
+root 2023-12-01 11:06:12,004 INFO End zagruzka dannih - ym_hits_obshee_new.
+root 2023-12-01 11:06:12,004 INFO Start zagruzka dannih - ym_hits_deystviya_new.
+root 2023-12-01 11:06:12,054 INFO End zagruzka dannih - ym_hits_deystviya_new.
+root 2023-12-01 11:06:12,054 INFO Start zagruzka dannih - ym_hits_ad_new.
+root 2023-12-01 11:06:12,105 INFO End zagruzka dannih - ym_hits_ad_new.
+root 2023-12-01 11:06:12,105 INFO Step_1_visit. Creating a log.
+root 2023-12-01 11:06:12,339 INFO Code status 200
+NoneType: None
+root 2023-12-01 11:06:12,339 INFO Step_1_visit. Successful log request.
+root 2023-12-01 11:06:12,339 INFO Step_1_visit. Request number 32834324.
+root 2023-12-01 11:06:12,339 INFO Step_1_visit. Request status created.
+root 2023-12-01 11:06:12,339 INFO Step_2_visit. Log processing status.
+root 2023-12-01 11:06:12,544 INFO Step_2_visit. Loading data. Code 200.
+root 2023-12-01 11:08:07,937 INFO Step_2_visit. Number of parts - 0.
+root 2023-12-01 11:08:07,937 INFO Step_2_visit. Request status processed.
+root 2023-12-01 11:08:07,937 INFO Step_3_visit. Loading the log.
+root 2023-12-01 11:08:08,307 INFO Step_3_visit. Loading a log from one part.
+root 2023-12-01 11:08:08,308 INFO Step_3_visit. Loading 0 parts of the log.
+root 2023-12-01 11:08:08,308 INFO Step_4_visit. Deleting a log.
+root 2023-12-01 11:08:08,534 INFO Step_4_visit. Successful log deletion # 32834324.
+root 2023-12-01 11:08:08,534 INFO Step_4_visit. Deleting variables.
+root 2023-12-01 11:08:08,535 INFO Start clearing data VISITS.
+root 2023-12-01 11:08:08,535 INFO Reading data VISITS and writing to a dataframe.
+root 2023-12-01 11:08:08,545 INFO Renaming columns VISITS.
+root 2023-12-01 11:08:08,547 INFO Clearing data VISITS.
+root 2023-12-01 11:08:08,568 INFO Start zagruzka v bazu logs api VISITS.
+root 2023-12-01 11:08:08,609 INFO Start zagruzka dannih - ym_visits_obshee_new.
+root 2023-12-01 11:08:08,623 INFO End zagruzka dannih - ym_visits_obshee_new.
+root 2023-12-01 11:08:08,623 INFO Start zagruzka dannih - # ym_visits_detali_new.
+root 2023-12-01 11:08:08,640 INFO End zagruzka dannih - ym_visits_detali_new.
+root 2023-12-01 11:14:32,974 INFO Step_1_hits. Creating a log.
+root 2023-12-01 11:14:33,313 INFO Code status 200
+NoneType: None
+root 2023-12-01 11:14:33,314 INFO Step_1_hits. Successful log request.
+root 2023-12-01 11:14:33,314 INFO Step_1_hits. Request number 32834434.
+root 2023-12-01 11:14:33,314 INFO Step_1_hits. Request status created.
+root 2023-12-01 11:14:33,314 INFO Step_2_hits. Log processing status.
+root 2023-12-01 11:14:33,520 INFO Step_2_hits. Loading data. Code 200.
+root 2023-12-01 11:15:10,823 INFO Step_2_hits. Number of parts - 1.
+root 2023-12-01 11:15:10,823 INFO Step_2_hits. Request status processed.
+root 2023-12-01 11:15:10,824 INFO Step_3_hits. Loading the log.
+root 2023-12-01 11:15:11,373 INFO Step_3_hits. Loading a log from one part.
+root 2023-12-01 11:15:11,373 INFO Step_4_hits. Deleting a log.
+root 2023-12-01 11:15:11,601 INFO Step_4_hits. Successful log deletion # 32834434.
+root 2023-12-01 11:15:11,601 INFO Step_4_hits. Deleting variables.
+root 2023-12-01 11:15:11,601 INFO Start clearing data HITS.
+root 2023-12-01 11:15:11,601 INFO Reading data HITS and writing to a dataframe.
+root 2023-12-01 11:15:11,637 INFO Renaming columns HITS.
+root 2023-12-01 11:15:11,638 INFO Clearing data HITS.
+root 2023-12-01 11:15:11,646 INFO Start zagruzka v bazu logs api HITS.
+root 2023-12-01 11:15:11,690 INFO Start zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-12-01 11:15:11,769 INFO End zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-12-01 11:15:11,769 INFO Start zagruzka dannih - ym_hits_obshee_new.
+root 2023-12-01 11:15:11,832 ERROR Error: oshibka zagruzki v tablitsu - ym_hits_obshee_new - (psycopg2.errors.NumericValueOutOfRange) smallint out of range
+
+[SQL: INSERT INTO public.ym_hits_obshee_new (counter_user_id_hash, client_id, watch_id, date_event, datetime_event, counter_id, device_category, region_city, region_city_id, region_country, region_country_id, last_traffic_source, referer, ip_address, is_pa ... 376166 characters truncated ... ic_source__999)s, %(referer__999)s, %(ip_address__999)s, %(is_page_view__999)s, %(artificial__999)s)]
+[parameters: {'referer__0': 'https://google.com/', 'artificial__0': 0, 'last_traffic_source__0': 'organic', 'is_page_view__0': 1, 'date_event__0': '2023-11-29', 'region_country_id__0': 225, 'counter_user_id_hash__0': '7710653258328695435', 'client_id__0': '1701269053641366769', 'watch_id__0': '7103120254365597831', 'counter_id__0': 31318467, 'datetime_event__0': '2023-11-29 21:44:13', 'region_city_id__0': 197, 'device_category__0': 2, 'region_city__0': 'Barnaul', 'ip_address__0': '188.162.72.xxx', 'region_country__0': 'Russia', 'referer__1': None, 'artificial__1': 1, 'last_traffic_source__1': 'direct', 'is_page_view__1': 0, 'date_event__1': '2023-11-29', 'region_country_id__1': 225, 'counter_user_id_hash__1': '7710653258328695435', 'client_id__1': '1701269053641366769', 'watch_id__1': '7103124156450078798', 'counter_id__1': 31318467, 'datetime_event__1': '2023-11-29 21:44:28', 'region_city_id__1': 197, 'device_category__1': 2, 'region_city__1': 'Barnaul', 'ip_address__1': '188.162.72.xxx', 'region_country__1': 'Russia', 'referer__2': 'https://link.2gis.ru/', 'artificial__2': 0, 'last_traffic_source__2': 'referral', 'is_page_view__2': 1, 'date_event__2': '2023-11-29', 'region_country_id__2': 225, 'counter_user_id_hash__2': '9753612770245310035', 'client_id__2': '1701239634503110217', 'watch_id__2': '7095407592209121336', 'counter_id__2': 31318467, 'datetime_event__2': '2023-11-29 13:33:51', 'region_city_id__2': 65, 'device_category__2': 1, 'region_city__2': 'Novosibirsk', 'ip_address__2': '37.192.136.xxx', 'region_country__2': 'Russia', 'referer__3': 'https://sz154.com/', 'artificial__3': 0 ... 15900 parameters truncated ... 'ip_address__996': '5.128.28.xxx', 'region_country__996': 'Russia', 'referer__997': 'https://yandex.ru/', 'artificial__997': 0, 'last_traffic_source__997': 'organic', 'is_page_view__997': 1, 'date_event__997': '2023-11-30', 'region_country_id__997': 225, 'counter_user_id_hash__997': '11698474264872626683', 'client_id__997': '1701289999659439593', 'watch_id__997': '7108611285310767389', 'counter_id__997': 31318467, 'datetime_event__997': '2023-11-30 03:33:20', 'region_city_id__997': 213, 'device_category__997': 2, 'region_city__997': 'Moscow', 'ip_address__997': '176.59.172.xxx', 'region_country__997': 'Russia', 'referer__998': 'https://sz154.com/catalog/nissan/bluebird/autopart-zerkalo', 'artificial__998': 0, 'last_traffic_source__998': 'internal', 'is_page_view__998': 1, 'date_event__998': '2023-11-30', 'region_country_id__998': 225, 'counter_user_id_hash__998': '14846806938302209559', 'client_id__998': '1700800494609300463', 'watch_id__998': '7115476286389354616', 'counter_id__998': 31318467, 'datetime_event__998': '2023-11-30 10:49:47', 'region_city_id__998': 67, 'device_category__998': 1, 'region_city__998': 'Tomsk', 'ip_address__998': '78.140.8.xxx', 'region_country__998': 'Russia', 'referer__999': 'https://sz154.com/products/zerkalo---bluebird-eu14-5k-levo---serebro-kl0---', 'artificial__999': 0, 'last_traffic_source__999': 'internal', 'is_page_view__999': 1, 'date_event__999': '2023-11-30', 'region_country_id__999': 225, 'counter_user_id_hash__999': '14846806938302209559', 'client_id__999': '1700800494609300463', 'watch_id__999': '7115477837954416655', 'counter_id__999': 31318467, 'datetime_event__999': '2023-11-30 10:49:53', 'region_city_id__999': 67, 'device_category__999': 1, 'region_city__999': 'Tomsk', 'ip_address__999': '78.140.8.xxx', 'region_country__999': 'Russia'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+Traceback (most recent call last):
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2112, in _exec_insertmany_context
+    dialect.do_execute(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.NumericValueOutOfRange: smallint out of range
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "e:\Projects\tb\data_collection\ya_metric\zagruzka_v_db.py", line 47, in ya_hits_to_bd
+    col.to_sql('ym_hits_obshee_new', engine, schema='public', if_exists='append', index=False)
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1958, in to_sql
+    total_inserted = sql_engine.insert_records(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1507, in insert_records
+    raise err
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1498, in insert_records
+    return table.insert(chunksize=chunksize, method=method)
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1059, in insert
+    num_inserted = exec_insert(conn, keys, chunk_iter)
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 951, in _execute_insert
+    result = conn.execute(self.table.insert(), data)
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\sql\elements.py", line 516, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1639, in _execute_clauseelement
+    ret = self._execute_context(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_insertmany_context(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2120, in _exec_insertmany_context
+    self._handle_dbapi_exception(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2343, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2112, in _exec_insertmany_context
+    dialect.do_execute(
+  File "e:\Projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (psycopg2.errors.NumericValueOutOfRange) smallint out of range
+
+[SQL: INSERT INTO public.ym_hits_obshee_new (counter_user_id_hash, client_id, watch_id, date_event, datetime_event, counter_id, device_category, region_city, region_city_id, region_country, region_country_id, last_traffic_source, referer, ip_address, is_pa ... 376166 characters truncated ... ic_source__999)s, %(referer__999)s, %(ip_address__999)s, %(is_page_view__999)s, %(artificial__999)s)]
+[parameters: {'referer__0': 'https://google.com/', 'artificial__0': 0, 'last_traffic_source__0': 'organic', 'is_page_view__0': 1, 'date_event__0': '2023-11-29', 'region_country_id__0': 225, 'counter_user_id_hash__0': '7710653258328695435', 'client_id__0': '1701269053641366769', 'watch_id__0': '7103120254365597831', 'counter_id__0': 31318467, 'datetime_event__0': '2023-11-29 21:44:13', 'region_city_id__0': 197, 'device_category__0': 2, 'region_city__0': 'Barnaul', 'ip_address__0': '188.162.72.xxx', 'region_country__0': 'Russia', 'referer__1': None, 'artificial__1': 1, 'last_traffic_source__1': 'direct', 'is_page_view__1': 0, 'date_event__1': '2023-11-29', 'region_country_id__1': 225, 'counter_user_id_hash__1': '7710653258328695435', 'client_id__1': '1701269053641366769', 'watch_id__1': '7103124156450078798', 'counter_id__1': 31318467, 'datetime_event__1': '2023-11-29 21:44:28', 'region_city_id__1': 197, 'device_category__1': 2, 'region_city__1': 'Barnaul', 'ip_address__1': '188.162.72.xxx', 'region_country__1': 'Russia', 'referer__2': 'https://link.2gis.ru/', 'artificial__2': 0, 'last_traffic_source__2': 'referral', 'is_page_view__2': 1, 'date_event__2': '2023-11-29', 'region_country_id__2': 225, 'counter_user_id_hash__2': '9753612770245310035', 'client_id__2': '1701239634503110217', 'watch_id__2': '7095407592209121336', 'counter_id__2': 31318467, 'datetime_event__2': '2023-11-29 13:33:51', 'region_city_id__2': 65, 'device_category__2': 1, 'region_city__2': 'Novosibirsk', 'ip_address__2': '37.192.136.xxx', 'region_country__2': 'Russia', 'referer__3': 'https://sz154.com/', 'artificial__3': 0 ... 15900 parameters truncated ... 'ip_address__996': '5.128.28.xxx', 'region_country__996': 'Russia', 'referer__997': 'https://yandex.ru/', 'artificial__997': 0, 'last_traffic_source__997': 'organic', 'is_page_view__997': 1, 'date_event__997': '2023-11-30', 'region_country_id__997': 225, 'counter_user_id_hash__997': '11698474264872626683', 'client_id__997': '1701289999659439593', 'watch_id__997': '7108611285310767389', 'counter_id__997': 31318467, 'datetime_event__997': '2023-11-30 03:33:20', 'region_city_id__997': 213, 'device_category__997': 2, 'region_city__997': 'Moscow', 'ip_address__997': '176.59.172.xxx', 'region_country__997': 'Russia', 'referer__998': 'https://sz154.com/catalog/nissan/bluebird/autopart-zerkalo', 'artificial__998': 0, 'last_traffic_source__998': 'internal', 'is_page_view__998': 1, 'date_event__998': '2023-11-30', 'region_country_id__998': 225, 'counter_user_id_hash__998': '14846806938302209559', 'client_id__998': '1700800494609300463', 'watch_id__998': '7115476286389354616', 'counter_id__998': 31318467, 'datetime_event__998': '2023-11-30 10:49:47', 'region_city_id__998': 67, 'device_category__998': 1, 'region_city__998': 'Tomsk', 'ip_address__998': '78.140.8.xxx', 'region_country__998': 'Russia', 'referer__999': 'https://sz154.com/products/zerkalo---bluebird-eu14-5k-levo---serebro-kl0---', 'artificial__999': 0, 'last_traffic_source__999': 'internal', 'is_page_view__999': 1, 'date_event__999': '2023-11-30', 'region_country_id__999': 225, 'counter_user_id_hash__999': '14846806938302209559', 'client_id__999': '1700800494609300463', 'watch_id__999': '7115477837954416655', 'counter_id__999': 31318467, 'datetime_event__999': '2023-11-30 10:49:53', 'region_city_id__999': 67, 'device_category__999': 1, 'region_city__999': 'Tomsk', 'ip_address__999': '78.140.8.xxx', 'region_country__999': 'Russia'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+root 2023-12-01 11:15:11,832 INFO Start zagruzka dannih - ym_hits_deystviya_new.
+root 2023-12-01 11:15:11,925 INFO End zagruzka dannih - ym_hits_deystviya_new.
+root 2023-12-01 11:15:11,925 INFO Start zagruzka dannih - ym_hits_ad_new.
+root 2023-12-01 11:15:12,011 INFO End zagruzka dannih - ym_hits_ad_new.
+root 2023-12-01 11:21:05,912 INFO Step_1_hits. Creating a log.
+root 2023-12-01 11:21:06,167 INFO Code status 200
+NoneType: None
+root 2023-12-01 11:21:06,167 INFO Step_1_hits. Successful log request.
+root 2023-12-01 11:21:06,167 INFO Step_1_hits. Request number 32834526.
+root 2023-12-01 11:21:06,167 INFO Step_1_hits. Request status created.
+root 2023-12-01 11:21:06,167 INFO Step_2_hits. Log processing status.
+root 2023-12-01 11:21:06,363 INFO Step_2_hits. Loading data. Code 200.
+root 2023-12-01 11:22:09,102 INFO Step_2_hits. Number of parts - 1.
+root 2023-12-01 11:22:09,102 INFO Step_2_hits. Request status processed.
+root 2023-12-01 11:22:09,102 INFO Step_3_hits. Loading the log.
+root 2023-12-01 11:22:09,546 INFO Step_3_hits. Loading a log from one part.
+root 2023-12-01 11:22:09,547 INFO Step_4_hits. Deleting a log.
+root 2023-12-01 11:22:09,769 INFO Step_4_hits. Successful log deletion # 32834526.
+root 2023-12-01 11:22:09,769 INFO Step_4_hits. Deleting variables.
+root 2023-12-01 11:22:09,775 INFO Start clearing data HITS.
+root 2023-12-01 11:22:09,775 INFO Reading data HITS and writing to a dataframe.
+root 2023-12-01 11:22:09,798 INFO Renaming columns HITS.
+root 2023-12-01 11:22:09,799 INFO Clearing data HITS.
+root 2023-12-01 11:22:09,807 INFO Start zagruzka v bazu logs api HITS.
+root 2023-12-01 11:22:09,850 INFO Start zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-12-01 11:22:09,929 INFO End zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-12-01 11:22:09,929 INFO Start zagruzka dannih - ym_hits_obshee_new.
+root 2023-12-01 11:22:10,045 INFO End zagruzka dannih - ym_hits_obshee_new.
+root 2023-12-01 11:22:10,045 INFO Start zagruzka dannih - ym_hits_deystviya_new.
+root 2023-12-01 11:22:10,130 INFO End zagruzka dannih - ym_hits_deystviya_new.
+root 2023-12-01 11:22:10,130 INFO Start zagruzka dannih - ym_hits_ad_new.
+root 2023-12-01 11:22:10,232 INFO End zagruzka dannih - ym_hits_ad_new.
+root 2023-12-01 11:23:32,377 INFO Step_1_visit. Creating a log.
+root 2023-12-01 11:23:32,634 INFO Code status 200
+NoneType: None
+root 2023-12-01 11:23:32,635 INFO Step_1_visit. Successful log request.
+root 2023-12-01 11:23:32,635 INFO Step_1_visit. Request number 32834558.
+root 2023-12-01 11:23:32,635 INFO Step_1_visit. Request status created.
+root 2023-12-01 11:23:32,635 INFO Step_2_visit. Log processing status.
+root 2023-12-01 11:23:32,827 INFO Step_2_visit. Loading data. Code 200.
+root 2023-12-01 11:24:09,388 INFO Step_2_visit. Number of parts - 0.
+root 2023-12-01 11:24:09,388 INFO Step_2_visit. Request status processed.
+root 2023-12-01 11:24:09,388 INFO Step_3_visit. Loading the log.
+root 2023-12-01 11:24:09,729 INFO Step_3_visit. Loading a log from one part.
+root 2023-12-01 11:24:09,730 INFO Step_3_visit. Loading 0 parts of the log.
+root 2023-12-01 11:24:09,730 INFO Step_4_visit. Deleting a log.
+root 2023-12-01 11:24:09,953 INFO Step_4_visit. Successful log deletion # 32834558.
+root 2023-12-01 11:24:09,953 INFO Step_4_visit. Deleting variables.
+root 2023-12-01 11:24:09,954 INFO Start clearing data VISITS.
+root 2023-12-01 11:24:09,954 INFO Reading data VISITS and writing to a dataframe.
+root 2023-12-01 11:24:09,961 INFO Renaming columns VISITS.
+root 2023-12-01 11:24:09,963 INFO Clearing data VISITS.
+root 2023-12-01 11:24:09,982 INFO Start zagruzka v bazu logs api VISITS.
+root 2023-12-01 11:24:10,026 INFO Start zagruzka dannih - ym_visits_obshee_new.
+root 2023-12-01 11:24:10,049 INFO End zagruzka dannih - ym_visits_obshee_new.
+root 2023-12-01 11:24:10,049 INFO Start zagruzka dannih - # ym_visits_detali_new.
+root 2023-12-01 11:24:10,060 INFO End zagruzka dannih - ym_visits_detali_new.
+root 2023-12-01 11:25:53,319 INFO Otpravka soobsheniya v telegram.
+root 2023-12-01 11:25:53,677 INFO Soobshenie v telegram otpravleno.
+root 2023-12-01 11:31:00,868 INFO Otpravka soobsheniya v telegram.
+root 2023-12-01 11:31:01,301 INFO Soobshenie v telegram otpravleno.
+root 2023-12-01 11:45:28,853 INFO Otpravka soobsheniya v telegram.
+root 2023-12-01 11:45:29,186 INFO Soobshenie v telegram otpravleno.

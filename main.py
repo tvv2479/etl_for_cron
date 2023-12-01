@@ -26,9 +26,9 @@ with engine.connect() as conn:
     for row in result:
         row
         
-start_date = row[0] + timedelta(days=1)
+start_date = row[0]
 
-DATE1 = start_date.strftime('%Y-%m-%d')
+DATE1 = (start_date + timedelta(days=1)).strftime('%Y-%m-%d')
 DATE2 = end_date.strftime('%Y-%m-%d')
 
 dateDelta = int((end_date - start_date).total_seconds()/86400)
@@ -48,7 +48,7 @@ with engine.connect() as conn:
         row
         
 start_date = row[0] + timedelta(days=1)
-DATE1 = start_date.strftime('%Y-%m-%d')
+DATE1 = (start_date + timedelta(days=1)).strftime('%Y-%m-%d')
 
 dateDelta = int((end_date - start_date).total_seconds()/86400)
 
@@ -60,7 +60,7 @@ if dateDelta > 0:
     zagruzka_v_db.ya_visits_to_bd(clean_visit)
 #%%
 # Удаление файлов логов
-logs = glob(fr"G:/py.projects/tb/data_collection/logs/*.log")
+logs = glob(fr"E:\Projects\tb\data_collection\logs/*.log")
 clean_logs.logs_clean(logs, 4) 
 
 # Запрос к базе 
@@ -74,17 +74,10 @@ with engine.connect() as conn:
         row2    
         
 if row1 == row2:
-    if row1 == end_date:
-        MSG = f'''Загрузка данных из яндексметрики в базу прошла успешно!\n
-        Крайняя дата:\n 
-        Таблица ym_hits_obshee_new - {row1[0]}\n
-        Таблица ym_visits_obshee_new - {row2[0]}
-       '''
-    else:
-        MSG = f'''Внимание! При загрузке данных из яндексметрики произошла ошибка.\n
-        Крайняя дата:\n 
-        Таблица ym_hits_obshee_new - {row1[0]}\n
-        Таблица ym_visits_obshee_new - {row2[0]}
+    MSG = f'''Загрузка данных из яндексметрики в базу прошла успешно!\n
+    Крайняя дата:\n 
+    Таблица ym_hits_obshee_new - {row1[0]}\n
+    Таблица ym_visits_obshee_new - {row2[0]}
        '''
 else:
     MSG = f'''Внимание!\n 
@@ -95,14 +88,6 @@ else:
        
 # Отправка сообщения в Телеграм
 bot.bot_maccege(MSG)
+#%%
 
 del log_load, data_hit, clean_hit, data_visit, clean_visit
-
-
-# %%
-DATE1
-# %%
-DATE2
-# %%
-row[0]
-# %%
