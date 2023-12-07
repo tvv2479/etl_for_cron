@@ -1,0 +1,111 @@
+root 2023-12-05 13:15:39,860 INFO site.dataSite(). Polychenie dannih s saita.
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:15:39,862 WARNING Could not read SSH configuration file: ~/.ssh\config
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:15:40,026 INFO 0 keys loaded from agent
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:15:40,027 INFO 0 key(s) loaded
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:15:40,028 INFO Connecting to gateway: 194.38.9.81:22 as user 'poweruser'
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:15:40,029 DEBUG Concurrent connections allowed: True
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:15:40,030 DEBUG Trying to log in with password: ***************
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:15:40,036 DEBUG Transport socket info: (<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 0), timeout=0.1
+paramiko.transport 2023-12-05 13:15:40,081 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-05 13:15:40,847 INFO Authentication (password) successful!
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:15:40,854 INFO Opening tunnel: 0.0.0.0:63344 <> 127.0.0.1:3306
+py.warnings 2023-12-05 13:15:41,317 WARNING <ipython-input-4-062e367f825a>:29: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, connection)
+
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:15:43,998 INFO Closing all open connections...
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:15:44,000 DEBUG Listening tunnels: 0.0.0.0:63344
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:15:44,001 INFO Shutting down tunnel: 0.0.0.0:63344 <> 127.0.0.1:3306 (up)
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:15:44,053 INFO Tunnel: 0.0.0.0:63344 <> 127.0.0.1:3306 released
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:15:44,054 INFO Closing ssh transport
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:15:44,059 DEBUG Transport is closed
+root 2023-12-05 13:15:44,060 INFO site.dataSite(). Dannie polucheni yspeshno.
+root 2023-12-05 13:18:11,752 INFO site.dataSite(). Polychenie dannih s saita.
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:18:11,753 WARNING Could not read SSH configuration file: ~/.ssh\config
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:18:11,755 INFO 0 keys loaded from agent
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:18:11,756 INFO 0 key(s) loaded
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:18:11,757 INFO Connecting to gateway: 194.38.9.81:22 as user 'poweruser'
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:18:11,758 DEBUG Concurrent connections allowed: True
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:18:11,759 DEBUG Trying to log in with password: ***************
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:18:11,764 DEBUG Transport socket info: (<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 0), timeout=0.1
+paramiko.transport 2023-12-05 13:18:11,781 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-05 13:18:12,271 INFO Authentication (password) successful!
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:18:12,449 INFO Opening tunnel: 0.0.0.0:63402 <> 127.0.0.1:3306
+py.warnings 2023-12-05 13:18:12,660 WARNING <ipython-input-4-062e367f825a>:29: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, connection)
+
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:18:15,463 INFO Closing all open connections...
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:18:15,464 DEBUG Listening tunnels: 0.0.0.0:63402
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:18:15,465 INFO Shutting down tunnel: 0.0.0.0:63402 <> 127.0.0.1:3306 (up)
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:18:15,563 INFO Tunnel: 0.0.0.0:63402 <> 127.0.0.1:3306 released
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:18:15,563 INFO Closing ssh transport
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:18:15,566 DEBUG Transport is closed
+root 2023-12-05 13:18:15,567 INFO site.dataSite(). Dannie polucheni yspeshno.
+root 2023-12-05 13:19:59,265 INFO site.dataSite(). Polychenie dannih s saita.
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:19:59,265 WARNING Could not read SSH configuration file: ~/.ssh\config
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:19:59,267 INFO 0 keys loaded from agent
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:19:59,268 INFO 0 key(s) loaded
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:19:59,270 INFO Connecting to gateway: 194.38.9.81:22 as user 'poweruser'
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:19:59,271 DEBUG Concurrent connections allowed: True
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:19:59,271 DEBUG Trying to log in with password: ***************
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:19:59,277 DEBUG Transport socket info: (<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 0), timeout=0.1
+paramiko.transport 2023-12-05 13:19:59,298 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-05 13:19:59,830 INFO Authentication (password) successful!
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:19:59,834 INFO Opening tunnel: 0.0.0.0:63450 <> 127.0.0.1:3306
+py.warnings 2023-12-05 13:20:00,229 WARNING <ipython-input-4-062e367f825a>:29: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, connection)
+
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:20:02,869 INFO Closing all open connections...
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:20:02,870 DEBUG Listening tunnels: 0.0.0.0:63450
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:20:02,871 INFO Shutting down tunnel: 0.0.0.0:63450 <> 127.0.0.1:3306 (up)
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:20:02,896 INFO Tunnel: 0.0.0.0:63450 <> 127.0.0.1:3306 released
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:20:02,897 INFO Closing ssh transport
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:20:02,900 DEBUG Transport is closed
+root 2023-12-05 13:20:02,901 INFO site.dataSite(). Dannie polucheni yspeshno.
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:32:16,105 WARNING Could not read SSH configuration file: ~/.ssh\config
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:32:16,107 INFO 0 keys loaded from agent
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:32:16,109 INFO 0 key(s) loaded
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:32:16,109 INFO Connecting to gateway: 194.38.9.81:22 as user 'poweruser'
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:32:16,110 DEBUG Concurrent connections allowed: True
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:32:16,111 DEBUG Trying to log in with password: ***************
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:32:16,115 DEBUG Transport socket info: (<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 0), timeout=0.1
+paramiko.transport 2023-12-05 13:32:16,139 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-05 13:32:16,633 INFO Authentication (password) successful!
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:32:16,636 INFO Opening tunnel: 0.0.0.0:63732 <> 127.0.0.1:3306
+root 2023-12-05 13:35:16,309 INFO site.dataSite(). Polychenie dannih s saita.
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:35:16,309 WARNING Could not read SSH configuration file: ~/.ssh\config
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:35:16,311 INFO 0 keys loaded from agent
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:35:16,313 INFO 0 key(s) loaded
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:35:16,314 INFO Connecting to gateway: 194.38.9.81:22 as user 'poweruser'
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:35:16,315 DEBUG Concurrent connections allowed: True
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:35:16,316 DEBUG Trying to log in with password: ***************
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:35:16,320 DEBUG Transport socket info: (<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 0), timeout=0.1
+paramiko.transport 2023-12-05 13:35:16,353 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-05 13:35:16,941 INFO Authentication (password) successful!
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:35:16,949 INFO Opening tunnel: 0.0.0.0:63803 <> 127.0.0.1:3306
+py.warnings 2023-12-05 13:35:17,306 WARNING <ipython-input-29-ce2082676d6b>:28: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, connection)
+
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:35:20,366 INFO Closing all open connections...
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:35:20,367 DEBUG Listening tunnels: 0.0.0.0:63803
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:35:20,368 INFO Shutting down tunnel: 0.0.0.0:63803 <> 127.0.0.1:3306 (up)
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:35:20,458 INFO Tunnel: 0.0.0.0:63803 <> 127.0.0.1:3306 released
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:35:20,460 INFO Closing ssh transport
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:35:20,461 DEBUG Transport is closed
+root 2023-12-05 13:35:20,462 INFO site.dataSite(). Dannie polucheni yspeshno.
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:37:57,249 WARNING Could not read SSH configuration file: ~/.ssh\config
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:37:57,251 INFO 0 keys loaded from agent
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:37:57,253 INFO 0 key(s) loaded
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:37:57,254 INFO Connecting to gateway: 194.38.9.81:22 as user 'poweruser'
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:37:57,255 DEBUG Concurrent connections allowed: True
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:37:57,256 DEBUG Trying to log in with password: ***************
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:37:57,262 DEBUG Transport socket info: (<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 0), timeout=0.1
+paramiko.transport 2023-12-05 13:37:57,283 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-05 13:37:57,833 INFO Authentication (password) successful!
+sshtunnel.SSHTunnelForwarder 2023-12-05 13:37:57,837 INFO Opening tunnel: 0.0.0.0:63858 <> 127.0.0.1:3306
+root 2023-12-05 13:40:40,593 INFO site.dataSite(). Polychenie dannih s saita.
+paramiko.transport 2023-12-05 13:40:40,625 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-05 13:40:40,960 INFO Authentication (password) successful!
+py.warnings 2023-12-05 13:40:41,268 WARNING <ipython-input-4-ce2082676d6b>:28: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, connection)
+
+root 2023-12-05 13:40:44,030 INFO site.dataSite(). Dannie polucheni yspeshno.
