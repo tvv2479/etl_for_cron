@@ -6,7 +6,14 @@ import requests
 import time
 from datetime import datetime
 import logging
+import configparser
 # %%
+config = configparser.ConfigParser()
+config.read("E:\Projects/tb\data_collection/config.ini")
+
+TOKEN = config['BotTel']['token']
+chat_id = config['BotTel']['chat']
+#%%
 # Настройка логирования
 current_date = datetime.now().date()
 cd = current_date.strftime('%d_%m_%Y')
@@ -19,15 +26,13 @@ logging.basicConfig(level=logging.INFO, filename=log_file, filemode="a",
 
 # Отправляем сообщение
 
-def bot_maccege(msg):
+def bot_message(msg):
     '''
     msg - Текст сообщения в фомате str
     '''
     logging.info("Otpravka soobsheniya v telegram.")
     
     try:
-        TOKEN = "6600334329:AAHnVWe50AzUhBAhw76xn9d1BEoidEvKZiM"
-        chat_id = "87726530"
         message = msg
         url = f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={chat_id}&text={message}"
         # print(requests.get(url).json()) # Эта строка отсылает сообщение

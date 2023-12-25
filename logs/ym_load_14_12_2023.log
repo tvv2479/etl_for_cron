@@ -1,0 +1,412 @@
+paramiko.transport 2023-12-14 12:38:40,209 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-14 12:38:40,885 INFO Authentication (password) successful!
+py.warnings 2023-12-14 12:38:41,458 WARNING <ipython-input-7-bae49922f8fe>:31: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, connection)
+
+root 2023-12-14 12:38:41,578 INFO site.dataSite(). Dannie polucheni yspeshno.
+paramiko.transport 2023-12-14 12:47:21,965 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-14 12:47:22,456 INFO Authentication (password) successful!
+py.warnings 2023-12-14 12:47:22,900 WARNING <ipython-input-7-bae49922f8fe>:31: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, connection)
+
+root 2023-12-14 12:47:22,948 ERROR site.dataSite(). Oshibka polycheniya dannih - Execution failed on sql '
+    select bso.id, user_id, bso.status_id, bso.account_number, bso.additional_info, 
+           bso.affiliate_id, bso.allow_delivery, bso.bx_user_id, bso.canceled, bso."comments", bso.company_id, 
+           bso.created_by, bso.currency, bso.date_allow_delivery, bso.date_bill, bso.date_canceled, 
+           bso.date_deducted, bso.date_insert, bso.date_lock, bso.date_marked, bso.date_pay_before, 
+           bso.date_payed, bso.date_status, bso.date_update, bso.deducted, bso.delivery_doc_date, 
+           bso.delivery_doc_num, bso.delivery_id, bso.discount_value, bso.emp_allow_delivery_id, 
+           bso.emp_canceled_id, bso.emp_deducted_id, bso.emp_marked_id, bso.emp_payed_id, 
+           bso.emp_status_id, bso.external_order, bso.id_1c, bso.is_recurring, bso.is_sync_b24, bso.lid, 
+           bso.locked_by, bso.marked, bso.order_topic, bso.pay_system_id, bso.pay_voucher_date, 
+           bso.pay_voucher_num, bso.payed, bso.person_type_id, bso.price, bso.price_delivery, bso.price_payment, 
+           bso.ps_currency, bso.ps_response_date, bso.ps_status, bso.ps_status_code, bso.ps_status_description, 
+           bso.ps_status_message, bso.ps_sum, bso.reason_canceled, bso.reason_marked, bso.reason_uno_deducted, 
+           bso.recount_flag, bso.recurring_id, bso.reserved, bso.responsible_id, bso.running, bso.search_content, 
+           bso.stat_gid, bso.store_id, bso.sum_paid, bso.tax_value, bso.tracking_number, bso.updated_1c, 
+           bso.user_description, bso."version", bso.version_1c, bsopv.value as promocode
+      from b_sale_order bso
+           join (select order_id,
+                        value
+                   from b_sale_order_props_value  
+                  where name = 'Промокод') as bsopv
+                on bso.id = bsopv.order_id
+      where date(bso.date_update) BETWEEN 2023-12-13 AND 2023-12-13
+    ': (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'"comments", bso.company_id, \n           bso.created_by, bso.currency, bso.date_a\' at line 2')
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 2264, in execute
+    cur.execute(sql, *args)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\connections.py", line 822, in _read_query_result
+    result.read()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'"comments", bso.company_id, \n           bso.created_by, bso.currency, bso.date_a\' at line 2')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<ipython-input-7-bae49922f8fe>", line 31, in dataSite
+    df = pd.read_sql_query(query, connection)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 486, in read_sql_query
+    return pandas_sql.read_query(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 2328, in read_query
+    cursor = self.execute(sql, params)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 2276, in execute
+    raise ex from exc
+pandas.errors.DatabaseError: Execution failed on sql '
+    select bso.id, user_id, bso.status_id, bso.account_number, bso.additional_info, 
+           bso.affiliate_id, bso.allow_delivery, bso.bx_user_id, bso.canceled, bso."comments", bso.company_id, 
+           bso.created_by, bso.currency, bso.date_allow_delivery, bso.date_bill, bso.date_canceled, 
+           bso.date_deducted, bso.date_insert, bso.date_lock, bso.date_marked, bso.date_pay_before, 
+           bso.date_payed, bso.date_status, bso.date_update, bso.deducted, bso.delivery_doc_date, 
+           bso.delivery_doc_num, bso.delivery_id, bso.discount_value, bso.emp_allow_delivery_id, 
+           bso.emp_canceled_id, bso.emp_deducted_id, bso.emp_marked_id, bso.emp_payed_id, 
+           bso.emp_status_id, bso.external_order, bso.id_1c, bso.is_recurring, bso.is_sync_b24, bso.lid, 
+           bso.locked_by, bso.marked, bso.order_topic, bso.pay_system_id, bso.pay_voucher_date, 
+           bso.pay_voucher_num, bso.payed, bso.person_type_id, bso.price, bso.price_delivery, bso.price_payment, 
+           bso.ps_currency, bso.ps_response_date, bso.ps_status, bso.ps_status_code, bso.ps_status_description, 
+           bso.ps_status_message, bso.ps_sum, bso.reason_canceled, bso.reason_marked, bso.reason_uno_deducted, 
+           bso.recount_flag, bso.recurring_id, bso.reserved, bso.responsible_id, bso.running, bso.search_content, 
+           bso.stat_gid, bso.store_id, bso.sum_paid, bso.tax_value, bso.tracking_number, bso.updated_1c, 
+           bso.user_description, bso."version", bso.version_1c, bsopv.value as promocode
+      from b_sale_order bso
+           join (select order_id,
+                        value
+                   from b_sale_order_props_value  
+                  where name = 'Промокод') as bsopv
+                on bso.id = bsopv.order_id
+      where date(bso.date_update) BETWEEN 2023-12-13 AND 2023-12-13
+    ': (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'"comments", bso.company_id, \n           bso.created_by, bso.currency, bso.date_a\' at line 2')
+paramiko.transport 2023-12-14 13:03:52,659 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-14 13:03:52,996 INFO Authentication (password) successful!
+py.warnings 2023-12-14 13:03:53,417 WARNING <ipython-input-7-bae49922f8fe>:31: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, connection)
+
+root 2023-12-14 13:03:56,515 INFO site.dataSite(). Dannie polucheni yspeshno.
+paramiko.transport 2023-12-14 13:08:26,482 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-14 13:08:26,892 INFO Authentication (password) successful!
+py.warnings 2023-12-14 13:08:27,287 WARNING <ipython-input-7-bae49922f8fe>:31: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, connection)
+
+root 2023-12-14 13:08:30,410 INFO site.dataSite(). Dannie polucheni yspeshno.
+paramiko.transport 2023-12-14 13:17:51,862 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-14 13:17:52,211 INFO Authentication (password) successful!
+py.warnings 2023-12-14 13:17:52,634 WARNING <ipython-input-7-bae49922f8fe>:31: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, connection)
+
+root 2023-12-14 13:17:52,684 ERROR site.dataSite(). Oshibka polycheniya dannih - Execution failed on sql '
+    select bso.id, user_id, bso.status_id, bso.account_number, bso.additional_info, 
+           bso.affiliate_id, bso.allow_delivery, bso.bx_user_id, bso.canceled, bso.comments, bso.company_id,
+           bso.created_by, bso.currency, bso.date_allow_delivery, bso.date_bill, bso.date_canceled,
+           bso.date_deducted, bso.date_insert, bso.date_lock, bso.date_marked, bso.date_pay_before, 
+           bso.date_payed, bso.date_status, bso.date_update, bso.deducted, bso.delivery_doc_date, 
+           bso.delivery_doc_num, bso.delivery_id, bso.discount_value, bso.emp_allow_delivery_id, 
+           bso.emp_canceled_id, bso.emp_deducted_id, bso.emp_marked_id, bso.emp_payed_id, 
+           bso.emp_status_id, bso.external_order, bso.id_1c, bso.is_recurring, bso.is_sync_b24, bso.lid, 
+           bso.locked_by, bso.marked, bso.order_topic, bso.pay_system_id, bso.pay_voucher_date, 
+           bso.pay_voucher_num, bso.payed, bso.person_type_id, bso.price, bso.price_delivery, bso.price_payment, 
+           bso.ps_currency, bso.ps_response_date, bso.ps_status, bso.ps_status_code, bso.ps_status_description, 
+           bso.ps_status_message, bso.ps_sum, bso.reason_canceled, bso.reason_marked, bso.reason_undo_deducted, 
+           bso.recount_flag, bso.recurring_id, bso.reserved, bso.responsible_id, bso.running, bso.search_content, 
+           bso.stat_gid, bso.store_id, bso.sum_paid, bso.tax_value, bso.tracking_number, bso.updated_1c, 
+           bso.user_description, bso.version, bso.version_1c, bsopv.value as promocode
+      from b_sale_order bso
+           join (select order_id,
+                        value
+                   from b_sale_order_props_value  
+                  where name = 'Промокод') as bsopv
+                on bso.id = bsopv.order_id
+      where date(bso.date_update) BETWEEN '2023-12-13 AND '2023-12-13'
+    ': (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2023-12-13'' at line 22")
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 2264, in execute
+    cur.execute(sql, *args)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\connections.py", line 822, in _read_query_result
+    result.read()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2023-12-13'' at line 22")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<ipython-input-7-bae49922f8fe>", line 31, in dataSite
+    df = pd.read_sql_query(query, connection)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 486, in read_sql_query
+    return pandas_sql.read_query(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 2328, in read_query
+    cursor = self.execute(sql, params)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 2276, in execute
+    raise ex from exc
+pandas.errors.DatabaseError: Execution failed on sql '
+    select bso.id, user_id, bso.status_id, bso.account_number, bso.additional_info, 
+           bso.affiliate_id, bso.allow_delivery, bso.bx_user_id, bso.canceled, bso.comments, bso.company_id,
+           bso.created_by, bso.currency, bso.date_allow_delivery, bso.date_bill, bso.date_canceled,
+           bso.date_deducted, bso.date_insert, bso.date_lock, bso.date_marked, bso.date_pay_before, 
+           bso.date_payed, bso.date_status, bso.date_update, bso.deducted, bso.delivery_doc_date, 
+           bso.delivery_doc_num, bso.delivery_id, bso.discount_value, bso.emp_allow_delivery_id, 
+           bso.emp_canceled_id, bso.emp_deducted_id, bso.emp_marked_id, bso.emp_payed_id, 
+           bso.emp_status_id, bso.external_order, bso.id_1c, bso.is_recurring, bso.is_sync_b24, bso.lid, 
+           bso.locked_by, bso.marked, bso.order_topic, bso.pay_system_id, bso.pay_voucher_date, 
+           bso.pay_voucher_num, bso.payed, bso.person_type_id, bso.price, bso.price_delivery, bso.price_payment, 
+           bso.ps_currency, bso.ps_response_date, bso.ps_status, bso.ps_status_code, bso.ps_status_description, 
+           bso.ps_status_message, bso.ps_sum, bso.reason_canceled, bso.reason_marked, bso.reason_undo_deducted, 
+           bso.recount_flag, bso.recurring_id, bso.reserved, bso.responsible_id, bso.running, bso.search_content, 
+           bso.stat_gid, bso.store_id, bso.sum_paid, bso.tax_value, bso.tracking_number, bso.updated_1c, 
+           bso.user_description, bso.version, bso.version_1c, bsopv.value as promocode
+      from b_sale_order bso
+           join (select order_id,
+                        value
+                   from b_sale_order_props_value  
+                  where name = 'Промокод') as bsopv
+                on bso.id = bsopv.order_id
+      where date(bso.date_update) BETWEEN '2023-12-13 AND '2023-12-13'
+    ': (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2023-12-13'' at line 22")
+paramiko.transport 2023-12-14 13:20:12,735 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-14 13:20:13,122 INFO Authentication (password) successful!
+py.warnings 2023-12-14 13:20:13,551 WARNING <ipython-input-20-bae49922f8fe>:31: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, connection)
+
+root 2023-12-14 13:20:13,600 ERROR site.dataSite(). Oshibka polycheniya dannih - Execution failed on sql '
+    select bso.id, user_id, bso.status_id, bso.account_number, bso.additional_info, 
+           bso.affiliate_id, bso.allow_delivery, bso.bx_user_id, bso.canceled, bso.comments, bso.company_id,
+           bso.created_by, bso.currency, bso.date_allow_delivery, bso.date_bill, bso.date_canceled,
+           bso.date_deducted, bso.date_insert, bso.date_lock, bso.date_marked, bso.date_pay_before, 
+           bso.date_payed, bso.date_status, bso.date_update, bso.deducted, bso.delivery_doc_date, 
+           bso.delivery_doc_num, bso.delivery_id, bso.discount_value, bso.emp_allow_delivery_id, 
+           bso.emp_canceled_id, bso.emp_deducted_id, bso.emp_marked_id, bso.emp_payed_id, 
+           bso.emp_status_id, bso.external_order, bso.id_1c, bso.is_recurring, bso.is_sync_b24, bso.lid, 
+           bso.locked_by, bso.marked, bso.order_topic, bso.pay_system_id, bso.pay_voucher_date, 
+           bso.pay_voucher_num, bso.payed, bso.person_type_id, bso.price, bso.price_delivery, bso.price_payment, 
+           bso.ps_currency, bso.ps_response_date, bso.ps_status, bso.ps_status_code, bso.ps_status_description, 
+           bso.ps_status_message, bso.ps_sum, bso.reason_canceled, bso.reason_marked, bso.reason_undo_deducted, 
+           bso.recount_flag, bso.recurring_id, bso.reserved, bso.responsible_id, bso.running, bso.search_content, 
+           bso.stat_gid, bso.store_id, bso.sum_paid, bso.tax_value, bso.tracking_number, bso.updated_1c, 
+           bso.user_description, bso.version, bso.version_1c, bsopv.value as promocode
+      from b_sale_order bso
+           join (select order_id,
+                        value
+                   from b_sale_order_props_value  
+                  where name = 'Промокод') as bsopv
+                on bso.id = bsopv.order_id
+      where date(bso.date_update) BETWEEN '2023-12-13 AND '2023-12-13'
+    ': (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2023-12-13'' at line 22")
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 2264, in execute
+    cur.execute(sql, *args)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\connections.py", line 822, in _read_query_result
+    result.read()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2023-12-13'' at line 22")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<ipython-input-20-bae49922f8fe>", line 31, in dataSite
+    df = pd.read_sql_query(query, connection)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 486, in read_sql_query
+    return pandas_sql.read_query(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 2328, in read_query
+    cursor = self.execute(sql, params)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 2276, in execute
+    raise ex from exc
+pandas.errors.DatabaseError: Execution failed on sql '
+    select bso.id, user_id, bso.status_id, bso.account_number, bso.additional_info, 
+           bso.affiliate_id, bso.allow_delivery, bso.bx_user_id, bso.canceled, bso.comments, bso.company_id,
+           bso.created_by, bso.currency, bso.date_allow_delivery, bso.date_bill, bso.date_canceled,
+           bso.date_deducted, bso.date_insert, bso.date_lock, bso.date_marked, bso.date_pay_before, 
+           bso.date_payed, bso.date_status, bso.date_update, bso.deducted, bso.delivery_doc_date, 
+           bso.delivery_doc_num, bso.delivery_id, bso.discount_value, bso.emp_allow_delivery_id, 
+           bso.emp_canceled_id, bso.emp_deducted_id, bso.emp_marked_id, bso.emp_payed_id, 
+           bso.emp_status_id, bso.external_order, bso.id_1c, bso.is_recurring, bso.is_sync_b24, bso.lid, 
+           bso.locked_by, bso.marked, bso.order_topic, bso.pay_system_id, bso.pay_voucher_date, 
+           bso.pay_voucher_num, bso.payed, bso.person_type_id, bso.price, bso.price_delivery, bso.price_payment, 
+           bso.ps_currency, bso.ps_response_date, bso.ps_status, bso.ps_status_code, bso.ps_status_description, 
+           bso.ps_status_message, bso.ps_sum, bso.reason_canceled, bso.reason_marked, bso.reason_undo_deducted, 
+           bso.recount_flag, bso.recurring_id, bso.reserved, bso.responsible_id, bso.running, bso.search_content, 
+           bso.stat_gid, bso.store_id, bso.sum_paid, bso.tax_value, bso.tracking_number, bso.updated_1c, 
+           bso.user_description, bso.version, bso.version_1c, bsopv.value as promocode
+      from b_sale_order bso
+           join (select order_id,
+                        value
+                   from b_sale_order_props_value  
+                  where name = 'Промокод') as bsopv
+                on bso.id = bsopv.order_id
+      where date(bso.date_update) BETWEEN '2023-12-13 AND '2023-12-13'
+    ': (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2023-12-13'' at line 22")
+paramiko.transport 2023-12-14 13:21:14,403 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-14 13:21:14,854 INFO Authentication (password) successful!
+py.warnings 2023-12-14 13:21:15,288 WARNING <ipython-input-20-bae49922f8fe>:31: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, connection)
+
+root 2023-12-14 13:21:18,728 INFO site.dataSite(). Dannie polucheni yspeshno.
+paramiko.transport 2023-12-14 13:22:40,679 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-14 13:22:41,163 INFO Authentication (password) successful!
+py.warnings 2023-12-14 13:22:41,558 WARNING <ipython-input-20-bae49922f8fe>:31: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, connection)
+
+root 2023-12-14 13:22:44,788 INFO site.dataSite(). Dannie polucheni yspeshno.
+paramiko.transport 2023-12-14 13:23:23,981 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-14 13:23:24,340 INFO Authentication (password) successful!
+py.warnings 2023-12-14 13:23:24,780 WARNING <ipython-input-20-bae49922f8fe>:31: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, connection)
+
+root 2023-12-14 13:23:27,761 INFO site.dataSite(). Dannie polucheni yspeshno.
+paramiko.transport 2023-12-14 14:34:06,904 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-14 14:34:07,389 INFO Authentication (password) successful!
+py.warnings 2023-12-14 14:34:07,980 WARNING <ipython-input-5-bae49922f8fe>:31: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, connection)
+
+root 2023-12-14 14:34:10,903 INFO site.dataSite(). Dannie polucheni yspeshno.
+paramiko.transport 2023-12-14 14:34:47,589 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-14 14:34:48,034 INFO Authentication (password) successful!
+py.warnings 2023-12-14 14:34:48,545 WARNING <ipython-input-5-bae49922f8fe>:31: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, connection)
+
+root 2023-12-14 14:34:51,783 INFO site.dataSite(). Dannie polucheni yspeshno.
+paramiko.transport 2023-12-14 14:35:20,811 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-14 14:35:21,237 INFO Authentication (password) successful!
+py.warnings 2023-12-14 14:35:21,670 WARNING <ipython-input-5-bae49922f8fe>:31: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, connection)
+
+root 2023-12-14 14:35:24,999 INFO site.dataSite(). Dannie polucheni yspeshno.
+paramiko.transport 2023-12-14 14:47:24,296 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-14 14:47:24,678 INFO Authentication (password) successful!
+py.warnings 2023-12-14 14:47:25,176 WARNING <ipython-input-5-bae49922f8fe>:31: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, connection)
+
+root 2023-12-14 14:47:28,419 INFO site.dataSite(). Dannie polucheni yspeshno.
+paramiko.transport 2023-12-14 14:50:07,278 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-14 14:50:07,664 INFO Authentication (password) successful!
+py.warnings 2023-12-14 14:50:08,053 WARNING <ipython-input-5-bae49922f8fe>:31: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, connection)
+
+root 2023-12-14 14:50:08,106 ERROR site.dataSite(). Oshibka polycheniya dannih - Execution failed on sql '
+    select bso.id, user_id, bso.status_id, bso.account_number, bso.additional_info, 
+           bso.affiliate_id, bso.allow_delivery, bso.bx_user_id, bso.canceled, bso.comments, bso.company_id,
+           bso.created_by, bso.currency, bso.date_allow_delivery, bso.date_bill, bso.date_canceled,
+           bso.date_deducted, bso.date_insert, bso.date_lock, bso.date_marked, bso.date_pay_before, 
+           bso.date_payed, bso.date_status, bso.date_update, bso.deducted, bso.delivery_doc_date, 
+           bso.delivery_doc_num, bso.delivery_id, bso.discount_value, bso.emp_allow_delivery_id, 
+           bso.emp_canceled_id, bso.emp_deducted_id, bso.emp_marked_id, bso.emp_payed_id, 
+           bso.emp_status_id, bso.external_order, bso.id_1c, bso.is_recurring, bso.is_sync_b24, bso.lid, 
+           bso.locked_by, bso.marked, bso.order_topic, bso.pay_system_id, bso.pay_voucher_date, 
+           bso.pay_voucher_num, bso.payed, bso.person_type_id, bso.price, bso.price_delivery, bso.price_payment, 
+           bso.ps_currency, bso.ps_response_date, bso.ps_status, bso.ps_status_code, bso.ps_status_description, 
+           bso.ps_status_message, bso.ps_sum, bso.reason_canceled, bso.reason_marked, bso.reason_undo_deducted, 
+           bso.recount_flag, bso.recurring_id, bso.reserved, bso.responsible_id, bso.running, bso.search_content, 
+           bso.stat_gid, bso.store_id, bso.sum_paid, bso.tax_value, bso.tracking_number, bso.updated_1c, 
+           bso.user_description, bso.version, bso.version_1c, bsopv.value as promocode
+      from b_sale_order bso
+           join (select order_id,
+                        value
+                   from b_sale_order_props_value  
+                  where name = 'Промокод') as bsopv
+                on bso.id = bsopv.order_id
+      where date(bso.date_update) BETWEEN 2023-12-13 00:00:00 AND 2023-12-13 00:00:00
+    ': (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '00:00:00 AND 2023-12-13 00:00:00' at line 22")
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 2264, in execute
+    cur.execute(sql, *args)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\connections.py", line 822, in _read_query_result
+    result.read()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '00:00:00 AND 2023-12-13 00:00:00' at line 22")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<ipython-input-5-bae49922f8fe>", line 31, in dataSite
+    df = pd.read_sql_query(query, connection)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 486, in read_sql_query
+    return pandas_sql.read_query(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 2328, in read_query
+    cursor = self.execute(sql, params)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 2276, in execute
+    raise ex from exc
+pandas.errors.DatabaseError: Execution failed on sql '
+    select bso.id, user_id, bso.status_id, bso.account_number, bso.additional_info, 
+           bso.affiliate_id, bso.allow_delivery, bso.bx_user_id, bso.canceled, bso.comments, bso.company_id,
+           bso.created_by, bso.currency, bso.date_allow_delivery, bso.date_bill, bso.date_canceled,
+           bso.date_deducted, bso.date_insert, bso.date_lock, bso.date_marked, bso.date_pay_before, 
+           bso.date_payed, bso.date_status, bso.date_update, bso.deducted, bso.delivery_doc_date, 
+           bso.delivery_doc_num, bso.delivery_id, bso.discount_value, bso.emp_allow_delivery_id, 
+           bso.emp_canceled_id, bso.emp_deducted_id, bso.emp_marked_id, bso.emp_payed_id, 
+           bso.emp_status_id, bso.external_order, bso.id_1c, bso.is_recurring, bso.is_sync_b24, bso.lid, 
+           bso.locked_by, bso.marked, bso.order_topic, bso.pay_system_id, bso.pay_voucher_date, 
+           bso.pay_voucher_num, bso.payed, bso.person_type_id, bso.price, bso.price_delivery, bso.price_payment, 
+           bso.ps_currency, bso.ps_response_date, bso.ps_status, bso.ps_status_code, bso.ps_status_description, 
+           bso.ps_status_message, bso.ps_sum, bso.reason_canceled, bso.reason_marked, bso.reason_undo_deducted, 
+           bso.recount_flag, bso.recurring_id, bso.reserved, bso.responsible_id, bso.running, bso.search_content, 
+           bso.stat_gid, bso.store_id, bso.sum_paid, bso.tax_value, bso.tracking_number, bso.updated_1c, 
+           bso.user_description, bso.version, bso.version_1c, bsopv.value as promocode
+      from b_sale_order bso
+           join (select order_id,
+                        value
+                   from b_sale_order_props_value  
+                  where name = 'Промокод') as bsopv
+                on bso.id = bsopv.order_id
+      where date(bso.date_update) BETWEEN 2023-12-13 00:00:00 AND 2023-12-13 00:00:00
+    ': (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '00:00:00 AND 2023-12-13 00:00:00' at line 22")
+paramiko.transport 2023-12-14 14:57:14,363 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-14 14:57:14,810 INFO Authentication (password) successful!
+py.warnings 2023-12-14 14:57:15,197 WARNING <ipython-input-5-bae49922f8fe>:31: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, connection)
+
+root 2023-12-14 14:57:18,271 INFO site.dataSite(). Dannie polucheni yspeshno.
+paramiko.transport 2023-12-14 14:57:42,637 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-14 14:57:43,033 INFO Authentication (password) successful!
+py.warnings 2023-12-14 14:57:43,548 WARNING <ipython-input-5-bae49922f8fe>:31: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, connection)
+
+root 2023-12-14 14:57:46,778 INFO site.dataSite(). Dannie polucheni yspeshno.

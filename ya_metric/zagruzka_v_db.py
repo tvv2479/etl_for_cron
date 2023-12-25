@@ -4,13 +4,22 @@ import pandas as pd
 from sqlalchemy import create_engine, text
 from datetime import date, timedelta, datetime 
 import logging
+import configparser
+#%%
+config = configparser.ConfigParser()
+config.read("E:\Projects/tb\data_collection/config.ini")
+
+BdAnalisHost = config['KeyBd']['host']
+BdAnalisUser = config['KeyBd']['bd_user']
+BdAnalisName = config['KeyBd']['bd_name']
+BdAnalisPass = config['KeyBd']['password']
 #%%
 
 # Настройка логирования
 current_date = datetime.now().date()
 cd = current_date.strftime('%d_%m_%Y')
 
-log_file = f"G:\py.projects/tb\data_collection\logs\ym_load_{cd}.log"
+log_file = f"E:\Projects/tb\data_collection\logs\ym_load_{cd}.log"
 
 logging.basicConfig(level=logging.INFO, filename=log_file, filemode="a",
                     format="%(name)s %(asctime)s %(levelname)s %(message)s")
@@ -20,7 +29,7 @@ def ya_hits_to_bd(df_hits):
        # HITS загрузка в базу
        
        # Подключаемся к базе данных PGSQL
-       engine = create_engine('postgresql+psycopg2://postgres:listopad@localhost/test_char')
+       engine = create_engine(f'postgresql+psycopg2://{BdAnalisUser}:{BdAnalisPass}@{BdAnalisHost}/{BdAnalisName}')
        # Выдаём генеральные права
        with engine.connect() as conn:
               conn.execute(text('GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO postgres'))
@@ -83,7 +92,7 @@ def ya_visits_to_bd(df_visits):
        # VISITS загрузка в базу
 
        # Подключение к базе данных PGSQL
-       engine = create_engine('postgresql+psycopg2://postgres:listopad@localhost/test_char')
+       engine = create_engine(f'postgresql+psycopg2://{BdAnalisUser}:{BdAnalisPass}@{BdAnalisHost}/{BdAnalisName}')
        # Выдача генеральных прав
        with engine.connect() as conn:
               conn.execute(text('GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO postgres'))

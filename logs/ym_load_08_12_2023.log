@@ -1,0 +1,14 @@
+root 2023-12-08 12:21:39,495 INFO site.dataSite(). Polychenie dannih s saita.
+paramiko.transport 2023-12-08 12:21:39,640 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-08 12:21:40,332 INFO Authentication (password) successful!
+py.warnings 2023-12-08 12:21:40,862 WARNING <ipython-input-5-e3d395ecd9ba>:28: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, connection)
+
+root 2023-12-08 12:21:43,985 INFO site.dataSite(). Dannie polucheni yspeshno.
+root 2023-12-08 12:25:10,356 INFO site.dataSite(). Polychenie dannih s saita.
+paramiko.transport 2023-12-08 12:25:10,408 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-08 12:25:10,961 INFO Authentication (password) successful!
+py.warnings 2023-12-08 12:25:11,378 WARNING <ipython-input-9-c2795172c24c>:28: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, connection)
+
+root 2023-12-08 12:25:14,593 INFO site.dataSite(). Dannie polucheni yspeshno.
