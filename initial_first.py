@@ -10,7 +10,7 @@ import pandas as pd
 
 #%%
 config = configparser.ConfigParser()
-config.read("E:\Projects/tb\data_collection/config.ini")
+config.read("G:\py.projects/tb\data_collection/config.ini")
 
 # данные для запросов
 TOKEN = config['KeysYm']['token']
@@ -50,6 +50,7 @@ def daterange(start, stop, step=timedelta(days=1), inclusive=True):
         yield start
         
 #%%
+# Генерирует список дат
 end_date = date.fromisoformat('2019-12-21')
 # start_date = date.today()-timedelta(days=365)
 start_date = date.fromisoformat('2019-10-01')
@@ -73,8 +74,8 @@ date.fromisoformat('2019-10-01')
 # %%
 dates
 #%%
-date1 = "'2023-12-19'"
-date2 = "'2023-12-19'"
+date1 = "'2023-12-25'"
+date2 = "'2023-12-25'"
 # %%
 df = lds.siteLocationCountry()
 df = df.replace({'': None})
@@ -89,7 +90,7 @@ df = df.replace({'': None})
 lds.dataSiteToBd(df, 'site_sale_status_new')
 
 #%%
-
+# site_insert_order_new
 df = lds.siteInsertOrders(date1, date2)
 df = df.replace({'': None})
 df.rename(columns = {'id':'order_id'}, inplace = True )
@@ -100,11 +101,13 @@ df = lds.siteUpdateOrders(date1, date2)
 df = df.replace({'': None})
 df.rename(columns = {'id':'order_id'}, inplace = True )
 lds.dataSiteToBd(df, 'site_update_order_new')
+#%%
 
 # site_user_new
 df = lds.siteUsers(date1, date2)
 df = df.replace({'': None})
 lds.dataSiteToBd(df, 'site_user_new')
+#%%
 
 # site_insert_basket_new
 df = lds.siteInsertBasket(date1, date2)
@@ -117,6 +120,7 @@ df = lds.siteUpdateBasket(date1, date2)
 df = df.replace({'': None})
 df.rename(columns = {'id':'basket_id'}, inplace = True )
 lds.dataSiteToBd(df, 'site_update_basket_new')
+#%%
 
 # site_insert_fuser_new
 df = lds.siteInsertFuser(date1, date2)
@@ -129,12 +133,14 @@ df = lds.siteUpdateFuser(date1, date2)
 df = df.replace({'': None})
 df.rename(columns = {'id':'fuser_id'}, inplace = True )
 lds.dataSiteToBd(df, 'site_update_fuser_new')
+#%%
 
 # site_guest_new
 df = lds.siteGuest(date1, date2)
 df = df.replace({'': None})
-df.rename(columns = {'id':'fguest_id'}, inplace = True )
+df.rename(columns = {'id':'guest_id'}, inplace = True )
 lds.dataSiteToBd(df, 'site_guest_new')
+#%%
 
 # site_session_new
 df = lds.siteSession(date1, date2)
@@ -146,25 +152,26 @@ lds.dataSiteToBd(df, 'site_session_new')
 df = lds.siteOrderPropsValue(date1, date2)
 df = df.replace({'': None})
 lds.dataSiteToBd(df, 'site_order_props_value_new')
+#%%
 
 # site_user_transact_new
 df = lds.siteTransact(date1, date2)
 df.rename(columns = {'id':'transact_id'}, inplace = True )
 df = df.replace({'': None})
 lds.dataSiteToBd(df, 'site_user_transact_new')
+
+
 # %%
-df = lds.siteUpdateOrders(date1, date2)
-df
+date1 = '2023-12-25'
+date2 = '2023-12-25'
+#%%
+log_load = load_data_ym.Logsapi(TOKEN, COUNTER, date1, date2)
+data_hit = load_data_ym.Logsapi.download_hits(log_load)
+clean_hit = clearing_data_ym.clean_logs_hits(data_hit)
+zagruzka_v_db.ya_hits_to_bd(clean_hit)
+#%%
+log_load = load_data_ym.Logsapi(TOKEN, COUNTER, date1, date2)
+data_visit = load_data_ym.Logsapi.download_visits(log_load)
+clean_visit = clearing_data_ym.clean_logs_visits(data_visit)
+zagruzka_v_db.ya_visits_to_bd(clean_visit)
 # %%
-df = lds.siteSession(date1, date2)
-df
-# %%
-sql = """
-      SELECT *      
-        FROM b_stat_session limit 10
-      """ 
-      
-df = lds.dataSite(sql)
-df.columns
-# %%
-df.columns

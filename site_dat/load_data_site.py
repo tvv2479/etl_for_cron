@@ -12,7 +12,7 @@ import pandas as pd
 import configparser
 # %%
 config = configparser.ConfigParser()
-config.read("E:\Projects/tb\data_collection/config.ini")
+config.read("G:\py.projects/tb\data_collection/config.ini")
 
 #%%
 # Подключение к базе аналитики
@@ -27,7 +27,7 @@ BdAnalisPass = config['KeyBd']['password']
 current_date = datetime.now().date()
 cd = current_date.strftime('%d_%m_%Y')
 
-log_file = f"E:\Projects/tb\data_collection\logs\ym_load_{cd}.log"
+log_file = f"G:\py.projects/tb\data_collection\logs\ym_load_{cd}.log"
 
 logging.basicConfig(level=logging.INFO, filename=log_file, filemode="a",
                     format="%(name)s %(asctime)s %(levelname)s %(message)s")
@@ -411,12 +411,12 @@ def siteInsertBasket(date1, date2):
         with connection.cursor() as cursor:
             query = f"""
                     SELECT id, order_id, fuser_id, barcode_multi, base_price, callback_func, can_buy, 
-                           cancel_callback_func, catalog_xml_id, currency, custom_price, date_insert, 
+                           cancel_callback_func, currency, custom_price, date_insert, 
                            date_refresh, date_update, deducted, delay, detail_page_url, dimensions, 
                            discount_coupon, discount_name, discount_price, discount_value, lid, 
                            marking_code_group, measure_code, measure_name, module, name, notes, 
                            order_callback_func, pay_callback_func, price, price_type_id, product_id, 
-                           product_price_id, product_provider_class, product_xml_id, quantity, recommendation, 
+                           product_price_id, product_provider_class, quantity, recommendation, 
                            reserve_quantity, reserved, set_parent_id, sort, subscribe, type, vat_included, 
                            vat_rate, weight
                       FROM b_sale_basket
@@ -432,12 +432,12 @@ def siteInsertBasket(date1, date2):
         tunnel.close()
         
         kol = ['id', 'order_id', 'fuser_id', 'barcode_multi', 'base_price', 'callback_func', 'can_buy', 
-               'cancel_callback_func', 'catalog_xml_id', 'currency', 'custom_price', 'date_insert', 
+               'cancel_callback_func', 'currency', 'custom_price', 'date_insert', 
                'date_refresh', 'date_update', 'deducted', 'delay', 'detail_page_url', 'dimensions', 
                'discount_coupon', 'discount_name', 'discount_price', 'discount_value', 'lid', 
                'marking_code_group', 'measure_code', 'measure_name', 'module', 'name', 'notes', 
                'order_callback_func', 'pay_callback_func', 'price', 'price_type_id', 'product_id', 
-               'product_price_id', 'product_provider_class', 'product_xml_id', 'quantity', 'recommendation', 
+               'product_price_id', 'product_provider_class', 'quantity', 'recommendation', 
                'reserve_quantity', 'reserved', 'set_parent_id', 'sort', 'subscribe', 'type', 'vat_included', 
                'vat_rate', 'weight']
 
@@ -486,12 +486,12 @@ def siteUpdateBasket(date1, date2):
         with connection.cursor() as cursor:
             query = f"""
                     SELECT id, order_id, fuser_id, barcode_multi, base_price, callback_func, can_buy, 
-                           cancel_callback_func, catalog_xml_id, currency, custom_price, date_insert, 
+                           cancel_callback_func, currency, custom_price, date_insert, 
                            date_refresh, date_update, deducted, delay, detail_page_url, dimensions, 
                            discount_coupon, discount_name, discount_price, discount_value, lid, 
                            marking_code_group, measure_code, measure_name, module, name, notes, 
                            order_callback_func, pay_callback_func, price, price_type_id, product_id, 
-                           product_price_id, product_provider_class, product_xml_id, quantity, recommendation, 
+                           product_price_id, product_provider_class, quantity, recommendation, 
                            reserve_quantity, reserved, set_parent_id, sort, subscribe, type, vat_included, 
                            vat_rate, weight
                       FROM b_sale_basket
@@ -507,12 +507,12 @@ def siteUpdateBasket(date1, date2):
         tunnel.close()
         
         kol = ['id', 'order_id', 'fuser_id', 'barcode_multi', 'base_price', 'callback_func', 'can_buy', 
-               'cancel_callback_func', 'catalog_xml_id', 'currency', 'custom_price', 'date_insert', 
+               'cancel_callback_func', 'currency', 'custom_price', 'date_insert', 
                'date_refresh', 'date_update', 'deducted', 'delay', 'detail_page_url', 'dimensions', 
                'discount_coupon', 'discount_name', 'discount_price', 'discount_value', 'lid', 
                'marking_code_group', 'measure_code', 'measure_name', 'module', 'name', 'notes', 
                'order_callback_func', 'pay_callback_func', 'price', 'price_type_id', 'product_id', 
-               'product_price_id', 'product_provider_class', 'product_xml_id', 'quantity', 'recommendation', 
+               'product_price_id', 'product_provider_class', 'quantity', 'recommendation', 
                'reserve_quantity', 'reserved', 'set_parent_id', 'sort', 'subscribe', 'type', 'vat_included', 
                'vat_rate', 'weight']
 
@@ -684,7 +684,7 @@ def siteGuest(date1, date2):
                            last_date, last_user_id, last_user_auth, last_url_last, last_url_last_404, 
                            last_user_agent, last_ip, last_cookie, last_language, last_adv_id, last_adv_back, 
                            last_referer1, last_referer2, last_referer3, last_site_id, last_country_id, 
-                           LAST_city_id, last_city_info
+                           last_city_id, last_city_info
                       FROM b_stat_guest
                      where date(first_date) BETWEEN {date1} AND {date2}
                     """
@@ -703,7 +703,7 @@ def siteGuest(date1, date2):
                'last_date', 'last_user_id', 'last_user_auth', 'last_url_last', 'last_url_last_404', 
                'last_user_agent', 'last_ip', 'last_cookie', 'last_language', 'last_adv_id', 'last_adv_back', 
                'last_referer1', 'last_referer2', 'last_referer3', 'last_site_id', 'last_country_id', 
-               'LAST_city_id', 'last_city_info']
+               'last_city_id', 'last_city_info']
 
         df = pd.DataFrame(res, columns= kol)
         del res, rows
@@ -845,7 +845,7 @@ def siteOrderPropsValue(date1, date2):
         tunnel.close()
         
         kol = ['order_id', 'date_insert', 'user_id', 'city', 'email', 'company', 'first_name', 'last_name',
-               'phone', 'promocode', 'customer_type_shop', 'customer_type_org', 'customer_type_compsny',
+               'phone', 'promocode', 'customer_type_shop', 'customer_type_org', 'customer_type_company',
                'customer_type_personal', 'entity_type' ]
 
         df = pd.DataFrame(res, columns= kol)

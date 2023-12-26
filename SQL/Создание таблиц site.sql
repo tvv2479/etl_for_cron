@@ -136,7 +136,7 @@ create table site_insert_order_new (
              ID_1C varchar,
              IS_RECURRING char,
              IS_SYNC_B24 char,
-             LID char,
+             LID varchar(5),
              LOCKED_BY int,
              MARKED	char(1),
              ORDER_TOPIC varchar(20),
@@ -150,7 +150,7 @@ create table site_insert_order_new (
              PRICE_PAYMENT decimal,
              PS_CURRENCY char,
              PS_RESPONSE_DATE timestamp,
-             PS_STATUS char(1),
+             PS_STATUS varchar(10),
              PS_STATUS_CODE	varchar(10),
              PS_STATUS_DESCRIPTION varchar(50),
              PS_STATUS_MESSAGE varchar(100),
@@ -221,7 +221,7 @@ create table site_insert_order_new (
              ID_1C varchar,
              IS_RECURRING char,
              IS_SYNC_B24 char,
-             LID char,
+             LID varchar(5),
              LOCKED_BY int,
              MARKED	char(1),
              ORDER_TOPIC varchar(20),
@@ -295,7 +295,6 @@ create table site_update_fuser_new (
              CALLBACK_FUNC varchar(200),
              CAN_BUY char(1),
              CANCEL_CALLBACK_FUNC varchar(100),
-             CATALOG_XML_ID	varchar(500),
              CURRENCY char(3),
              CUSTOM_PRICE char(1),
              DATE_INSERT timestamp,
@@ -309,7 +308,7 @@ create table site_update_fuser_new (
              DISCOUNT_NAME varchar(200),
              DISCOUNT_PRICE	decimal,
              DISCOUNT_VALUE	varchar(50),
-             LID char,
+             LID varchar(5),
              MARKING_CODE_GROUP	varchar(300),
              MEASURE_CODE int,
              MEASURE_NAME varchar(10),
@@ -323,7 +322,6 @@ create table site_update_fuser_new (
              PRODUCT_ID	int,
              PRODUCT_PRICE_ID int,
              PRODUCT_PROVIDER_CLASS varchar(100),
-             PRODUCT_XML_ID	varchar(300),
              QUANTITY double precision,
              RECOMMENDATION	varchar(1000),
              RESERVE_QUANTITY double precision,
@@ -349,7 +347,6 @@ create table site_update_fuser_new (
              CALLBACK_FUNC varchar(200),
              CAN_BUY char(1),
              CANCEL_CALLBACK_FUNC varchar(100),
-             CATALOG_XML_ID	varchar(500),
              CURRENCY char(3),
              CUSTOM_PRICE char(1),
              DATE_INSERT timestamp,
@@ -363,7 +360,7 @@ create table site_update_fuser_new (
              DISCOUNT_NAME varchar(200),
              DISCOUNT_PRICE	decimal,
              DISCOUNT_VALUE	varchar(50),
-             LID char,
+             LID varchar(5),
              MARKING_CODE_GROUP	varchar(300),
              MEASURE_CODE int,
              MEASURE_NAME varchar(10),
@@ -377,7 +374,6 @@ create table site_update_fuser_new (
              PRODUCT_ID	int,
              PRODUCT_PRICE_ID int,
              PRODUCT_PROVIDER_CLASS varchar(100),
-             PRODUCT_XML_ID	varchar(300),
              QUANTITY double precision,
              RECOMMENDATION	varchar(1000),
              RESERVE_QUANTITY double precision,
@@ -407,7 +403,7 @@ create table site_guest_new (
              FIRST_URL_FROM text,
              FIRST_URL_TO text,
              FIRST_URL_TO_404 char,
-             FIRST_SITE_ID char,
+             FIRST_SITE_ID varchar(10),
              FIRST_ADV_ID int,
              FIRST_REFERER1	varchar(2000),
              FIRST_REFERER2	varchar(2000),
@@ -421,7 +417,7 @@ create table site_guest_new (
              LAST_USER_AGENT text,
              LAST_IP varchar(30),
              LAST_COOKIE text,
-             LAST_LANGUAGE varchar(100),
+             LAST_LANGUAGE varchar(300),
              LAST_ADV_ID int,
              LAST_ADV_BACK char(1),
              LAST_REFERER1 varchar(2000),
@@ -560,6 +556,12 @@ SELECT table_name, column_name
  WHERE table_catalog = 'test_char' and table_schema = 'public' order by table_name
  )
  select distinct table_name from a
+ 
+ -- или
+SELECT column_name, data_type
+FROM information_schema.columns
+WHERE table_name = 'tablename'
+ORDER BY ordinal_position;
  
  
  -- Очистить таблицы

@@ -9,7 +9,7 @@ import logging
 import configparser
 # %%
 config = configparser.ConfigParser()
-config.read("E:\Projects/tb\data_collection/config.ini")
+config.read("G:\py.projects/tb\data_collection/config.ini")
 
 TOKEN = config['BotTel']['token']
 chat_id = config['BotTel']['chat']
@@ -18,7 +18,7 @@ chat_id = config['BotTel']['chat']
 current_date = datetime.now().date()
 cd = current_date.strftime('%d_%m_%Y')
 
-log_file = f"E:\Projects/tb\data_collection\logs\ym_load_{cd}.log"
+log_file = f"G:\py.projects/tb\data_collection\logs\ym_load_{cd}.log"
 
 logging.basicConfig(level=logging.INFO, filename=log_file, filemode="a",
                     format="%(name)s %(asctime)s %(levelname)s %(message)s")
