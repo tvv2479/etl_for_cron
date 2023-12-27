@@ -18,8 +18,6 @@ config.read("G:\py.projects/tb\data_collection/config.ini")
 TOKEN = config['KeysYm']['token']
 COUNTER = config['KeysYm']['counter']
 
-# https://habr.com/ru/companies/domclick/articles/581304/
-# https://docs.sqlalchemy.org/en/20/core/connections.html
 # Подключение к базе
 
 BdAnalisHost = config['KeyBd']['host']
@@ -79,7 +77,6 @@ del log_load, data_hit, clean_hit, data_visit, clean_visit
 # ЗАГРУЗКА ДАННЫХ SITE
 
 # Загружаем таблицы-справочники
-# https://ru.stackoverflow.com/questions/717808/%D0%9F%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C-%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B8-%D0%B4%D0%B0%D1%82%D0%B0%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B0-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D0%BD%D0%B5-%D0%B2%D1%85%D0%BE%D0%B4%D1%8F%D1%82-%D0%B2-%D0%B4%D1%80%D1%83%D0%B3%D0%BE%D0%B9-%D0%B4%D0%B0%D1%82%D0%B0%D1%84%D1%80%D0%B5%D0%B9%D0%BC
 
 # Получаем данные с сайта
 
