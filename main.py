@@ -1,4 +1,4 @@
-#%%
+
 from ya_metric import load_data_ym, clearing_data_ym, zagruzka_v_db
 from support import clean_logs, bot
 from site_dat import load_data_site as lds
@@ -10,10 +10,10 @@ from datetime import datetime, date, timedelta
 import datetime
 import configparser
 import pandas as pd
-#%%
+
 config = configparser.ConfigParser()
 config.read("G:\py.projects/tb\data_collection/config.ini")
-#%%
+
 # данные для запросов
 TOKEN = config['KeysYm']['token']
 COUNTER = config['KeysYm']['counter']
@@ -30,7 +30,7 @@ BdAnalisPass = config['KeyBd']['password']
 engine = create_engine(f'postgresql+psycopg2://{BdAnalisUser}:{BdAnalisPass}@{BdAnalisHost}/{BdAnalisName}')
 # Дата на вчера
 end_date = date.today() - timedelta(days=1)
-#%%
+
 # Проверка максимальной даты Hits в базе
 with engine.connect() as conn:
     result = conn.execute(text('select max(date_event) from ym_hits_obshee_new'))
@@ -53,7 +53,6 @@ if dateDelta > 0:
     clean_hit = clearing_data_ym.clean_logs_hits(data_hit)
     zagruzka_v_db.ya_hits_to_bd(clean_hit)
     
-#%%
 # Проверка максимальной даты Visits в базе
 with engine.connect() as conn:
     result = conn.execute(text('select max(date_event) from ym_visits_obshee_new'))
@@ -73,10 +72,9 @@ if dateDelta > 0:
     clean_visit = clearing_data_ym.clean_logs_visits(data_visit)
     zagruzka_v_db.ya_visits_to_bd(clean_visit)
 
-#%%
 
 del log_load, data_hit, clean_hit, data_visit, clean_visit
-#%%
+
 
 # ЗАГРУЗКА ДАННЫХ SITE
 
@@ -112,13 +110,16 @@ df = df1.merge(df2, how='left', indicator=True) \
 
 if df['city_id'].count() > 0:
     df.to_sql('site_location_city_new', engine, schema='public', if_exists='append', index=False)
+    
+
 
 # site_sale_status_new таблица-справочник
 df1 = lds.siteStatus()
+df1 = df1.replace({'': None})
 # Получаем данные с сайта аналитики
 sql = 'select * from site_sale_status_new'
 df2 = pd.read_sql_query(text(sql), engine)
-
+df2 = df2[['status_id', 'sort', 'type', 'notify', 'color']]
 # Сравниваем два датафрейма и оставляем то, что есть на сайте (df1) и нет в аналитике (df2)
 df = df1.merge(df2, how='left', indicator=True) \
                .query("_merge == 'left_only'") \
@@ -129,13 +130,13 @@ if df['status_id'].count() > 0:
     
 del df1, df2, df
 
+
 # Основные таблицы
-#%%
+
 # Общая конечная дата для site
 dateEnd = end_date.strftime('%Y-%m-%d')
 date2 = f"'{dateEnd}'"
 
-#%%
 # site_user_new
 # получаем крайнюю дату в таблице бызы аналитики
 sql = 'select max(date_register::date) from site_user_new'
@@ -187,7 +188,7 @@ if dateDelta > 0:
     lds.dataSiteToBd(df, 'site_update_order_new')
 
 # site_insert_fuser_new
-sql = 'select max(date_insert::date) site_insert_fuser_new'
+sql = 'select max(date_insert::date) from site_insert_fuser_new'
 date = pd.read_sql_query(text(sql), engine)
 # Начальная дата для диапазона site
 d = list(date['max'])
@@ -201,9 +202,10 @@ if dateDelta > 0:
     df = lds.siteInsertFuser(date1, date2)
     df = lds.cleanDataSite(df)
     lds.dataSiteToBd(df, 'site_insert_fuser_new')
+    
 
 # site_update_fuser_new
-sql = 'select max(date_update::date) site_update_fuser_new'
+sql = 'select max(date_update::date) from site_update_fuser_new'
 date = pd.read_sql_query(text(sql), engine)
 # Начальная дата для диапазона site
 d = list(date['max'])
@@ -217,9 +219,10 @@ if dateDelta > 0:
     df = lds.siteUpdateFuser(date1, date2)
     df = lds.cleanDataSite(df)
     lds.dataSiteToBd(df, 'site_update_fuser_new')
+    
 
 # site_insert_basket_new
-sql = 'select max(date_insert::date) site_insert_basket_new'
+sql = 'select max(date_insert::date) from site_insert_basket_new'
 date = pd.read_sql_query(text(sql), engine)
 # Начальная дата для диапазона site
 d = list(date['max'])
@@ -235,7 +238,7 @@ if dateDelta > 0:
     lds.dataSiteToBd(df, 'site_insert_basket_new')
 
 # site_update_basket_new
-sql = 'select max(date_update::date) site_update_basket_new'
+sql = 'select max(date_update::date) from site_update_basket_new'
 date = pd.read_sql_query(text(sql), engine)
 # Начальная дата для диапазона site
 d = list(date['max'])
@@ -251,7 +254,7 @@ if dateDelta > 0:
     lds.dataSiteToBd(df, 'site_update_basket_new')
 
 # site_guest_new
-sql = 'select max(first_date::date) site_guest_new'
+sql = 'select max(first_date::date) from site_guest_new'
 date = pd.read_sql_query(text(sql), engine)
 # Начальная дата для диапазона site
 d = list(date['max'])
@@ -267,7 +270,7 @@ if dateDelta > 0:
     lds.dataSiteToBd(df, 'site_guest_new')
 
 # site_session_new
-sql = 'select max(date_stat) site_session_new'
+sql = 'select max(date_stat) from site_session_new'
 date = pd.read_sql_query(text(sql), engine)
 # Начальная дата для диапазона site
 d = list(date['max'])
@@ -283,7 +286,7 @@ if dateDelta > 0:
     lds.dataSiteToBd(df, 'site_session_new')
 
 # site_order_props_value_new
-sql = 'select max(date_insert::date) site_order_props_value_new'
+sql = 'select max(date_insert::date) from site_order_props_value_new'
 date = pd.read_sql_query(text(sql), engine)
 # Начальная дата для диапазона site
 d = list(date['max'])
@@ -299,7 +302,7 @@ if dateDelta > 0:
     lds.dataSiteToBd(df, 'site_order_props_value_new')
 
 # site_user_transact_new
-sql = 'select max(transact_date::date) site_user_transact_new'
+sql = 'select max(transact_date::date) from site_user_transact_new'
 date = pd.read_sql_query(text(sql), engine)
 # Начальная дата для диапазона site
 d = list(date['max'])
@@ -313,11 +316,12 @@ if dateDelta > 0:
     df = lds.siteTransact(date1, date2)
     df = lds.cleanDataSite(df)
     lds.dataSiteToBd(df, 'site_user_transact_new')
-#%%
+    
+
 # МОНИТОРИНГ
 
 # Удаление файлов логов
-logs = glob(fr"E:\Projects\tb\data_collection\logs/*.log")
+logs = glob(fr"G:\py.projects/tb\data_collection\logs/*.log")
 clean_logs.logs_clean(logs, 4) 
 
 DatesTable = []
@@ -329,20 +333,22 @@ with engine.connect() as conn:
     result3 = conn.execute(text('select max(date_register::date) from site_user_new'))
     result4 = conn.execute(text('select max(date_insert::date) from site_insert_order_new'))
     result5 = conn.execute(text('select max(date_update::date) from site_update_order_new'))
-    result6 = conn.execute(text('select max(date_insert::date) site_insert_fuser_new'))
-    result7 = conn.execute(text('select max(date_update::date) site_update_fuser_new'))
-    result8 = conn.execute(text('select max(date_insert::date) site_insert_basket_new'))
-    result9 = conn.execute(text('select max(date_update::date) site_update_basket_new'))
-    result10 = conn.execute(text('select max(first_date::date) site_guest_new'))
-    result11 = conn.execute(text('select max(date_stat) site_session_new'))
-    result12 = conn.execute(text('select max(date_insert::date) site_order_props_value_new'))
-    result13 = conn.execute(text('select max(transact_date::date) site_user_transact_new'))
+    result6 = conn.execute(text('select max(date_insert::date) from site_insert_fuser_new'))
+    result7 = conn.execute(text('select max(date_update::date) from site_update_fuser_new'))
+    result8 = conn.execute(text('select max(date_insert::date) from site_insert_basket_new'))
+    result9 = conn.execute(text('select max(date_update::date) from site_update_basket_new'))
+    result10 = conn.execute(text('select max(first_date::date) from site_guest_new'))
+    result11 = conn.execute(text('select max(date_stat) from site_session_new'))
+    result12 = conn.execute(text('select max(date_insert::date) from site_order_props_value_new'))
+    result13 = conn.execute(text('select max(transact_date::date) from site_user_transact_new'))
     
     res = [result1, result2, result3, result4, result5, result6, result7, result8, result9, result10, 
            result11, result12, result13]
     
-    for row in res:
-        DatesTable.append(row[0])
+for sub in res:
+    for row in sub:
+        DatesTable.append(row[0].strftime('%Y-%m-%d'))
+    
         
 
 MSG = f'''Загрузка данных из яндексметрики в базу прошла успешно!\n
