@@ -167,6 +167,12 @@ date2 = '2023-12-25'
 #%%
 log_load = load_data_ym.Logsapi(TOKEN, COUNTER, date1, date2)
 data_hit = load_data_ym.Logsapi.download_hits(log_load)
+#%%
+print(data_hit)
+#%%
+log_load
+#%%
+#%%
 clean_hit = clearing_data_ym.clean_logs_hits(data_hit)
 zagruzka_v_db.ya_hits_to_bd(clean_hit)
 #%%

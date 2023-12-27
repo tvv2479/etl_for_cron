@@ -1,4 +1,4 @@
-
+#%%
 from ya_metric import load_data_ym, clearing_data_ym, zagruzka_v_db
 from support import clean_logs, bot
 from site_dat import load_data_site as lds
@@ -71,8 +71,6 @@ if dateDelta > 0:
     zagruzka_v_db.ya_visits_to_bd(clean_visit)
 
 
-del log_load, data_hit, clean_hit, data_visit, clean_visit
-
 
 # ЗАГРУЗКА ДАННЫХ SITE
 
@@ -125,7 +123,7 @@ df = df1.merge(df2, how='left', indicator=True) \
 if df['status_id'].count() > 0:
     df.to_sql('site_sale_status_new', engine, schema='public', if_exists='append', index=False)
     
-del df1, df2, df
+
 
 
 # Основные таблицы
@@ -370,3 +368,5 @@ MSG = f'''Загрузка данных из яндексметрики в ба�
 bot.bot_message(MSG)
 
 
+
+# %%
