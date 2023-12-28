@@ -10,6 +10,7 @@ from datetime import datetime, date, timedelta
 import datetime
 import configparser
 import pandas as pd
+#%%
 
 config = configparser.ConfigParser()
 config.read("G:\py.projects/tb\data_collection/config.ini")
@@ -88,6 +89,8 @@ df2 = pd.read_sql_query(text(sql), engine)
 df = df1.merge(df2, how='left', indicator=True) \
                .query("_merge == 'left_only'") \
                .drop('_merge', axis=1)[df1.columns]
+               
+df.rename(columns = {'id':'country_id'}, inplace = True )
 
 if df['country_id'].count() > 0:
     df.to_sql('site_location_country_new', engine, schema='public', if_exists='append', index=False)
@@ -102,6 +105,8 @@ df2 = pd.read_sql_query(text(sql), engine)
 df = df1.merge(df2, how='left', indicator=True) \
                .query("_merge == 'left_only'") \
                .drop('_merge', axis=1)[df1.columns]
+               
+df.rename(columns = {'id':'city_id'}, inplace = True )
 
 if df['city_id'].count() > 0:
     df.to_sql('site_location_city_new', engine, schema='public', if_exists='append', index=False)
@@ -120,11 +125,11 @@ df = df1.merge(df2, how='left', indicator=True) \
                .query("_merge == 'left_only'") \
                .drop('_merge', axis=1)[df1.columns]
                
+df.rename(columns = {'id':'status_id'}, inplace = True )
+               
 if df['status_id'].count() > 0:
     df.to_sql('site_sale_status_new', engine, schema='public', if_exists='append', index=False)
     
-
-
 
 # Основные таблицы
 
@@ -163,6 +168,7 @@ dateDelta = int((end_date - d[0]).total_seconds()/86400)
 
 if dateDelta > 0:
     df = lds.siteInsertOrders(date1, date2)
+    df.rename(columns = {'id':'order_id'}, inplace = True )
     df = lds.cleanDataSite(df)
     lds.dataSiteToBd(df, 'site_insert_order_new')
 
@@ -179,8 +185,10 @@ dateDelta = int((end_date - d[0]).total_seconds()/86400)
 
 if dateDelta > 0:
     df = lds.siteUpdateOrders(date1, date2)
+    df.rename(columns = {'id':'order_id'}, inplace = True )
     df = lds.cleanDataSite(df)
     lds.dataSiteToBd(df, 'site_update_order_new')
+
 
 # site_insert_fuser_new
 sql = 'select max(date_insert::date) from site_insert_fuser_new'
@@ -195,6 +203,7 @@ dateDelta = int((end_date - d[0]).total_seconds()/86400)
 
 if dateDelta > 0:
     df = lds.siteInsertFuser(date1, date2)
+    df.rename(columns = {'id':'fuser_id'}, inplace = True )
     df = lds.cleanDataSite(df)
     lds.dataSiteToBd(df, 'site_insert_fuser_new')
     
@@ -212,6 +221,7 @@ dateDelta = int((end_date - d[0]).total_seconds()/86400)
 
 if dateDelta > 0:
     df = lds.siteUpdateFuser(date1, date2)
+    df.rename(columns = {'id':'fuser_id'}, inplace = True )
     df = lds.cleanDataSite(df)
     lds.dataSiteToBd(df, 'site_update_fuser_new')
     
@@ -229,6 +239,7 @@ dateDelta = int((end_date - d[0]).total_seconds()/86400)
 
 if dateDelta > 0:
     df = lds.siteInsertBasket(date1, date2)
+    df.rename(columns = {'id':'basket_id'}, inplace = True )
     df = lds.cleanDataSite(df)
     lds.dataSiteToBd(df, 'site_insert_basket_new')
 
@@ -245,6 +256,7 @@ dateDelta = int((end_date - d[0]).total_seconds()/86400)
 
 if dateDelta > 0:
     df = lds.siteUpdateBasket(date1, date2)
+    df.rename(columns = {'id':'basket_id'}, inplace = True )
     df = lds.cleanDataSite(df)
     lds.dataSiteToBd(df, 'site_update_basket_new')
 
@@ -261,6 +273,7 @@ dateDelta = int((end_date - d[0]).total_seconds()/86400)
 
 if dateDelta > 0:
     df = lds.siteGuest(date1, date2)
+    df.rename(columns = {'id':'guest_id'}, inplace = True )
     df = lds.cleanDataSite(df)
     lds.dataSiteToBd(df, 'site_guest_new')
 
@@ -277,6 +290,7 @@ dateDelta = int((end_date - d[0]).total_seconds()/86400)
 
 if dateDelta > 0:
     df = lds.siteSession(date1, date2)
+    df.rename(columns = {'id':'session_id'}, inplace = True )
     df = lds.cleanDataSite(df)
     lds.dataSiteToBd(df, 'site_session_new')
 
@@ -309,6 +323,7 @@ dateDelta = int((end_date - d[0]).total_seconds()/86400)
 
 if dateDelta > 0:
     df = lds.siteTransact(date1, date2)
+    df.rename(columns = {'id':'transact_id'}, inplace = True )
     df = lds.cleanDataSite(df)
     lds.dataSiteToBd(df, 'site_user_transact_new')
     
@@ -318,6 +333,25 @@ if dateDelta > 0:
 # Удаление файлов логов
 logs = glob(fr"G:\py.projects/tb\data_collection\logs/*.log")
 clean_logs.logs_clean(logs, 4) 
+
+# Проверка наличия ошибок в логах
+for i in logs:
+    st = i.split('\\')[-1].split('_')
+    st1 = st[2]+'-'+st[3]+'-'+st[4].split('.')[0]
+    dt = datetime.datetime.strptime(st1, "%d-%m-%Y").date()
+    if dt == date.today():
+        res = i
+
+log_err = []
+
+with open(res, 'r') as file:
+    lines = file.readlines()
+    
+for row in lines:
+    s = row.split(' ')
+    if s[0] == 'root':
+        if s[3] == 'ERROR':
+            log_err.append(s[3])
 
 DatesTable = []
 
@@ -346,8 +380,9 @@ for sub in res:
     
         
 
-MSG = f'''Загрузка данных из яндексметрики в базу прошла успешно!\n
-    Крайняя дата:\n 
+MSG = f'''Загрузка данных из яндексметрики в базу.\n
+    **Количество ошибок** - {len(log_err)}\n
+    Крайняя дата в таблицах:\n 
     Таблица ym_hits_obshee_new - {DatesTable[0]}\n
     Таблица ym_visits_obshee_new - {DatesTable[1]}\n
     Таблица site_user_new - {DatesTable[2]}\n
@@ -366,7 +401,6 @@ MSG = f'''Загрузка данных из яндексметрики в ба�
        
 # Отправка сообщения в Телеграм
 bot.bot_message(MSG)
-
 
 
 # %%

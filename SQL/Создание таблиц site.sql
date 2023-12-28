@@ -182,7 +182,7 @@ create table site_insert_order_new (
  -----------------------------------------
  create table site_update_order_new (
              id serial, 
-             ORDER_ID int unique,
+             ORDER_ID int,
              USER_ID int REFERENCES site_user_new (ID),
              STATUS_ID varchar(10) REFERENCES site_sale_status_new (STATUS_ID),
              ACCOUNT_NUMBER	varchar(15),
@@ -276,7 +276,7 @@ create table site_insert_order_new (
 ---------------------------------------------
 create table site_update_fuser_new (
              id serial,
-             FUSER_ID int unique,
+             FUSER_ID int,
              DATE_INSERT timestamp,
              DATE_UPDATE timestamp,
              USER_ID int REFERENCES site_user_new (ID),
@@ -339,7 +339,7 @@ create table site_update_fuser_new (
 -----------------------------------------------------
  create table site_update_basket_new(
              id serial,
-             BASKET_ID int unique,
+             BASKET_ID int,
              ORDER_ID int REFERENCES site_insert_order_new (ORDER_ID),
              FUSER_ID int REFERENCES site_insert_fuser_new (FUSER_ID),
              BARCODE_MULTI char(1),

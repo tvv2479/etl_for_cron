@@ -74,10 +74,11 @@ date.fromisoformat('2019-10-01')
 # %%
 dates
 #%%
-date1 = "'2023-12-25'"
-date2 = "'2023-12-25'"
+date1 = "'2023-12-26'"
+date2 = "'2023-12-26'"
 # %%
 df = lds.siteLocationCountry()
+df.rename(columns = {'id':'order_id'}, inplace = True )
 df = df.replace({'': None})
 lds.dataSiteToBd(df, 'site_location_country_new')
 
@@ -147,7 +148,7 @@ df = lds.siteSession(date1, date2)
 df = df.replace({'': None})
 df.rename(columns = {'id':'session_id'}, inplace = True )
 lds.dataSiteToBd(df, 'site_session_new')
-
+#%%
 # site_order_props_value_new
 df = lds.siteOrderPropsValue(date1, date2)
 df = df.replace({'': None})
@@ -160,7 +161,7 @@ df.rename(columns = {'id':'transact_id'}, inplace = True )
 df = df.replace({'': None})
 lds.dataSiteToBd(df, 'site_user_transact_new')
 
-
+#%%
 # %%
 date1 = '2023-12-25'
 date2 = '2023-12-25'
@@ -181,3 +182,19 @@ data_visit = load_data_ym.Logsapi.download_visits(log_load)
 clean_visit = clearing_data_ym.clean_logs_visits(data_visit)
 zagruzka_v_db.ya_visits_to_bd(clean_visit)
 # %%
+
+log_err = []
+
+with open('G:\py.projects/tb\data_collection\logs/ym_load_28_12_2023.log', 'r') as file:
+    lines = file.readlines()
+    
+for row in lines:
+    s = row.split(' ')
+    if s[0] == 'root':
+        if s[3] == 'ERROR':
+            log_err.append(s[3])
+            
+len(log_err)
+            
+# %%
+

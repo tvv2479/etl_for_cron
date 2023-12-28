@@ -1,0 +1,508 @@
+root 2023-12-28 04:30:13,635 INFO Step_1_hits. Creating a log.
+root 2023-12-28 04:30:14,715 INFO Code status 200
+NoneType: None
+root 2023-12-28 04:30:14,717 INFO Step_1_hits. Successful log request.
+root 2023-12-28 04:30:14,718 INFO Step_1_hits. Request number 33164035.
+root 2023-12-28 04:30:14,718 INFO Step_1_hits. Request status created.
+root 2023-12-28 04:30:14,718 INFO Step_2_hits. Log processing status.
+root 2023-12-28 04:30:14,973 INFO Step_2_hits. Loading data. Code 200.
+root 2023-12-28 04:33:19,864 INFO Step_2_hits. Number of parts - 1.
+root 2023-12-28 04:33:19,864 INFO Step_2_hits. Request status processed.
+root 2023-12-28 04:33:19,865 INFO Step_3_hits. Loading the log.
+root 2023-12-28 04:33:20,716 INFO Step_3_hits. Loading a log from one part.
+root 2023-12-28 04:33:20,716 INFO Step_4_hits. Deleting a log.
+root 2023-12-28 04:33:20,985 INFO Step_4_hits. Successful log deletion # 33164035.
+root 2023-12-28 04:33:20,986 INFO Step_4_hits. Deleting variables.
+root 2023-12-28 04:33:20,990 INFO Start clearing data HITS.
+root 2023-12-28 04:33:20,990 INFO Reading data HITS and writing to a dataframe.
+root 2023-12-28 04:33:21,402 INFO Renaming columns HITS.
+root 2023-12-28 04:33:21,552 INFO Clearing data HITS.
+root 2023-12-28 04:33:21,655 INFO Start zagruzka v bazu logs api HITS.
+root 2023-12-28 04:33:21,732 INFO Start zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-12-28 04:33:22,658 INFO End zagruzka dannih - ym_hits_stranitsi_new.
+root 2023-12-28 04:33:22,658 INFO Start zagruzka dannih - ym_hits_obshee_new.
+root 2023-12-28 04:33:23,766 INFO End zagruzka dannih - ym_hits_obshee_new.
+root 2023-12-28 04:33:23,766 INFO Start zagruzka dannih - ym_hits_deystviya_new.
+root 2023-12-28 04:33:24,639 INFO End zagruzka dannih - ym_hits_deystviya_new.
+root 2023-12-28 04:33:24,639 INFO Start zagruzka dannih - ym_hits_ad_new.
+root 2023-12-28 04:33:25,388 INFO End zagruzka dannih - ym_hits_ad_new.
+root 2023-12-28 04:33:25,444 INFO Step_1_visit. Creating a log.
+root 2023-12-28 04:33:25,806 INFO Code status 200
+NoneType: None
+root 2023-12-28 04:33:25,807 INFO Step_1_visit. Successful log request.
+root 2023-12-28 04:33:25,807 INFO Step_1_visit. Request number 33164058.
+root 2023-12-28 04:33:25,807 INFO Step_1_visit. Request status created.
+root 2023-12-28 04:33:25,807 INFO Step_2_visit. Log processing status.
+root 2023-12-28 04:33:26,036 INFO Step_2_visit. Loading data. Code 200.
+root 2023-12-28 04:34:13,625 INFO Step_2_visit. Number of parts - 0.
+root 2023-12-28 04:34:13,625 INFO Step_2_visit. Request status processed.
+root 2023-12-28 04:34:13,625 INFO Step_3_visit. Loading the log.
+root 2023-12-28 04:34:14,283 INFO Step_3_visit. Loading a log from one part.
+root 2023-12-28 04:34:14,283 INFO Step_3_visit. Loading 0 parts of the log.
+root 2023-12-28 04:34:14,283 INFO Step_4_visit. Deleting a log.
+root 2023-12-28 04:34:14,590 INFO Step_4_visit. Successful log deletion # 33164058.
+root 2023-12-28 04:34:14,590 INFO Step_4_visit. Deleting variables.
+root 2023-12-28 04:34:14,594 INFO Start clearing data VISITS.
+root 2023-12-28 04:34:14,594 INFO Reading data VISITS and writing to a dataframe.
+root 2023-12-28 04:34:14,669 INFO Renaming columns VISITS.
+root 2023-12-28 04:34:14,675 INFO Clearing data VISITS.
+root 2023-12-28 04:34:14,968 INFO Start zagruzka v bazu logs api VISITS.
+root 2023-12-28 04:34:15,012 INFO Start zagruzka dannih - ym_visits_obshee_new.
+root 2023-12-28 04:34:15,290 INFO End zagruzka dannih - ym_visits_obshee_new.
+root 2023-12-28 04:34:15,290 INFO Start zagruzka dannih - # ym_visits_detali_new.
+root 2023-12-28 04:34:15,626 INFO End zagruzka dannih - ym_visits_detali_new.
+root 2023-12-28 04:34:15,626 INFO siteLocationCountry(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 04:34:15,690 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 04:34:16,375 INFO Authentication (password) successful!
+root 2023-12-28 04:34:17,455 INFO siteLocationCountry(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 04:34:17,799 INFO siteLocationCity(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 04:34:17,836 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 04:34:18,320 INFO Authentication (password) successful!
+root 2023-12-28 04:34:18,994 INFO siteLocationCity(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 04:34:19,007 INFO siteStatus(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 04:34:19,031 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 04:34:19,580 INFO Authentication (password) successful!
+root 2023-12-28 04:34:20,246 INFO siteStatus(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 04:34:20,295 INFO siteUsers(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 04:34:20,317 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 04:34:20,654 INFO Authentication (password) successful!
+root 2023-12-28 04:34:21,962 INFO siteUsers(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 04:34:21,989 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_user_new.
+root 2023-12-28 04:34:22,095 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_user_new.
+root 2023-12-28 04:34:22,132 INFO siteInsertOrders(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 04:34:22,155 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 04:34:22,542 INFO Authentication (password) successful!
+root 2023-12-28 04:34:26,339 INFO siteInsertOrders(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 04:34:26,340 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_insert_order_new.
+root 2023-12-28 04:34:26,413 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_insert_order_new.
+root 2023-12-28 04:34:26,427 INFO siteUpdateOrders(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 04:34:26,453 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 04:34:26,825 INFO Authentication (password) successful!
+root 2023-12-28 04:34:30,484 INFO siteUpdateOrders(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 04:34:30,485 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_update_order_new.
+root 2023-12-28 04:34:30,697 ERROR site.dataSiteToBd(). Oshibka zapisi dannih v tab site_update_order_new - (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "site_update_order_new_pkey"
+DETAIL:  Key (id)=(321087) already exists.
+
+[SQL: INSERT INTO public.site_update_order_new (id, user_id, status_id, account_number, additional_info, affiliate_id, allow_delivery, bx_user_id, canceled, comments, company_id, created_by, currency, date_allow_delivery, date_bill, date_canceled, date_ded ... 136172 characters truncated ... (updated_1c__81)s, %(user_description__81)s, %(version__81)s, %(version_1c__81)s, %(promocode__81)s)]
+[parameters: {'pay_voucher_date__0': None, 'running__0': 'N', 'date_canceled__0': datetime.datetime(2023, 12, 27, 13, 13, 34), 'ps_status_code__0': None, 'reason_canceled__0': '�# new_IM-12313402 ,?, �����', 'person_type_id__0': 1, 'delivery_doc_date__0': None, 'delivery_doc_num__0': None, 'affiliate_id__0': None, 'date_deducted__0': None, 'emp_marked_id__0': None, 'external_order__0': 'N', 'reserved__0': 'N', 'emp_canceled_id__0': 4.0, 'recount_flag__0': 'Y', 'date_payed__0': None, 'date_marked__0': None, 'price_delivery__0': Decimal('0.0000'), 'version_1c__0': None, 'date_allow_delivery__0': None, 'comments__0': '�# new_IM-12313402 ,?, �����', 'id__0': 313402, 'reason_marked__0': None, 'date_status__0': datetime.datetime(2023, 11, 3, 11, 46, 59), 'delivery_id__0': '24', 'allow_delivery__0': 'N', 'id_1c__0': '318153', 'tracking_number__0': None, 'recurring_id__0': None, 'user_description__0': None, 'price_payment__0': Decimal('0.0000'), 'ps_sum__0': None, 'date_insert__0': datetime.datetime(2023, 10, 16, 18, 50, 34), 'emp_allow_delivery_id__0': None, 'discount_value__0': Decimal('0.0000'), 'additional_info__0': None, 'updated_1c__0': 'Y', 'status_id__0': 'OR', 'is_recurring__0': 'N', 'sum_paid__0': Decimal('0.00'), 'date_pay_before__0': None, 'payed__0': 'N', 'ps_currency__0': None, 'lid__0': 's1', 'tax_value__0': Decimal('0.00'), 'responsible_id__0': None, 'emp_payed_id__0': None, 'currency__0': 'RUB', 'canceled__0': 'Y', 'emp_deducted_id__0': None ... 6214 parameters truncated ... 'tracking_number__81': None, 'recurring_id__81': None, 'user_description__81': None, 'price_payment__81': Decimal('0.0000'), 'ps_sum__81': None, 'date_insert__81': datetime.datetime(2023, 12, 27, 23, 16, 29), 'emp_allow_delivery_id__81': None, 'discount_value__81': Decimal('0.0000'), 'additional_info__81': None, 'updated_1c__81': 'Y', 'status_id__81': 'OR', 'is_recurring__81': 'N', 'sum_paid__81': Decimal('0.00'), 'date_pay_before__81': None, 'payed__81': 'N', 'ps_currency__81': None, 'lid__81': 's1', 'tax_value__81': Decimal('0.00'), 'responsible_id__81': None, 'emp_payed_id__81': None, 'currency__81': 'RUB', 'canceled__81': 'N', 'emp_deducted_id__81': None, 'version__81': 35, 'created_by__81': 53144, 'ps_status__81': None, 'company_id__81': 0, 'ps_status_message__81': None, 'marked__81': 'N', 'store_id__81': None, 'bx_user_id__81': '982dd302094ca64d1926c04ce2851a5f', 'price__81': Decimal('8980.0000'), 'stat_gid__81': 'BITRIX_SM.NTU5NzA4NS42NDk5ODguUlUuLi5zMQ==', 'date_bill__81': None, 'account_number__81': 'IM-12322423', 'ps_status_description__81': None, 'search_content__81': None, 'pay_voucher_num__81': None, 'emp_status_id__81': 4, 'order_topic__81': None, 'date_update__81': datetime.datetime(2023, 12, 27, 23, 16, 40), 'is_sync_b24__81': 'N', 'deducted__81': 'N', 'ps_response_date__81': None, 'date_lock__81': None, 'reason_undo_deducted__81': None, 'user_id__81': 53144, 'pay_system_id__81': 1, 'locked_by__81': None, 'promocode__81': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2112, in _exec_insertmany_context
+    dialect.do_execute(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "site_update_order_new_pkey"
+DETAIL:  Key (id)=(321087) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\py.projects\tb\data_collection\site_dat\load_data_site.py", line 95, in dataSiteToBd
+    df.to_sql(tableName, engine_pg, schema='public', if_exists='append', index=False)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1958, in to_sql
+    total_inserted = sql_engine.insert_records(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1507, in insert_records
+    raise err
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1498, in insert_records
+    return table.insert(chunksize=chunksize, method=method)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1059, in insert
+    num_inserted = exec_insert(conn, keys, chunk_iter)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 951, in _execute_insert
+    result = conn.execute(self.table.insert(), data)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\sql\elements.py", line 516, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1639, in _execute_clauseelement
+    ret = self._execute_context(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_insertmany_context(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2120, in _exec_insertmany_context
+    self._handle_dbapi_exception(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2343, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2112, in _exec_insertmany_context
+    dialect.do_execute(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "site_update_order_new_pkey"
+DETAIL:  Key (id)=(321087) already exists.
+
+[SQL: INSERT INTO public.site_update_order_new (id, user_id, status_id, account_number, additional_info, affiliate_id, allow_delivery, bx_user_id, canceled, comments, company_id, created_by, currency, date_allow_delivery, date_bill, date_canceled, date_ded ... 136172 characters truncated ... (updated_1c__81)s, %(user_description__81)s, %(version__81)s, %(version_1c__81)s, %(promocode__81)s)]
+[parameters: {'pay_voucher_date__0': None, 'running__0': 'N', 'date_canceled__0': datetime.datetime(2023, 12, 27, 13, 13, 34), 'ps_status_code__0': None, 'reason_canceled__0': '�# new_IM-12313402 ,?, �����', 'person_type_id__0': 1, 'delivery_doc_date__0': None, 'delivery_doc_num__0': None, 'affiliate_id__0': None, 'date_deducted__0': None, 'emp_marked_id__0': None, 'external_order__0': 'N', 'reserved__0': 'N', 'emp_canceled_id__0': 4.0, 'recount_flag__0': 'Y', 'date_payed__0': None, 'date_marked__0': None, 'price_delivery__0': Decimal('0.0000'), 'version_1c__0': None, 'date_allow_delivery__0': None, 'comments__0': '�# new_IM-12313402 ,?, �����', 'id__0': 313402, 'reason_marked__0': None, 'date_status__0': datetime.datetime(2023, 11, 3, 11, 46, 59), 'delivery_id__0': '24', 'allow_delivery__0': 'N', 'id_1c__0': '318153', 'tracking_number__0': None, 'recurring_id__0': None, 'user_description__0': None, 'price_payment__0': Decimal('0.0000'), 'ps_sum__0': None, 'date_insert__0': datetime.datetime(2023, 10, 16, 18, 50, 34), 'emp_allow_delivery_id__0': None, 'discount_value__0': Decimal('0.0000'), 'additional_info__0': None, 'updated_1c__0': 'Y', 'status_id__0': 'OR', 'is_recurring__0': 'N', 'sum_paid__0': Decimal('0.00'), 'date_pay_before__0': None, 'payed__0': 'N', 'ps_currency__0': None, 'lid__0': 's1', 'tax_value__0': Decimal('0.00'), 'responsible_id__0': None, 'emp_payed_id__0': None, 'currency__0': 'RUB', 'canceled__0': 'Y', 'emp_deducted_id__0': None ... 6214 parameters truncated ... 'tracking_number__81': None, 'recurring_id__81': None, 'user_description__81': None, 'price_payment__81': Decimal('0.0000'), 'ps_sum__81': None, 'date_insert__81': datetime.datetime(2023, 12, 27, 23, 16, 29), 'emp_allow_delivery_id__81': None, 'discount_value__81': Decimal('0.0000'), 'additional_info__81': None, 'updated_1c__81': 'Y', 'status_id__81': 'OR', 'is_recurring__81': 'N', 'sum_paid__81': Decimal('0.00'), 'date_pay_before__81': None, 'payed__81': 'N', 'ps_currency__81': None, 'lid__81': 's1', 'tax_value__81': Decimal('0.00'), 'responsible_id__81': None, 'emp_payed_id__81': None, 'currency__81': 'RUB', 'canceled__81': 'N', 'emp_deducted_id__81': None, 'version__81': 35, 'created_by__81': 53144, 'ps_status__81': None, 'company_id__81': 0, 'ps_status_message__81': None, 'marked__81': 'N', 'store_id__81': None, 'bx_user_id__81': '982dd302094ca64d1926c04ce2851a5f', 'price__81': Decimal('8980.0000'), 'stat_gid__81': 'BITRIX_SM.NTU5NzA4NS42NDk5ODguUlUuLi5zMQ==', 'date_bill__81': None, 'account_number__81': 'IM-12322423', 'ps_status_description__81': None, 'search_content__81': None, 'pay_voucher_num__81': None, 'emp_status_id__81': 4, 'order_topic__81': None, 'date_update__81': datetime.datetime(2023, 12, 27, 23, 16, 40), 'is_sync_b24__81': 'N', 'deducted__81': 'N', 'ps_response_date__81': None, 'date_lock__81': None, 'reason_undo_deducted__81': None, 'user_id__81': 53144, 'pay_system_id__81': 1, 'locked_by__81': None, 'promocode__81': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+root 2023-12-28 04:34:31,836 INFO siteInsertFuser(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 04:34:31,865 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 04:34:32,311 INFO Authentication (password) successful!
+root 2023-12-28 04:34:33,542 INFO siteInsertFuser(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 04:34:33,545 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_insert_fuser_new.
+root 2023-12-28 04:34:34,073 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_insert_fuser_new.
+root 2023-12-28 04:34:34,202 INFO siteUpdateFuser(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 04:34:34,231 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 04:34:34,692 INFO Authentication (password) successful!
+root 2023-12-28 04:34:37,004 INFO siteUpdateFuser(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 04:34:37,016 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_update_fuser_new.
+root 2023-12-28 04:34:37,349 ERROR site.dataSiteToBd(). Oshibka zapisi dannih v tab site_update_fuser_new - (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "site_update_fuser_new_pkey"
+DETAIL:  Key (id)=(7099) already exists.
+
+[SQL: INSERT INTO public.site_update_fuser_new (id, date_insert, date_update, user_id, code) VALUES (%(id__0)s, %(date_insert__0)s, %(date_update__0)s, %(user_id__0)s, %(code__0)s), (%(id__1)s, %(date_insert__1)s, %(date_update__1)s, %(user_id__1)s, %(code ... 91192 characters truncated ... __998)s), (%(id__999)s, %(date_insert__999)s, %(date_update__999)s, %(user_id__999)s, %(code__999)s)]
+[parameters: {'user_id__0': 8865.0, 'id__0': 7099, 'date_update__0': datetime.datetime(2023, 12, 25, 18, 16, 19), 'date_insert__0': datetime.datetime(2015, 11, 27, 15, 22, 4), 'code__0': '7e66e49a7a44727a0b656cc67c2b24b1', 'user_id__1': 8778.0, 'id__1': 7170, 'date_update__1': datetime.datetime(2023, 12, 26, 23, 24, 43), 'date_insert__1': datetime.datetime(2015, 11, 27, 15, 40, 37), 'code__1': '482ed1661c6eed411ca1665cfb9c2a8c', 'user_id__2': 10457.0, 'id__2': 7193, 'date_update__2': datetime.datetime(2023, 12, 27, 1, 15, 37), 'date_insert__2': datetime.datetime(2015, 11, 27, 15, 48, 18), 'code__2': '45e3752f06265331979fc8d80bbcf7b3', 'user_id__3': 9959.0, 'id__3': 7202, 'date_update__3': datetime.datetime(2023, 12, 25, 9, 54, 57), 'date_insert__3': datetime.datetime(2015, 11, 27, 15, 51, 7), 'code__3': '2a48f5659d9df7706375b0995efa221c', 'user_id__4': 8777.0, 'id__4': 7635, 'date_update__4': datetime.datetime(2023, 12, 26, 15, 13, 18), 'date_insert__4': datetime.datetime(2015, 11, 27, 16, 28, 47), 'code__4': 'bcdd57e3254eca804fd5a186b24cc520', 'user_id__5': 17390.0, 'id__5': 8533, 'date_update__5': datetime.datetime(2023, 12, 27, 22, 43, 1), 'date_insert__5': datetime.datetime(2015, 11, 27, 18, 56, 12), 'code__5': '499b5e86a9a4953bcb20f8058db00d12', 'user_id__6': 10583.0, 'id__6': 9457, 'date_update__6': datetime.datetime(2023, 12, 27, 10, 13, 29), 'date_insert__6': datetime.datetime(2015, 11, 27, 20, 1, 20), 'code__6': 'd7a535f8c99a4aca13e0269796e0f5cd', 'user_id__7': 15613.0, 'id__7': 9586, 'date_update__7': datetime.datetime(2023, 12, 26, 23, 48, 8), 'date_insert__7': datetime.datetime(2015, 11, 27, 20, 20, 14), 'code__7': '66cd6998d6e1b7c33c56e902e90f9798', 'user_id__8': 10860.0, 'id__8': 10132, 'date_update__8': datetime.datetime(2023, 12, 27, 8, 23, 2), 'date_insert__8': datetime.datetime(2015, 11, 27, 22, 51, 27), 'code__8': '3a2e0c7ac4576e7735ae61e52a6a41a1', 'user_id__9': 11061.0, 'id__9': 11000, 'date_update__9': datetime.datetime(2023, 12, 26, 14, 47, 41), 'date_insert__9': datetime.datetime(2015, 11, 28, 5, 49, 13), 'code__9': '03fd8ebee24d3e1018033c22641f4fc7' ... 4900 parameters truncated ... 'user_id__990': None, 'id__990': 60377123, 'date_update__990': datetime.datetime(2023, 12, 27, 15, 0, 34), 'date_insert__990': datetime.datetime(2023, 9, 22, 17, 30, 59), 'code__990': '7c370fcda7ac521dc80bf66e89583c84', 'user_id__991': 139856.0, 'id__991': 60382286, 'date_update__991': datetime.datetime(2023, 12, 27, 19, 51, 50), 'date_insert__991': datetime.datetime(2023, 9, 22, 22, 5, 26), 'code__991': 'b95195739f57eb805f78f9b10d7ddfbc', 'user_id__992': None, 'id__992': 60394124, 'date_update__992': datetime.datetime(2023, 12, 27, 16, 20, 59), 'date_insert__992': datetime.datetime(2023, 9, 23, 15, 1, 25), 'code__992': 'ce0845992b9c64d9a9686a62eec66ed5', 'user_id__993': 139868.0, 'id__993': 60412284, 'date_update__993': datetime.datetime(2023, 12, 27, 1, 54, 47), 'date_insert__993': datetime.datetime(2023, 9, 24, 10, 2, 6), 'code__993': '5bc811451395c14e5a16093a8ea570f2', 'user_id__994': None, 'id__994': 60418020, 'date_update__994': datetime.datetime(2023, 12, 27, 22, 23, 28), 'date_insert__994': datetime.datetime(2023, 9, 24, 16, 52, 26), 'code__994': '0f17d6b44ea4424639e741ce1b24e222', 'user_id__995': None, 'id__995': 60430382, 'date_update__995': datetime.datetime(2023, 12, 26, 9, 57, 1), 'date_insert__995': datetime.datetime(2023, 9, 25, 8, 26, 18), 'code__995': '5db380065da188fda73ea2dec53c07ab', 'user_id__996': 139906.0, 'id__996': 60468163, 'date_update__996': datetime.datetime(2023, 12, 25, 22, 17, 25), 'date_insert__996': datetime.datetime(2023, 9, 26, 19, 31, 32), 'code__996': '3b7b3f431b2c48ec127fb185ccd72e12', 'user_id__997': None, 'id__997': 60482342, 'date_update__997': datetime.datetime(2023, 12, 27, 10, 56, 43), 'date_insert__997': datetime.datetime(2023, 9, 27, 11, 16, 25), 'code__997': '645a002052289abc06e8a2238e170f29', 'user_id__998': None, 'id__998': 60506975, 'date_update__998': datetime.datetime(2023, 12, 27, 13, 8, 55), 'date_insert__998': datetime.datetime(2023, 9, 28, 13, 4, 5), 'code__998': 'ac2389e6a4ddf891ec42626fe6a3c5dd', 'user_id__999': None, 'id__999': 60508612, 'date_update__999': datetime.datetime(2023, 12, 27, 9, 13, 55), 'date_insert__999': datetime.datetime(2023, 9, 28, 15, 0, 23), 'code__999': '838e0ea3707f694a1c431812eb951e62'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2112, in _exec_insertmany_context
+    dialect.do_execute(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "site_update_fuser_new_pkey"
+DETAIL:  Key (id)=(7099) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\py.projects\tb\data_collection\site_dat\load_data_site.py", line 95, in dataSiteToBd
+    df.to_sql(tableName, engine_pg, schema='public', if_exists='append', index=False)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1958, in to_sql
+    total_inserted = sql_engine.insert_records(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1507, in insert_records
+    raise err
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1498, in insert_records
+    return table.insert(chunksize=chunksize, method=method)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1059, in insert
+    num_inserted = exec_insert(conn, keys, chunk_iter)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 951, in _execute_insert
+    result = conn.execute(self.table.insert(), data)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\sql\elements.py", line 516, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1639, in _execute_clauseelement
+    ret = self._execute_context(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_insertmany_context(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2120, in _exec_insertmany_context
+    self._handle_dbapi_exception(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2343, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2112, in _exec_insertmany_context
+    dialect.do_execute(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "site_update_fuser_new_pkey"
+DETAIL:  Key (id)=(7099) already exists.
+
+[SQL: INSERT INTO public.site_update_fuser_new (id, date_insert, date_update, user_id, code) VALUES (%(id__0)s, %(date_insert__0)s, %(date_update__0)s, %(user_id__0)s, %(code__0)s), (%(id__1)s, %(date_insert__1)s, %(date_update__1)s, %(user_id__1)s, %(code ... 91192 characters truncated ... __998)s), (%(id__999)s, %(date_insert__999)s, %(date_update__999)s, %(user_id__999)s, %(code__999)s)]
+[parameters: {'user_id__0': 8865.0, 'id__0': 7099, 'date_update__0': datetime.datetime(2023, 12, 25, 18, 16, 19), 'date_insert__0': datetime.datetime(2015, 11, 27, 15, 22, 4), 'code__0': '7e66e49a7a44727a0b656cc67c2b24b1', 'user_id__1': 8778.0, 'id__1': 7170, 'date_update__1': datetime.datetime(2023, 12, 26, 23, 24, 43), 'date_insert__1': datetime.datetime(2015, 11, 27, 15, 40, 37), 'code__1': '482ed1661c6eed411ca1665cfb9c2a8c', 'user_id__2': 10457.0, 'id__2': 7193, 'date_update__2': datetime.datetime(2023, 12, 27, 1, 15, 37), 'date_insert__2': datetime.datetime(2015, 11, 27, 15, 48, 18), 'code__2': '45e3752f06265331979fc8d80bbcf7b3', 'user_id__3': 9959.0, 'id__3': 7202, 'date_update__3': datetime.datetime(2023, 12, 25, 9, 54, 57), 'date_insert__3': datetime.datetime(2015, 11, 27, 15, 51, 7), 'code__3': '2a48f5659d9df7706375b0995efa221c', 'user_id__4': 8777.0, 'id__4': 7635, 'date_update__4': datetime.datetime(2023, 12, 26, 15, 13, 18), 'date_insert__4': datetime.datetime(2015, 11, 27, 16, 28, 47), 'code__4': 'bcdd57e3254eca804fd5a186b24cc520', 'user_id__5': 17390.0, 'id__5': 8533, 'date_update__5': datetime.datetime(2023, 12, 27, 22, 43, 1), 'date_insert__5': datetime.datetime(2015, 11, 27, 18, 56, 12), 'code__5': '499b5e86a9a4953bcb20f8058db00d12', 'user_id__6': 10583.0, 'id__6': 9457, 'date_update__6': datetime.datetime(2023, 12, 27, 10, 13, 29), 'date_insert__6': datetime.datetime(2015, 11, 27, 20, 1, 20), 'code__6': 'd7a535f8c99a4aca13e0269796e0f5cd', 'user_id__7': 15613.0, 'id__7': 9586, 'date_update__7': datetime.datetime(2023, 12, 26, 23, 48, 8), 'date_insert__7': datetime.datetime(2015, 11, 27, 20, 20, 14), 'code__7': '66cd6998d6e1b7c33c56e902e90f9798', 'user_id__8': 10860.0, 'id__8': 10132, 'date_update__8': datetime.datetime(2023, 12, 27, 8, 23, 2), 'date_insert__8': datetime.datetime(2015, 11, 27, 22, 51, 27), 'code__8': '3a2e0c7ac4576e7735ae61e52a6a41a1', 'user_id__9': 11061.0, 'id__9': 11000, 'date_update__9': datetime.datetime(2023, 12, 26, 14, 47, 41), 'date_insert__9': datetime.datetime(2015, 11, 28, 5, 49, 13), 'code__9': '03fd8ebee24d3e1018033c22641f4fc7' ... 4900 parameters truncated ... 'user_id__990': None, 'id__990': 60377123, 'date_update__990': datetime.datetime(2023, 12, 27, 15, 0, 34), 'date_insert__990': datetime.datetime(2023, 9, 22, 17, 30, 59), 'code__990': '7c370fcda7ac521dc80bf66e89583c84', 'user_id__991': 139856.0, 'id__991': 60382286, 'date_update__991': datetime.datetime(2023, 12, 27, 19, 51, 50), 'date_insert__991': datetime.datetime(2023, 9, 22, 22, 5, 26), 'code__991': 'b95195739f57eb805f78f9b10d7ddfbc', 'user_id__992': None, 'id__992': 60394124, 'date_update__992': datetime.datetime(2023, 12, 27, 16, 20, 59), 'date_insert__992': datetime.datetime(2023, 9, 23, 15, 1, 25), 'code__992': 'ce0845992b9c64d9a9686a62eec66ed5', 'user_id__993': 139868.0, 'id__993': 60412284, 'date_update__993': datetime.datetime(2023, 12, 27, 1, 54, 47), 'date_insert__993': datetime.datetime(2023, 9, 24, 10, 2, 6), 'code__993': '5bc811451395c14e5a16093a8ea570f2', 'user_id__994': None, 'id__994': 60418020, 'date_update__994': datetime.datetime(2023, 12, 27, 22, 23, 28), 'date_insert__994': datetime.datetime(2023, 9, 24, 16, 52, 26), 'code__994': '0f17d6b44ea4424639e741ce1b24e222', 'user_id__995': None, 'id__995': 60430382, 'date_update__995': datetime.datetime(2023, 12, 26, 9, 57, 1), 'date_insert__995': datetime.datetime(2023, 9, 25, 8, 26, 18), 'code__995': '5db380065da188fda73ea2dec53c07ab', 'user_id__996': 139906.0, 'id__996': 60468163, 'date_update__996': datetime.datetime(2023, 12, 25, 22, 17, 25), 'date_insert__996': datetime.datetime(2023, 9, 26, 19, 31, 32), 'code__996': '3b7b3f431b2c48ec127fb185ccd72e12', 'user_id__997': None, 'id__997': 60482342, 'date_update__997': datetime.datetime(2023, 12, 27, 10, 56, 43), 'date_insert__997': datetime.datetime(2023, 9, 27, 11, 16, 25), 'code__997': '645a002052289abc06e8a2238e170f29', 'user_id__998': None, 'id__998': 60506975, 'date_update__998': datetime.datetime(2023, 12, 27, 13, 8, 55), 'date_insert__998': datetime.datetime(2023, 9, 28, 13, 4, 5), 'code__998': 'ac2389e6a4ddf891ec42626fe6a3c5dd', 'user_id__999': None, 'id__999': 60508612, 'date_update__999': datetime.datetime(2023, 12, 27, 9, 13, 55), 'date_insert__999': datetime.datetime(2023, 9, 28, 15, 0, 23), 'code__999': '838e0ea3707f694a1c431812eb951e62'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+root 2023-12-28 04:34:37,378 INFO siteInsertBasket(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 04:34:37,408 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 04:34:37,859 INFO Authentication (password) successful!
+root 2023-12-28 04:34:41,447 INFO siteInsertBasket(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 04:34:41,450 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_insert_basket_new.
+root 2023-12-28 04:34:41,744 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_insert_basket_new.
+root 2023-12-28 04:34:41,821 INFO siteUpdateBasket(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 04:34:41,850 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 04:34:42,237 INFO Authentication (password) successful!
+root 2023-12-28 04:34:45,586 INFO siteUpdateBasket(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 04:34:45,593 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_update_basket_new.
+root 2023-12-28 04:34:45,977 ERROR site.dataSiteToBd(). Oshibka zapisi dannih v tab site_update_basket_new - (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "site_update_basket_new_pkey"
+DETAIL:  Key (id)=(2805690) already exists.
+
+[SQL: INSERT INTO public.site_update_basket_new (id, order_id, fuser_id, barcode_multi, base_price, callback_func, can_buy, cancel_callback_func, currency, custom_price, date_insert, date_refresh, date_update, deducted, delay, detail_page_url, dimensions,  ... 705933 characters truncated ... 709)s, %(subscribe__709)s, %(type__709)s, %(vat_included__709)s, %(vat_rate__709)s, %(weight__709)s)]
+[parameters: {'custom_price__0': 'Y', 'id__0': 1708758, 'vat_rate__0': Decimal('0.0000'), 'type__0': None, 'detail_page_url__0': None, 'date_refresh__0': None, 'dimensions__0': 's:50:"a:3:{s:5:"WIDTH";N;s:6:"HEIGHT";N;s:6:"LENGTH";N;}";', 'weight__0': 0.0, 'product_id__0': 284660, 'callback_func__0': None, 'currency__0': 'RUB', 'vat_included__0': 'N', 'subscribe__0': 'N', 'can_buy__0': 'Y', 'notes__0': '������� ����', 'fuser_id__0': 13006788, 'module__0': 'catalog', 'discount_price__0': Decimal('0.0000'), 'sort__0': 100, 'pay_callback_func__0': None, 'date_update__0': datetime.datetime(2023, 12, 27, 16, 32, 4), 'discount_name__0': None, 'measure_code__0': 796.0, 'reserved__0': 'N', 'date_insert__0': datetime.datetime(2021, 1, 20, 15, 52, 21), 'measure_name__0': '��', 'discount_value__0': None, 'base_price__0': Decimal('1090.0000'), 'price_type_id__0': 1.0, 'deducted__0': 'N', 'set_parent_id__0': None, 'product_provider_class__0': 'CCatalogProductProvider', 'order_callback_func__0': None, 'product_price_id__0': 47709.0, 'recommendation__0': None, 'marking_code_group__0': None, 'order_id__0': None, 'price__0': Decimal('888.0000'), 'name__0': '������ (���� �������) (50 ������)', 'barcode_multi__0': 'N', 'reserve_quantity__0': None, 'delay__0': 'N', 'quantity__0': 1.0, 'cancel_callback_func__0': None, 'discount_coupon__0': None, 'lid__0': 's1', 'custom_price__1': 'Y', 'id__1': 2134906, 'vat_rate__1': Decimal('0.0000'), 'type__1': None ... 32560 parameters truncated ... 'quantity__708': 1.0, 'cancel_callback_func__708': None, 'discount_coupon__708': None, 'lid__708': 's1', 'custom_price__709': 'Y', 'id__709': 2973755, 'vat_rate__709': None, 'type__709': None, 'detail_page_url__709': None, 'date_refresh__709': None, 'dimensions__709': 's:50:"a:3:{s:5:"WIDTH";N;s:6:"HEIGHT";N;s:6:"LENGTH";N;}";', 'weight__709': 0.0, 'product_id__709': 426618, 'callback_func__709': None, 'currency__709': 'RUB', 'vat_included__709': 'N', 'subscribe__709': 'N', 'can_buy__709': 'Y', 'notes__709': '������� ����', 'fuser_id__709': 58149145, 'module__709': 'catalog', 'discount_price__709': Decimal('0.0000'), 'sort__709': 1300, 'pay_callback_func__709': None, 'date_update__709': datetime.datetime(2023, 12, 27, 21, 10, 24), 'discount_name__709': None, 'measure_code__709': 796.0, 'reserved__709': 'N', 'date_insert__709': datetime.datetime(2023, 11, 22, 16, 41, 5), 'measure_name__709': '��', 'discount_value__709': None, 'base_price__709': Decimal('1390.0000'), 'price_type_id__709': 1.0, 'deducted__709': 'N', 'set_parent_id__709': None, 'product_provider_class__709': 'CCatalogProductProvider', 'order_callback_func__709': None, 'product_price_id__709': 111910.0, 'recommendation__709': None, 'marking_code_group__709': None, 'order_id__709': None, 'price__709': Decimal('1390.0000'), 'name__709': '����������� ��� (������) (46 ������)', 'barcode_multi__709': 'N', 'reserve_quantity__709': None, 'delay__709': 'N', 'quantity__709': 1.0, 'cancel_callback_func__709': None, 'discount_coupon__709': None, 'lid__709': 's1'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2112, in _exec_insertmany_context
+    dialect.do_execute(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "site_update_basket_new_pkey"
+DETAIL:  Key (id)=(2805690) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\py.projects\tb\data_collection\site_dat\load_data_site.py", line 95, in dataSiteToBd
+    df.to_sql(tableName, engine_pg, schema='public', if_exists='append', index=False)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1958, in to_sql
+    total_inserted = sql_engine.insert_records(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1507, in insert_records
+    raise err
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1498, in insert_records
+    return table.insert(chunksize=chunksize, method=method)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1059, in insert
+    num_inserted = exec_insert(conn, keys, chunk_iter)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 951, in _execute_insert
+    result = conn.execute(self.table.insert(), data)
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\sql\elements.py", line 516, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1639, in _execute_clauseelement
+    ret = self._execute_context(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_insertmany_context(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2120, in _exec_insertmany_context
+    self._handle_dbapi_exception(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2343, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2112, in _exec_insertmany_context
+    dialect.do_execute(
+  File "G:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "site_update_basket_new_pkey"
+DETAIL:  Key (id)=(2805690) already exists.
+
+[SQL: INSERT INTO public.site_update_basket_new (id, order_id, fuser_id, barcode_multi, base_price, callback_func, can_buy, cancel_callback_func, currency, custom_price, date_insert, date_refresh, date_update, deducted, delay, detail_page_url, dimensions,  ... 705933 characters truncated ... 709)s, %(subscribe__709)s, %(type__709)s, %(vat_included__709)s, %(vat_rate__709)s, %(weight__709)s)]
+[parameters: {'custom_price__0': 'Y', 'id__0': 1708758, 'vat_rate__0': Decimal('0.0000'), 'type__0': None, 'detail_page_url__0': None, 'date_refresh__0': None, 'dimensions__0': 's:50:"a:3:{s:5:"WIDTH";N;s:6:"HEIGHT";N;s:6:"LENGTH";N;}";', 'weight__0': 0.0, 'product_id__0': 284660, 'callback_func__0': None, 'currency__0': 'RUB', 'vat_included__0': 'N', 'subscribe__0': 'N', 'can_buy__0': 'Y', 'notes__0': '������� ����', 'fuser_id__0': 13006788, 'module__0': 'catalog', 'discount_price__0': Decimal('0.0000'), 'sort__0': 100, 'pay_callback_func__0': None, 'date_update__0': datetime.datetime(2023, 12, 27, 16, 32, 4), 'discount_name__0': None, 'measure_code__0': 796.0, 'reserved__0': 'N', 'date_insert__0': datetime.datetime(2021, 1, 20, 15, 52, 21), 'measure_name__0': '��', 'discount_value__0': None, 'base_price__0': Decimal('1090.0000'), 'price_type_id__0': 1.0, 'deducted__0': 'N', 'set_parent_id__0': None, 'product_provider_class__0': 'CCatalogProductProvider', 'order_callback_func__0': None, 'product_price_id__0': 47709.0, 'recommendation__0': None, 'marking_code_group__0': None, 'order_id__0': None, 'price__0': Decimal('888.0000'), 'name__0': '������ (���� �������) (50 ������)', 'barcode_multi__0': 'N', 'reserve_quantity__0': None, 'delay__0': 'N', 'quantity__0': 1.0, 'cancel_callback_func__0': None, 'discount_coupon__0': None, 'lid__0': 's1', 'custom_price__1': 'Y', 'id__1': 2134906, 'vat_rate__1': Decimal('0.0000'), 'type__1': None ... 32560 parameters truncated ... 'quantity__708': 1.0, 'cancel_callback_func__708': None, 'discount_coupon__708': None, 'lid__708': 's1', 'custom_price__709': 'Y', 'id__709': 2973755, 'vat_rate__709': None, 'type__709': None, 'detail_page_url__709': None, 'date_refresh__709': None, 'dimensions__709': 's:50:"a:3:{s:5:"WIDTH";N;s:6:"HEIGHT";N;s:6:"LENGTH";N;}";', 'weight__709': 0.0, 'product_id__709': 426618, 'callback_func__709': None, 'currency__709': 'RUB', 'vat_included__709': 'N', 'subscribe__709': 'N', 'can_buy__709': 'Y', 'notes__709': '������� ����', 'fuser_id__709': 58149145, 'module__709': 'catalog', 'discount_price__709': Decimal('0.0000'), 'sort__709': 1300, 'pay_callback_func__709': None, 'date_update__709': datetime.datetime(2023, 12, 27, 21, 10, 24), 'discount_name__709': None, 'measure_code__709': 796.0, 'reserved__709': 'N', 'date_insert__709': datetime.datetime(2023, 11, 22, 16, 41, 5), 'measure_name__709': '��', 'discount_value__709': None, 'base_price__709': Decimal('1390.0000'), 'price_type_id__709': 1.0, 'deducted__709': 'N', 'set_parent_id__709': None, 'product_provider_class__709': 'CCatalogProductProvider', 'order_callback_func__709': None, 'product_price_id__709': 111910.0, 'recommendation__709': None, 'marking_code_group__709': None, 'order_id__709': None, 'price__709': Decimal('1390.0000'), 'name__709': '����������� ��� (������) (46 ������)', 'barcode_multi__709': 'N', 'reserve_quantity__709': None, 'delay__709': 'N', 'quantity__709': 1.0, 'cancel_callback_func__709': None, 'discount_coupon__709': None, 'lid__709': 's1'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+root 2023-12-28 04:34:46,169 INFO siteGuest(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 04:34:46,197 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 04:34:46,623 INFO Authentication (password) successful!
+root 2023-12-28 04:35:02,159 INFO siteGuest(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 04:35:02,173 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_guest_new.
+root 2023-12-28 04:35:03,130 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_guest_new.
+root 2023-12-28 04:35:03,406 INFO siteSession(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 04:35:03,432 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 04:35:03,891 INFO Authentication (password) successful!
+root 2023-12-28 04:35:25,501 INFO siteSession(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 04:35:25,527 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_session_new.
+root 2023-12-28 04:35:27,216 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_session_new.
+root 2023-12-28 04:35:27,219 INFO siteOrderPropsValue(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 04:35:27,252 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 04:35:27,661 INFO Authentication (password) successful!
+root 2023-12-28 04:35:31,915 INFO siteOrderPropsValue(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 04:35:31,920 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_order_props_value_new.
+root 2023-12-28 04:35:31,973 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_order_props_value_new.
+root 2023-12-28 04:35:31,975 INFO siteTransact(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 04:35:32,004 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 04:35:32,450 INFO Authentication (password) successful!
+root 2023-12-28 04:35:33,137 INFO siteTransact(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 04:35:33,138 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_user_transact_new.
+root 2023-12-28 04:35:33,290 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_user_transact_new.
+root 2023-12-28 04:35:33,332 INFO Otpravka soobsheniya v telegram.
+root 2023-12-28 04:35:33,730 INFO Soobshenie v telegram otpravleno.
+root 2023-12-28 10:04:04,923 INFO siteUpdateOrders(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 10:04:05,055 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 10:04:05,563 INFO Authentication (password) successful!
+root 2023-12-28 10:04:09,453 INFO siteUpdateOrders(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 10:04:09,462 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_update_order_new.
+root 2023-12-28 10:04:09,637 ERROR site.dataSiteToBd(). Oshibka zapisi dannih v tab site_update_order_new - (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "site_update_order_new_pkey"
+DETAIL:  Key (id)=(321087) already exists.
+
+[SQL: INSERT INTO public.site_update_order_new (id, user_id, status_id, account_number, additional_info, affiliate_id, allow_delivery, bx_user_id, canceled, comments, company_id, created_by, currency, date_allow_delivery, date_bill, date_canceled, date_ded ... 127867 characters truncated ... (updated_1c__76)s, %(user_description__76)s, %(version__76)s, %(version_1c__76)s, %(promocode__76)s)]
+[parameters: {'affiliate_id__0': None, 'tax_value__0': Decimal('0.00'), 'delivery_doc_num__0': None, 'bx_user_id__0': 'da3fba900ed8d17483d9cd3d6971d651', 'deducted__0': 'N', 'reason_marked__0': None, 'comments__0': '�# new_IM-12313402 ,?, �����', 'ps_status__0': None, 'pay_voucher_date__0': None, 'reserved__0': 'N', 'user_id__0': 106811, 'emp_marked_id__0': None, 'price_payment__0': Decimal('0.0000'), 'account_number__0': 'IM-12313402', 'company_id__0': 0, 'order_topic__0': None, 'status_id__0': 'OR', 'id__0': 313402, 'date_insert__0': datetime.datetime(2023, 10, 16, 18, 50, 34), 'date_allow_delivery__0': None, 'ps_response_date__0': None, 'additional_info__0': None, 'recurring_id__0': None, 'is_sync_b24__0': 'N', 'date_marked__0': None, 'person_type_id__0': 1, 'emp_payed_id__0': None, 'store_id__0': None, 'is_recurring__0': 'N', 'discount_value__0': Decimal('0.0000'), 'date_deducted__0': None, 'delivery_doc_date__0': None, 'date_canceled__0': datetime.datetime(2023, 12, 27, 13, 13, 34), 'recount_flag__0': 'Y', 'sum_paid__0': Decimal('0.00'), 'stat_gid__0': 'BITRIX_SM.NDIyMDg1OC41Mjc3NzIuUlUuLi5zMQ==', 'ps_status_code__0': None, 'emp_canceled_id__0': 4.0, 'emp_deducted_id__0': None, 'price_delivery__0': Decimal('0.0000'), 'ps_status_message__0': None, 'pay_system_id__0': 1, 'lid__0': 's1', 'search_content__0': None, 'currency__0': 'RUB', 'ps_status_description__0': None, 'price__0': Decimal('4630.0000'), 'external_order__0': 'N', 'responsible_id__0': None, 'date_update__0': datetime.datetime(2023, 12, 27, 13, 13, 35) ... 5829 parameters truncated ... 'store_id__76': None, 'is_recurring__76': 'N', 'discount_value__76': Decimal('0.0000'), 'date_deducted__76': None, 'delivery_doc_date__76': None, 'date_canceled__76': None, 'recount_flag__76': 'Y', 'sum_paid__76': Decimal('0.00'), 'stat_gid__76': 'BITRIX_SM.NTU5NzA4NS42NDk5ODguUlUuLi5zMQ==', 'ps_status_code__76': None, 'emp_canceled_id__76': None, 'emp_deducted_id__76': None, 'price_delivery__76': Decimal('0.0000'), 'ps_status_message__76': None, 'pay_system_id__76': 1, 'lid__76': 's1', 'search_content__76': None, 'currency__76': 'RUB', 'ps_status_description__76': None, 'price__76': Decimal('8980.0000'), 'external_order__76': 'N', 'responsible_id__76': None, 'date_update__76': datetime.datetime(2023, 12, 27, 23, 16, 40), 'running__76': 'N', 'updated_1c__76': 'Y', 'ps_currency__76': None, 'created_by__76': 53144, 'locked_by__76': None, 'reason_canceled__76': None, 'delivery_id__76': '24', 'ps_sum__76': None, 'canceled__76': 'N', 'tracking_number__76': None, 'emp_status_id__76': 4, 'id_1c__76': '325698', 'allow_delivery__76': 'N', 'date_pay_before__76': None, 'date_lock__76': None, 'user_description__76': None, 'pay_voucher_num__76': None, 'date_status__76': datetime.datetime(2023, 12, 27, 23, 16, 38), 'emp_allow_delivery_id__76': None, 'date_bill__76': None, 'marked__76': 'N', 'reason_undo_deducted__76': None, 'payed__76': 'N', 'date_payed__76': None, 'version_1c__76': None, 'version__76': 35, 'promocode__76': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2112, in _exec_insertmany_context
+    dialect.do_execute(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "site_update_order_new_pkey"
+DETAIL:  Key (id)=(321087) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\site_dat\load_data_site.py", line 95, in dataSiteToBd
+    df.to_sql(tableName, engine_pg, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1958, in to_sql
+    total_inserted = sql_engine.insert_records(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1507, in insert_records
+    raise err
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1498, in insert_records
+    return table.insert(chunksize=chunksize, method=method)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1059, in insert
+    num_inserted = exec_insert(conn, keys, chunk_iter)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 951, in _execute_insert
+    result = conn.execute(self.table.insert(), data)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\sql\elements.py", line 516, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1639, in _execute_clauseelement
+    ret = self._execute_context(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_insertmany_context(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2120, in _exec_insertmany_context
+    self._handle_dbapi_exception(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2343, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2112, in _exec_insertmany_context
+    dialect.do_execute(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "site_update_order_new_pkey"
+DETAIL:  Key (id)=(321087) already exists.
+
+[SQL: INSERT INTO public.site_update_order_new (id, user_id, status_id, account_number, additional_info, affiliate_id, allow_delivery, bx_user_id, canceled, comments, company_id, created_by, currency, date_allow_delivery, date_bill, date_canceled, date_ded ... 127867 characters truncated ... (updated_1c__76)s, %(user_description__76)s, %(version__76)s, %(version_1c__76)s, %(promocode__76)s)]
+[parameters: {'affiliate_id__0': None, 'tax_value__0': Decimal('0.00'), 'delivery_doc_num__0': None, 'bx_user_id__0': 'da3fba900ed8d17483d9cd3d6971d651', 'deducted__0': 'N', 'reason_marked__0': None, 'comments__0': '�# new_IM-12313402 ,?, �����', 'ps_status__0': None, 'pay_voucher_date__0': None, 'reserved__0': 'N', 'user_id__0': 106811, 'emp_marked_id__0': None, 'price_payment__0': Decimal('0.0000'), 'account_number__0': 'IM-12313402', 'company_id__0': 0, 'order_topic__0': None, 'status_id__0': 'OR', 'id__0': 313402, 'date_insert__0': datetime.datetime(2023, 10, 16, 18, 50, 34), 'date_allow_delivery__0': None, 'ps_response_date__0': None, 'additional_info__0': None, 'recurring_id__0': None, 'is_sync_b24__0': 'N', 'date_marked__0': None, 'person_type_id__0': 1, 'emp_payed_id__0': None, 'store_id__0': None, 'is_recurring__0': 'N', 'discount_value__0': Decimal('0.0000'), 'date_deducted__0': None, 'delivery_doc_date__0': None, 'date_canceled__0': datetime.datetime(2023, 12, 27, 13, 13, 34), 'recount_flag__0': 'Y', 'sum_paid__0': Decimal('0.00'), 'stat_gid__0': 'BITRIX_SM.NDIyMDg1OC41Mjc3NzIuUlUuLi5zMQ==', 'ps_status_code__0': None, 'emp_canceled_id__0': 4.0, 'emp_deducted_id__0': None, 'price_delivery__0': Decimal('0.0000'), 'ps_status_message__0': None, 'pay_system_id__0': 1, 'lid__0': 's1', 'search_content__0': None, 'currency__0': 'RUB', 'ps_status_description__0': None, 'price__0': Decimal('4630.0000'), 'external_order__0': 'N', 'responsible_id__0': None, 'date_update__0': datetime.datetime(2023, 12, 27, 13, 13, 35) ... 5829 parameters truncated ... 'store_id__76': None, 'is_recurring__76': 'N', 'discount_value__76': Decimal('0.0000'), 'date_deducted__76': None, 'delivery_doc_date__76': None, 'date_canceled__76': None, 'recount_flag__76': 'Y', 'sum_paid__76': Decimal('0.00'), 'stat_gid__76': 'BITRIX_SM.NTU5NzA4NS42NDk5ODguUlUuLi5zMQ==', 'ps_status_code__76': None, 'emp_canceled_id__76': None, 'emp_deducted_id__76': None, 'price_delivery__76': Decimal('0.0000'), 'ps_status_message__76': None, 'pay_system_id__76': 1, 'lid__76': 's1', 'search_content__76': None, 'currency__76': 'RUB', 'ps_status_description__76': None, 'price__76': Decimal('8980.0000'), 'external_order__76': 'N', 'responsible_id__76': None, 'date_update__76': datetime.datetime(2023, 12, 27, 23, 16, 40), 'running__76': 'N', 'updated_1c__76': 'Y', 'ps_currency__76': None, 'created_by__76': 53144, 'locked_by__76': None, 'reason_canceled__76': None, 'delivery_id__76': '24', 'ps_sum__76': None, 'canceled__76': 'N', 'tracking_number__76': None, 'emp_status_id__76': 4, 'id_1c__76': '325698', 'allow_delivery__76': 'N', 'date_pay_before__76': None, 'date_lock__76': None, 'user_description__76': None, 'pay_voucher_num__76': None, 'date_status__76': datetime.datetime(2023, 12, 27, 23, 16, 38), 'emp_allow_delivery_id__76': None, 'date_bill__76': None, 'marked__76': 'N', 'reason_undo_deducted__76': None, 'payed__76': 'N', 'date_payed__76': None, 'version_1c__76': None, 'version__76': 35, 'promocode__76': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+root 2023-12-28 10:13:30,780 INFO siteUpdateFuser(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 10:13:30,812 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 10:13:31,288 INFO Authentication (password) successful!
+root 2023-12-28 10:13:33,583 INFO siteUpdateFuser(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 10:13:33,593 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_update_fuser_new.
+root 2023-12-28 10:13:33,928 ERROR site.dataSiteToBd(). Oshibka zapisi dannih v tab site_update_fuser_new - (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "site_update_fuser_new_pkey"
+DETAIL:  Key (id)=(7099) already exists.
+
+[SQL: INSERT INTO public.site_update_fuser_new (id, date_insert, date_update, user_id, code) VALUES (%(id__0)s, %(date_insert__0)s, %(date_update__0)s, %(user_id__0)s, %(code__0)s), (%(id__1)s, %(date_insert__1)s, %(date_update__1)s, %(user_id__1)s, %(code ... 91192 characters truncated ... __998)s), (%(id__999)s, %(date_insert__999)s, %(date_update__999)s, %(user_id__999)s, %(code__999)s)]
+[parameters: {'date_update__0': datetime.datetime(2023, 12, 25, 18, 16, 19), 'id__0': 7099, 'date_insert__0': datetime.datetime(2015, 11, 27, 15, 22, 4), 'user_id__0': 8865.0, 'code__0': '7e66e49a7a44727a0b656cc67c2b24b1', 'date_update__1': datetime.datetime(2023, 12, 26, 23, 24, 43), 'id__1': 7170, 'date_insert__1': datetime.datetime(2015, 11, 27, 15, 40, 37), 'user_id__1': 8778.0, 'code__1': '482ed1661c6eed411ca1665cfb9c2a8c', 'date_update__2': datetime.datetime(2023, 12, 27, 1, 15, 37), 'id__2': 7193, 'date_insert__2': datetime.datetime(2015, 11, 27, 15, 48, 18), 'user_id__2': 10457.0, 'code__2': '45e3752f06265331979fc8d80bbcf7b3', 'date_update__3': datetime.datetime(2023, 12, 25, 9, 54, 57), 'id__3': 7202, 'date_insert__3': datetime.datetime(2015, 11, 27, 15, 51, 7), 'user_id__3': 9959.0, 'code__3': '2a48f5659d9df7706375b0995efa221c', 'date_update__4': datetime.datetime(2023, 12, 26, 15, 13, 18), 'id__4': 7635, 'date_insert__4': datetime.datetime(2015, 11, 27, 16, 28, 47), 'user_id__4': 8777.0, 'code__4': 'bcdd57e3254eca804fd5a186b24cc520', 'date_update__5': datetime.datetime(2023, 12, 27, 22, 43, 1), 'id__5': 8533, 'date_insert__5': datetime.datetime(2015, 11, 27, 18, 56, 12), 'user_id__5': 17390.0, 'code__5': '499b5e86a9a4953bcb20f8058db00d12', 'date_update__6': datetime.datetime(2023, 12, 27, 10, 13, 29), 'id__6': 9457, 'date_insert__6': datetime.datetime(2015, 11, 27, 20, 1, 20), 'user_id__6': 10583.0, 'code__6': 'd7a535f8c99a4aca13e0269796e0f5cd', 'date_update__7': datetime.datetime(2023, 12, 26, 23, 48, 8), 'id__7': 9586, 'date_insert__7': datetime.datetime(2015, 11, 27, 20, 20, 14), 'user_id__7': 15613.0, 'code__7': '66cd6998d6e1b7c33c56e902e90f9798', 'date_update__8': datetime.datetime(2023, 12, 27, 8, 23, 2), 'id__8': 10132, 'date_insert__8': datetime.datetime(2015, 11, 27, 22, 51, 27), 'user_id__8': 10860.0, 'code__8': '3a2e0c7ac4576e7735ae61e52a6a41a1', 'date_update__9': datetime.datetime(2023, 12, 26, 14, 47, 41), 'id__9': 11000, 'date_insert__9': datetime.datetime(2015, 11, 28, 5, 49, 13), 'user_id__9': 11061.0, 'code__9': '03fd8ebee24d3e1018033c22641f4fc7' ... 4900 parameters truncated ... 'date_update__990': datetime.datetime(2023, 12, 27, 17, 40, 54), 'id__990': 60986229, 'date_insert__990': datetime.datetime(2023, 10, 20, 3, 15, 44), 'user_id__990': 140267.0, 'code__990': '28c9ad20c7253decd40c7cc6f917f961', 'date_update__991': datetime.datetime(2023, 12, 27, 14, 22, 2), 'id__991': 60986961, 'date_insert__991': datetime.datetime(2023, 10, 20, 4, 10, 42), 'user_id__991': 140268.0, 'code__991': '43e0bc77775c2d2bc5f516230b0ee8ff', 'date_update__992': datetime.datetime(2023, 12, 27, 19, 59, 45), 'id__992': 60998537, 'date_insert__992': datetime.datetime(2023, 10, 20, 13, 13, 30), 'user_id__992': 140270.0, 'code__992': 'c111324fd63920a67c94061d25059d89', 'date_update__993': datetime.datetime(2023, 12, 25, 15, 17, 53), 'id__993': 61004869, 'date_insert__993': datetime.datetime(2023, 10, 20, 18, 17, 49), 'user_id__993': 140275.0, 'code__993': 'bc0c79d37a8b3487707a784169eaed79', 'date_update__994': datetime.datetime(2023, 12, 26, 3, 3, 43), 'id__994': 61027422, 'date_insert__994': datetime.datetime(2023, 10, 21, 15, 13, 45), 'user_id__994': 140291.0, 'code__994': '61c60cb32f8fc5e80cb343b96b3f064c', 'date_update__995': datetime.datetime(2023, 12, 25, 6, 49, 7), 'id__995': 61030170, 'date_insert__995': datetime.datetime(2023, 10, 21, 18, 10, 30), 'user_id__995': 140294.0, 'code__995': '7295fb19fd038ae50f01e9e3bd31ab25', 'date_update__996': datetime.datetime(2023, 12, 26, 11, 23, 10), 'id__996': 61059062, 'date_insert__996': datetime.datetime(2023, 10, 22, 23, 14, 38), 'user_id__996': 140312.0, 'code__996': '710c527711392adba21c06b88dbbd010', 'date_update__997': datetime.datetime(2023, 12, 26, 14, 33, 11), 'id__997': 61075160, 'date_insert__997': datetime.datetime(2023, 10, 23, 15, 40, 44), 'user_id__997': 140330.0, 'code__997': '211fd5f71bcf7d1a43c552c1d484d24f', 'date_update__998': datetime.datetime(2023, 12, 27, 2, 53, 15), 'id__998': 61096448, 'date_insert__998': datetime.datetime(2023, 10, 24, 14, 44, 57), 'user_id__998': None, 'code__998': 'abe995ca969776933761df9261e991e8', 'date_update__999': datetime.datetime(2023, 12, 26, 13, 18, 51), 'id__999': 61101742, 'date_insert__999': datetime.datetime(2023, 10, 24, 17, 38, 34), 'user_id__999': None, 'code__999': '3f83e8fa97b7b0dd133074c47f966973'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2112, in _exec_insertmany_context
+    dialect.do_execute(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "site_update_fuser_new_pkey"
+DETAIL:  Key (id)=(7099) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "g:\py.projects\tb\data_collection\site_dat\load_data_site.py", line 95, in dataSiteToBd
+    df.to_sql(tableName, engine_pg, schema='public', if_exists='append', index=False)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\core\generic.py", line 3008, in to_sql
+    return sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 788, in to_sql
+    return pandas_sql.to_sql(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1958, in to_sql
+    total_inserted = sql_engine.insert_records(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1507, in insert_records
+    raise err
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1498, in insert_records
+    return table.insert(chunksize=chunksize, method=method)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 1059, in insert
+    num_inserted = exec_insert(conn, keys, chunk_iter)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\pandas\io\sql.py", line 951, in _execute_insert
+    result = conn.execute(self.table.insert(), data)
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\sql\elements.py", line 516, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1639, in _execute_clauseelement
+    ret = self._execute_context(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_insertmany_context(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2120, in _exec_insertmany_context
+    self._handle_dbapi_exception(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2343, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2112, in _exec_insertmany_context
+    dialect.do_execute(
+  File "g:\py.projects\tb\data_collection\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "site_update_fuser_new_pkey"
+DETAIL:  Key (id)=(7099) already exists.
+
+[SQL: INSERT INTO public.site_update_fuser_new (id, date_insert, date_update, user_id, code) VALUES (%(id__0)s, %(date_insert__0)s, %(date_update__0)s, %(user_id__0)s, %(code__0)s), (%(id__1)s, %(date_insert__1)s, %(date_update__1)s, %(user_id__1)s, %(code ... 91192 characters truncated ... __998)s), (%(id__999)s, %(date_insert__999)s, %(date_update__999)s, %(user_id__999)s, %(code__999)s)]
+[parameters: {'date_update__0': datetime.datetime(2023, 12, 25, 18, 16, 19), 'id__0': 7099, 'date_insert__0': datetime.datetime(2015, 11, 27, 15, 22, 4), 'user_id__0': 8865.0, 'code__0': '7e66e49a7a44727a0b656cc67c2b24b1', 'date_update__1': datetime.datetime(2023, 12, 26, 23, 24, 43), 'id__1': 7170, 'date_insert__1': datetime.datetime(2015, 11, 27, 15, 40, 37), 'user_id__1': 8778.0, 'code__1': '482ed1661c6eed411ca1665cfb9c2a8c', 'date_update__2': datetime.datetime(2023, 12, 27, 1, 15, 37), 'id__2': 7193, 'date_insert__2': datetime.datetime(2015, 11, 27, 15, 48, 18), 'user_id__2': 10457.0, 'code__2': '45e3752f06265331979fc8d80bbcf7b3', 'date_update__3': datetime.datetime(2023, 12, 25, 9, 54, 57), 'id__3': 7202, 'date_insert__3': datetime.datetime(2015, 11, 27, 15, 51, 7), 'user_id__3': 9959.0, 'code__3': '2a48f5659d9df7706375b0995efa221c', 'date_update__4': datetime.datetime(2023, 12, 26, 15, 13, 18), 'id__4': 7635, 'date_insert__4': datetime.datetime(2015, 11, 27, 16, 28, 47), 'user_id__4': 8777.0, 'code__4': 'bcdd57e3254eca804fd5a186b24cc520', 'date_update__5': datetime.datetime(2023, 12, 27, 22, 43, 1), 'id__5': 8533, 'date_insert__5': datetime.datetime(2015, 11, 27, 18, 56, 12), 'user_id__5': 17390.0, 'code__5': '499b5e86a9a4953bcb20f8058db00d12', 'date_update__6': datetime.datetime(2023, 12, 27, 10, 13, 29), 'id__6': 9457, 'date_insert__6': datetime.datetime(2015, 11, 27, 20, 1, 20), 'user_id__6': 10583.0, 'code__6': 'd7a535f8c99a4aca13e0269796e0f5cd', 'date_update__7': datetime.datetime(2023, 12, 26, 23, 48, 8), 'id__7': 9586, 'date_insert__7': datetime.datetime(2015, 11, 27, 20, 20, 14), 'user_id__7': 15613.0, 'code__7': '66cd6998d6e1b7c33c56e902e90f9798', 'date_update__8': datetime.datetime(2023, 12, 27, 8, 23, 2), 'id__8': 10132, 'date_insert__8': datetime.datetime(2015, 11, 27, 22, 51, 27), 'user_id__8': 10860.0, 'code__8': '3a2e0c7ac4576e7735ae61e52a6a41a1', 'date_update__9': datetime.datetime(2023, 12, 26, 14, 47, 41), 'id__9': 11000, 'date_insert__9': datetime.datetime(2015, 11, 28, 5, 49, 13), 'user_id__9': 11061.0, 'code__9': '03fd8ebee24d3e1018033c22641f4fc7' ... 4900 parameters truncated ... 'date_update__990': datetime.datetime(2023, 12, 27, 17, 40, 54), 'id__990': 60986229, 'date_insert__990': datetime.datetime(2023, 10, 20, 3, 15, 44), 'user_id__990': 140267.0, 'code__990': '28c9ad20c7253decd40c7cc6f917f961', 'date_update__991': datetime.datetime(2023, 12, 27, 14, 22, 2), 'id__991': 60986961, 'date_insert__991': datetime.datetime(2023, 10, 20, 4, 10, 42), 'user_id__991': 140268.0, 'code__991': '43e0bc77775c2d2bc5f516230b0ee8ff', 'date_update__992': datetime.datetime(2023, 12, 27, 19, 59, 45), 'id__992': 60998537, 'date_insert__992': datetime.datetime(2023, 10, 20, 13, 13, 30), 'user_id__992': 140270.0, 'code__992': 'c111324fd63920a67c94061d25059d89', 'date_update__993': datetime.datetime(2023, 12, 25, 15, 17, 53), 'id__993': 61004869, 'date_insert__993': datetime.datetime(2023, 10, 20, 18, 17, 49), 'user_id__993': 140275.0, 'code__993': 'bc0c79d37a8b3487707a784169eaed79', 'date_update__994': datetime.datetime(2023, 12, 26, 3, 3, 43), 'id__994': 61027422, 'date_insert__994': datetime.datetime(2023, 10, 21, 15, 13, 45), 'user_id__994': 140291.0, 'code__994': '61c60cb32f8fc5e80cb343b96b3f064c', 'date_update__995': datetime.datetime(2023, 12, 25, 6, 49, 7), 'id__995': 61030170, 'date_insert__995': datetime.datetime(2023, 10, 21, 18, 10, 30), 'user_id__995': 140294.0, 'code__995': '7295fb19fd038ae50f01e9e3bd31ab25', 'date_update__996': datetime.datetime(2023, 12, 26, 11, 23, 10), 'id__996': 61059062, 'date_insert__996': datetime.datetime(2023, 10, 22, 23, 14, 38), 'user_id__996': 140312.0, 'code__996': '710c527711392adba21c06b88dbbd010', 'date_update__997': datetime.datetime(2023, 12, 26, 14, 33, 11), 'id__997': 61075160, 'date_insert__997': datetime.datetime(2023, 10, 23, 15, 40, 44), 'user_id__997': 140330.0, 'code__997': '211fd5f71bcf7d1a43c552c1d484d24f', 'date_update__998': datetime.datetime(2023, 12, 27, 2, 53, 15), 'id__998': 61096448, 'date_insert__998': datetime.datetime(2023, 10, 24, 14, 44, 57), 'user_id__998': None, 'code__998': 'abe995ca969776933761df9261e991e8', 'date_update__999': datetime.datetime(2023, 12, 26, 13, 18, 51), 'id__999': 61101742, 'date_insert__999': datetime.datetime(2023, 10, 24, 17, 38, 34), 'user_id__999': None, 'code__999': '3f83e8fa97b7b0dd133074c47f966973'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+root 2023-12-28 10:31:30,423 INFO siteUpdateOrders(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 10:31:30,454 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 10:31:30,949 INFO Authentication (password) successful!
+root 2023-12-28 10:31:34,893 INFO siteUpdateOrders(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 10:31:34,900 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_update_order_new.
+root 2023-12-28 10:31:35,001 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_update_order_new.
+root 2023-12-28 10:36:18,473 INFO siteUpdateOrders(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 10:36:18,500 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 10:36:19,058 INFO Authentication (password) successful!
+root 2023-12-28 10:36:22,796 INFO siteUpdateOrders(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 10:36:22,841 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_update_order_new.
+root 2023-12-28 10:36:22,940 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_update_order_new.
+root 2023-12-28 10:37:37,182 INFO siteUpdateOrders(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 10:37:37,223 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 10:37:37,879 INFO Authentication (password) successful!
+root 2023-12-28 10:37:41,739 INFO siteUpdateOrders(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 10:37:41,741 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_update_order_new.
+root 2023-12-28 10:37:41,856 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_update_order_new.
+root 2023-12-28 10:52:03,061 INFO siteInsertOrders(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 10:52:03,090 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 10:52:03,597 INFO Authentication (password) successful!
+root 2023-12-28 10:52:07,333 INFO siteInsertOrders(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 10:52:07,335 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_insert_order_new.
+root 2023-12-28 10:52:07,432 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_insert_order_new.
+root 2023-12-28 10:52:07,433 INFO siteUpdateOrders(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 10:52:07,462 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 10:52:07,834 INFO Authentication (password) successful!
+root 2023-12-28 10:52:11,560 INFO siteUpdateOrders(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 10:52:11,564 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_update_order_new.
+root 2023-12-28 10:52:11,705 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_update_order_new.
+root 2023-12-28 10:52:21,622 INFO siteInsertBasket(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 10:52:21,695 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 10:52:22,134 INFO Authentication (password) successful!
+root 2023-12-28 10:52:25,429 INFO siteInsertBasket(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 10:52:25,433 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_insert_basket_new.
+root 2023-12-28 10:52:25,609 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_insert_basket_new.
+root 2023-12-28 10:52:25,609 INFO siteUpdateBasket(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 10:52:25,637 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 10:52:26,066 INFO Authentication (password) successful!
+root 2023-12-28 10:52:29,681 INFO siteUpdateBasket(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 10:52:29,688 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_update_basket_new.
+root 2023-12-28 10:52:30,134 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_update_basket_new.
+root 2023-12-28 10:52:33,777 INFO siteInsertFuser(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 10:52:33,804 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 10:52:34,266 INFO Authentication (password) successful!
+root 2023-12-28 10:52:35,379 INFO siteInsertFuser(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 10:52:35,382 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_insert_fuser_new.
+root 2023-12-28 10:52:35,852 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_insert_fuser_new.
+root 2023-12-28 10:52:35,853 INFO siteUpdateFuser(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 10:52:35,881 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 10:52:36,326 INFO Authentication (password) successful!
+root 2023-12-28 10:52:37,528 INFO siteUpdateFuser(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 10:52:37,533 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_update_fuser_new.
+root 2023-12-28 10:52:38,048 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_update_fuser_new.
+root 2023-12-28 10:52:41,737 INFO siteGuest(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 10:52:41,768 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 10:52:42,206 INFO Authentication (password) successful!
+root 2023-12-28 10:52:51,975 INFO siteGuest(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 10:52:51,999 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_guest_new.
+root 2023-12-28 10:52:53,657 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_guest_new.
+root 2023-12-28 10:52:55,404 INFO siteSession(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 10:52:55,430 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 10:52:55,816 INFO Authentication (password) successful!
+root 2023-12-28 10:53:09,534 INFO siteSession(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 10:53:09,563 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_session_new.
+root 2023-12-28 10:53:11,492 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_session_new.
+root 2023-12-28 10:54:30,758 INFO siteTransact(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 10:54:30,787 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 10:54:31,197 INFO Authentication (password) successful!
+root 2023-12-28 10:54:31,884 INFO siteTransact(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 10:54:31,888 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_user_transact_new.
+root 2023-12-28 10:54:31,951 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_user_transact_new.
+root 2023-12-28 10:55:02,524 INFO siteTransact(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2023-12-28 10:55:02,553 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2023-12-28 10:55:02,975 INFO Authentication (password) successful!
+root 2023-12-28 10:55:03,745 INFO siteTransact(). Uspeshnoe poluchenie dannih.
+root 2023-12-28 10:55:03,747 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_user_transact_new.
+root 2023-12-28 10:55:03,808 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_user_transact_new.
