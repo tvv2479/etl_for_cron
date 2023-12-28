@@ -181,20 +181,3 @@ log_load = load_data_ym.Logsapi(TOKEN, COUNTER, date1, date2)
 data_visit = load_data_ym.Logsapi.download_visits(log_load)
 clean_visit = clearing_data_ym.clean_logs_visits(data_visit)
 zagruzka_v_db.ya_visits_to_bd(clean_visit)
-# %%
-
-log_err = []
-
-with open('G:\py.projects/tb\data_collection\logs/ym_load_28_12_2023.log', 'r') as file:
-    lines = file.readlines()
-    
-for row in lines:
-    s = row.split(' ')
-    if s[0] == 'root':
-        if s[3] == 'ERROR':
-            log_err.append(s[3])
-            
-len(log_err)
-            
-# %%
-
