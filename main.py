@@ -10,7 +10,7 @@ from datetime import datetime, date, timedelta
 import datetime
 import configparser
 import pandas as pd
-#%%
+
 
 config = configparser.ConfigParser()
 config.read("G:\py.projects/tb\data_collection/config.ini")
@@ -28,7 +28,7 @@ BdAnalisPass = config['KeyBd']['password']
 
 engine = create_engine(f'postgresql+psycopg2://{BdAnalisUser}:{BdAnalisPass}@{BdAnalisHost}/{BdAnalisName}')
 # Дата на вчера
-end_date = date.today() - timedelta(days=1)
+end_date = datetime.date.today() - timedelta(days=1)
 
 # Проверка максимальной даты Hits в базе
 with engine.connect() as conn:
@@ -339,7 +339,7 @@ for i in logs:
     st = i.split('\\')[-1].split('_')
     st1 = st[2]+'-'+st[3]+'-'+st[4].split('.')[0]
     dt = datetime.datetime.strptime(st1, "%d-%m-%Y").date()
-    if dt == date.today():
+    if dt == datetime.date.today():
         res = i
 
 log_err = []
