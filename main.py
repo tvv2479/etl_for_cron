@@ -1,4 +1,4 @@
-#%%
+
 from ya_metric import load_data_ym, clearing_data_ym, zagruzka_v_db
 from support import clean_logs, bot
 from site_dat import load_data_site as lds
@@ -403,4 +403,4 @@ MSG = f'''Загрузка данных из яндексметрики в ба�
 bot.bot_message(MSG)
 
 
-# %%
+
