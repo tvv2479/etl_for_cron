@@ -9,7 +9,7 @@ from io import StringIO
 current_date = datetime.now().date()
 cd = current_date.strftime('%d_%m_%Y')
 
-log_file = f"G:\py.projects/tb\data_collection\logs\ym_load_{cd}.log"
+log_file = f"D:/vit\py.projects\char\logs\ym_load_{cd}.log"
 
 logging.basicConfig(level=logging.INFO, filename=log_file, filemode="a",
                     format="%(name)s %(asctime)s %(levelname)s %(message)s")
@@ -147,8 +147,8 @@ class Logsapi:
             # Если частей выгрузки болльше чем одна
             else:
                 a = list(range(0, len(parts)))
+                d = []
                 for i in a:
-                    d = []
                     url3 = f'https://api-metrika.yandex.net/management/v1/counter/{self.counter}\
                             /logrequest/{requestId}/part/{i}/download'
                     r = requests.get(url3, headers=headers_get)
@@ -422,8 +422,8 @@ class Logsapi:
             else:
                 # Если частей выгрузки болльше чем одна
                 a = list(range(0, len(parts)))
+                d = []
                 for i in a:
-                    d = []
                     url3 = f'https://api-metrika.yandex.net/management/v1/counter/{self.counter}\
                              /logrequest/{requestId}/part/{i}/download'
                     r = requests.get(url3, headers=headers_get)

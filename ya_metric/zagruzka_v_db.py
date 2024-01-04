@@ -7,7 +7,7 @@ import logging
 import configparser
 #%%
 config = configparser.ConfigParser()
-config.read("G:\py.projects/tb\data_collection/config.ini")
+config.read("D:/vit\py.projects\char/config.ini")
 
 BdAnalisHost = config['KeyBd']['host']
 BdAnalisUser = config['KeyBd']['bd_user']
@@ -19,7 +19,7 @@ BdAnalisPass = config['KeyBd']['password']
 current_date = datetime.now().date()
 cd = current_date.strftime('%d_%m_%Y')
 
-log_file = f"G:\py.projects/tb\data_collection\logs\ym_load_{cd}.log"
+log_file = f"D:/vit\py.projects\char\logs\ym_load_{cd}.log"
 
 logging.basicConfig(level=logging.INFO, filename=log_file, filemode="a",
                     format="%(name)s %(asctime)s %(levelname)s %(message)s")
@@ -40,7 +40,7 @@ def ya_hits_to_bd(df_hits):
               col = df_hits[['counter_user_id_hash', 'client_id', 'watch_id', 'date_event', 
                              'datetime_event', 'not_bounce', 'link', 'title', 'url']]
               # Пишем в PGSQL
-              col.to_sql('ym_hits_stranitsi_new', engine, schema='public', if_exists='append', index=False)
+              col.to_sql('ym_hits_stranitsi2', engine, schema='public', if_exists='append', index=False)
               logging.info("End zagruzka dannih - ym_hits_stranitsi_new.")
        except Exception as err:
               logging.error(f"Error: oshibka zagruzki v tablitsu - ym_hits_stranitsi_new - {err}", exc_info=True)
@@ -53,7 +53,7 @@ def ya_hits_to_bd(df_hits):
                              'region_country', 'region_country_id', 'last_traffic_source', 'referer', 
                              'ip_address', 'is_page_view', 'artificial']]
               # Пишем в PGSQL
-              col.to_sql('ym_hits_obshee_new', engine, schema='public', if_exists='append', index=False)
+              col.to_sql('ym_hits_obshee2', engine, schema='public', if_exists='append', index=False)
               logging.info("End zagruzka dannih - ym_hits_obshee_new.")
        except Exception as err:
               logging.error(f"Error: oshibka zagruzki v tablitsu - ym_hits_obshee_new - {err}", exc_info=True)
@@ -66,7 +66,7 @@ def ya_hits_to_bd(df_hits):
                              'last_search_engine_root', 'share_service', 'share_url', 'share_title', 
                              'last_social_network_profile']]
 
-              col.to_sql('ym_hits_deystviya_new', engine, schema='public', if_exists='append', index=False)
+              col.to_sql('ym_hits_deystviya2', engine, schema='public', if_exists='append', index=False)
               logging.info("End zagruzka dannih - ym_hits_deystviya_new.")
        except Exception as err:
               logging.error(f"Error: oshibka zagruzki v tablitsu - ym_hits_deystviya_new - {err}", exc_info=True)
@@ -79,7 +79,7 @@ def ya_hits_to_bd(df_hits):
                              'openstat_ad', 'openstat_campaign', 'openstat_service', 'openstat_source', 
                              'last_adv_engine']]
 
-              col.to_sql('ym_hits_ad_new', engine, schema='public', if_exists='append', index=False)
+              col.to_sql('ym_hits_ad2', engine, schema='public', if_exists='append', index=False)
               logging.info("End zagruzka dannih - ym_hits_ad_new.")
        except Exception as err:
               logging.error(f"Error: oshibka zagruzki v tablitsu - ym_hits_ad_new - {err}", exc_info=True)
@@ -105,7 +105,7 @@ def ya_visits_to_bd(df_visits):
                                'page_views', 'visit_duration', 'device_category', 'region_country', 
                                'region_country_id', 'region_city', 'region_city_id', 'bounce', 'ip_address']]
 
-              col.to_sql('ym_visits_obshee_new', engine, schema='public', if_exists='append', index=False)
+              col.to_sql('ym_visits_obshee2', engine, schema='public', if_exists='append', index=False)
               logging.info("End zagruzka dannih - ym_visits_obshee_new.")
        except Exception as err:
               logging.error(f"Error: oshibka zagruzki v tablitsu - ym_visits_obshee_new - {err}", exc_info=True)
@@ -119,7 +119,7 @@ def ya_visits_to_bd(df_visits):
                                'last_social_network', 'last_social_network_profile', 'referer',
                                'impressions_product_coupon']]
 
-              col.to_sql('ym_visits_detali_new', engine, schema='public', if_exists='append', index=False)
+              col.to_sql('ym_visits_detali2', engine, schema='public', if_exists='append', index=False)
               logging.info("End zagruzka dannih - ym_visits_detali_new.")
        except Exception as err:
               logging.error(f"Error: oshibka zagruzki v tablitsu - ym_visits_detali_new - {err}", exc_info=True)

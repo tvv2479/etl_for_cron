@@ -1,5 +1,5 @@
 
-create table site_sale_status_new (
+create table site_sale_status2(
              id serial,
              STATUS_ID varchar(5) unique,
              SORT int,
@@ -11,7 +11,7 @@ create table site_sale_status_new (
   );
  
 ----------------------------------------------------
-create table site_location_country_new(
+create table site_location_country2(
              id serial,
              country_id int,
              "name" varchar(100),
@@ -19,7 +19,7 @@ create table site_location_country_new(
      primary key (id)          
 );
 ---------------------------------------------------
-create table site_location_city_new (
+create table site_location_city2(
              id serial,
              city_id int,
              "name" varchar(100),
@@ -28,7 +28,7 @@ create table site_location_city_new (
      primary key (id)
 );
  ----------------------------------------------------
- create table site_user_new (
+ create table site_user2(
              ID int,            
              DATE_REGISTER timestamp,
              TIMESTAMP_X timestamp,
@@ -36,9 +36,6 @@ create table site_location_city_new (
              ADMIN_NOTES text,
              AUTO_TIME_ZONE char(1),
              "blocked" char(1),
-             BX_USER_ID	varchar(300),
-             CHECKWORD	varchar(300),
-             CHECKWORD_TIME	timestamp,
              CONFIRM_CODE varchar(10),
              EMAIL varchar(100),
              EXTERNAL_AUTH_ID varchar(200),
@@ -51,8 +48,6 @@ create table site_location_city_new (
              LID char(2),
              LOGIN varchar(150),
              LOGIN_ATTEMPTS	int,
-             "password"	varchar(300),
-             PASSWORD_EXPIRED char(1),
              PERSONAL_BIRTHDATE	varchar(50),
              PERSONAL_BIRTHDAY	date,
              PERSONAL_CITY	varchar(100),
@@ -94,17 +89,17 @@ create table site_location_city_new (
      primary key (id)        
 ); 
  
+TRUNCATE site_user2 RESTART identity CASCADE;
  ----------------------------------------------------
-create table site_insert_order_new (
+create table site_insert_order2 (
              id serial, 
              ORDER_ID int unique,
-             USER_ID int REFERENCES site_user_new (ID),
-             STATUS_ID varchar(10) REFERENCES site_sale_status_new (STATUS_ID),
+             USER_ID int REFERENCES site_user2 (ID),
+             STATUS_ID varchar(10) REFERENCES site_sale_status2 (STATUS_ID),
              ACCOUNT_NUMBER	varchar(15),
              ADDITIONAL_INFO varchar(50),
              AFFILIATE_ID int,
              ALLOW_DELIVERY	char(1),
-             BX_USER_ID	varchar(100),
              CANCELED char(1),
              "comments"	text,
              COMPANY_ID	int,
@@ -178,18 +173,17 @@ create table site_insert_order_new (
   );
  
  
- 
+TRUNCATE site_insert_order2 RESTART identity CASCADE;
  -----------------------------------------
- create table site_update_order_new (
+ create table site_update_order2 (
              id serial, 
              ORDER_ID int,
-             USER_ID int REFERENCES site_user_new (ID),
-             STATUS_ID varchar(10) REFERENCES site_sale_status_new (STATUS_ID),
+             USER_ID int REFERENCES site_user2 (ID),
+             STATUS_ID varchar(10) REFERENCES site_sale_status2 (STATUS_ID),
              ACCOUNT_NUMBER	varchar(15),
              ADDITIONAL_INFO varchar(50),
              AFFILIATE_ID int,
              ALLOW_DELIVERY	char(1),
-             BX_USER_ID	varchar(100),
              CANCELED char(1),
              "comments"	text,
              COMPANY_ID	int,
@@ -263,33 +257,34 @@ create table site_insert_order_new (
   );
  
  ---------------------------------------------------
- create table site_insert_fuser_new (
+ create table site_insert_fuser2 (
              id serial,
              FUSER_ID int unique,
              DATE_INSERT timestamp,
              DATE_UPDATE timestamp,
-             USER_ID int REFERENCES site_user_new (ID),
-             CODE varchar(200),
+             USER_ID int,
      primary key (id)          
 );
 
+TRUNCATE site_insert_fuser2 RESTART identity CASCADE;
 ---------------------------------------------
-create table site_update_fuser_new (
+create table site_update_fuser2 (
              id serial,
              FUSER_ID int,
              DATE_INSERT timestamp,
              DATE_UPDATE timestamp,
-             USER_ID int REFERENCES site_user_new (ID),
-             CODE varchar(200),
+             USER_ID int,
      primary key (id)          
-); 
+);
+
+TRUNCATE site_update_fuser2 RESTART identity CASCADE;
  
  -----------------------------------------------
- create table site_insert_basket_new(
+ create table site_insert_basket2(
              id serial,
              BASKET_ID	int unique,
-             ORDER_ID int REFERENCES site_insert_order_new (ORDER_ID),
-             FUSER_ID int REFERENCES site_insert_fuser_new (FUSER_ID),
+             ORDER_ID int REFERENCES site_insert_order2 (ORDER_ID),
+             FUSER_ID int,
              BARCODE_MULTI char(1),
              BASE_PRICE	decimal,
              CALLBACK_FUNC varchar(200),
@@ -336,12 +331,14 @@ create table site_update_fuser_new (
      primary key (id)
 );
 
+TRUNCATE site_insert_basket2 RESTART identity CASCADE;
+
 -----------------------------------------------------
- create table site_update_basket_new(
+ create table site_update_basket2(
              id serial,
              BASKET_ID int,
-             ORDER_ID int REFERENCES site_insert_order_new (ORDER_ID),
-             FUSER_ID int REFERENCES site_insert_fuser_new (FUSER_ID),
+             ORDER_ID int REFERENCES site_insert_order2 (ORDER_ID),
+             FUSER_ID int,
              BARCODE_MULTI char(1),
              BASE_PRICE	decimal,
              CALLBACK_FUNC varchar(200),
@@ -389,7 +386,7 @@ create table site_update_fuser_new (
 );
 
 -------------------------------------------
-create table site_guest_new (
+create table site_guest2 (
              id serial,
              GUEST_ID int unique,
              TIMESTAMP_X timestamp,
@@ -431,12 +428,12 @@ create table site_guest_new (
   );
  
  ----------------------------------------------
- create table site_session_new (
+ create table site_session2 (
              id serial,
              SESSION_ID	int unique,
-             GUEST_ID int REFERENCES site_guest_new (GUEST_ID),
+             GUEST_ID int REFERENCES site_guest2 (GUEST_ID),
              NEW_GUEST char(1),
-             USER_ID int REFERENCES site_user_new (ID),
+             USER_ID int REFERENCES site_user2 (ID),
              USER_AUTH char(1),
              C_EVENTS int,
              HITS int,
@@ -472,11 +469,11 @@ create table site_guest_new (
  
 
  --------------------------------------------------
- create table site_order_props_value_new (
+ create table site_order_props_value2(
              id serial,
-             order_id int REFERENCES site_insert_order_new (ORDER_ID),
+             order_id int REFERENCES site_insert_order2 (ORDER_ID),
              date_insert timestamp,
-             user_id int REFERENCES site_user_new (ID),
+             user_id int REFERENCES site_user2 (ID),
              city varchar(500),
              email varchar(500),
              company varchar(500),
@@ -493,13 +490,13 @@ create table site_guest_new (
 );
 ----------------------------------------------------
 
-create table site_user_transact_new(
+create table site_user_transact2(
              id serial,
              transact_id int,
              timestamp_x timestamp,
 	         transact_date timestamp,
-             order_id int REFERENCES site_insert_order_new (ORDER_ID),
-             user_id int REFERENCES site_user_new (ID),
+             order_id int REFERENCES site_insert_order2 (ORDER_ID),
+             user_id int REFERENCES site_user2 (ID),
              amount	decimal,
              currency char(3),
 	         current_budget	decimal,
@@ -511,23 +508,10 @@ create table site_user_transact_new(
 	 primary key (id)
 );
 
------------------------------------------------------
-create table site_order_change_new(
-             id serial,
-             change_order_id int,
-             order_id int REFERENCES site_insert_order_new (ORDER_ID),
-             user_id int REFERENCES site_user_new (ID),
-             "data" text,
-	         date_create timestamp,
-	         date_modify timestamp,
-	         entity varchar(50),
-	         entity_id int,
-	         "type" varchar(100),
-	 primary key (id)
-);
 
 
 --////////////////////////////////////////////////
+-- ТЕХНИЧЕСКАЯ ЧАСТЬ
 
 
 -- Удалить таблицы
@@ -553,9 +537,9 @@ DROP table site_guest,
 with a as (
 SELECT table_name, column_name 
   FROM information_schema.columns
- WHERE table_catalog = 'test_char' and table_schema = 'public' order by table_name
+ WHERE table_catalog = 'char' and table_schema = 'public' order by table_name
  )
- select distinct table_name from a
+ select distinct table_name from a;
  
  -- или
 SELECT column_name, data_type

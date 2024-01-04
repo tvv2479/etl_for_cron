@@ -12,7 +12,7 @@ import pandas as pd
 import configparser
 # %%
 config = configparser.ConfigParser()
-config.read("G:\py.projects/tb\data_collection/config.ini")
+config.read("D:/vit\py.projects\char/config.ini")
 
 #%%
 # Подключение к базе аналитики
@@ -27,7 +27,7 @@ BdAnalisPass = config['KeyBd']['password']
 current_date = datetime.now().date()
 cd = current_date.strftime('%d_%m_%Y')
 
-log_file = f"G:\py.projects/tb\data_collection\logs\ym_load_{cd}.log"
+log_file = f"D:/vit\py.projects\char\logs\ym_load_{cd}.log"
 
 logging.basicConfig(level=logging.INFO, filename=log_file, filemode="a",
                     format="%(name)s %(asctime)s %(levelname)s %(message)s")
@@ -143,7 +143,7 @@ def siteInsertOrders(date1, date2):
         with connection.cursor() as cursor:
             query = f"""
                     select bso.id, user_id, bso.status_id, bso.account_number, bso.additional_info, 
-                        bso.affiliate_id, bso.allow_delivery, bso.bx_user_id, bso.canceled, bso.comments, 
+                        bso.affiliate_id, bso.allow_delivery, bso.canceled, bso.comments, 
                         bso.company_id, bso.created_by, bso.currency, bso.date_allow_delivery, bso.date_bill, 
                         bso.date_canceled, bso.date_deducted, bso.date_insert, bso.date_lock, bso.date_marked, 
                         bso.date_pay_before, bso.date_payed, bso.date_status, bso.date_update, bso.deducted, 
@@ -177,7 +177,7 @@ def siteInsertOrders(date1, date2):
         tunnel.close()
         
         kol = ['id', 'user_id', 'status_id', 'account_number', 'additional_info', 'affiliate_id', 
-               'allow_delivery', 'bx_user_id', 'canceled', 'comments', 'company_id', 
+               'allow_delivery', 'canceled', 'comments', 'company_id', 
                'created_by', 'currency', 'date_allow_delivery', 'date_bill', 'date_canceled', 
                'date_deducted', 'date_insert', 'date_lock', 'date_marked', 'date_pay_before', 
                'date_payed', 'date_status', 'date_update', 'deducted', 'delivery_doc_date', 
@@ -237,7 +237,7 @@ def siteUpdateOrders(date1, date2):
         with connection.cursor() as cursor:
             query = f"""
                     select bso.id, user_id, bso.status_id, bso.account_number, bso.additional_info, 
-                        bso.affiliate_id, bso.allow_delivery, bso.bx_user_id, bso.canceled, bso.comments, 
+                        bso.affiliate_id, bso.allow_delivery, bso.canceled, bso.comments, 
                         bso.company_id, bso.created_by, bso.currency, bso.date_allow_delivery, bso.date_bill, 
                         bso.date_canceled, bso.date_deducted, bso.date_insert, bso.date_lock, bso.date_marked, 
                         bso.date_pay_before, bso.date_payed, bso.date_status, bso.date_update, bso.deducted, 
@@ -271,7 +271,7 @@ def siteUpdateOrders(date1, date2):
         tunnel.close()
         
         kol = ['id', 'user_id', 'status_id', 'account_number', 'additional_info', 'affiliate_id', 
-               'allow_delivery', 'bx_user_id', 'canceled', 'comments', 'company_id', 
+               'allow_delivery', 'canceled', 'comments', 'company_id', 
                'created_by', 'currency', 'date_allow_delivery', 'date_bill', 'date_canceled', 
                'date_deducted', 'date_insert', 'date_lock', 'date_marked', 'date_pay_before', 
                'date_payed', 'date_status', 'date_update', 'deducted', 'delivery_doc_date', 
@@ -331,16 +331,16 @@ def siteUsers(date1, date2):
         with connection.cursor() as cursor:
             query = f"""
                     SELECT id, date_register, timestamp_x, active, admin_notes, auto_time_zone, blocked, 
-                           bx_user_id, checkword, checkword_time, confirm_code, email, external_auth_id, 
-                           language_id, last_activity_date, last_login, name, last_name, second_name, lid, 
-                           login, login_attempts, password, password_expired, personal_birthdate, 
-                           personal_birthday, personal_city, personal_country, personal_fax, personal_gender, 
-                           personal_icq, personal_mailbox, personal_mobile, personal_notes, personal_pager, 
-                           personal_phone, personal_photo, personal_profession, personal_state, personal_street,
-                           personal_www, personal_zip, stored_hash, time_zone, time_zone_offset, title, 
-                           work_city, work_company, work_country, work_department, work_fax, work_logo, 
-                           work_mailbox, work_notes, work_pager, work_phone, work_position, work_profile, 
-                           work_state, work_street, work_www, work_zip
+                           confirm_code, email, external_auth_id, language_id, last_activity_date, 
+                           last_login, name, last_name, second_name, lid, login, login_attempts, 
+                           personal_birthdate, personal_birthday, personal_city, personal_country, 
+                           personal_fax, personal_gender, personal_icq, personal_mailbox, personal_mobile, 
+                           personal_notes, personal_pager, personal_phone, personal_photo, 
+                           personal_profession, personal_state, personal_street, personal_www, personal_zip, 
+                           stored_hash, time_zone, time_zone_offset, title, work_city, work_company, 
+                           work_country, work_department, work_fax, work_logo, work_mailbox, work_notes, 
+                           work_pager, work_phone, work_position, work_profile, work_state, work_street, 
+                           work_www, work_zip
                     FROM b_user
                     where date(date_register) BETWEEN {date1} AND {date2}
                     """
@@ -354,16 +354,16 @@ def siteUsers(date1, date2):
         tunnel.close()
         
         kol = ['id', 'date_register', 'timestamp_x', 'active', 'admin_notes', 'auto_time_zone', 'blocked', 
-               'bx_user_id', 'checkword', 'checkword_time', 'confirm_code', 'email', 'external_auth_id', 
-               'language_id', 'last_activity_date', 'last_login', 'name', 'last_name', 'second_name', 'lid', 
-               'login', 'login_attempts', 'password', 'password_expired', 'personal_birthdate', 
-               'personal_birthday', 'personal_city', 'personal_country', 'personal_fax', 'personal_gender', 
-               'personal_icq', 'personal_mailbox', 'personal_mobile', 'personal_notes', 'personal_pager', 
-               'personal_phone', 'personal_photo', 'personal_profession', 'personal_state', 'personal_street',
-               'personal_www', 'personal_zip', 'stored_hash', 'time_zone', 'time_zone_offset', 'title', 
-               'work_city', 'work_company', 'work_country', 'work_department', 'work_fax', 'work_logo', 
-               'work_mailbox', 'work_notes', 'work_pager', 'work_phone', 'work_position', 'work_profile', 
-               'work_state', 'work_street', 'work_www', 'work_zip']
+               'confirm_code', 'email', 'external_auth_id', 'language_id', 'last_activity_date', 
+               'last_login', 'name', 'last_name', 'second_name', 'lid', 'login', 'login_attempts', 
+               'personal_birthdate', 'personal_birthday', 'personal_city', 'personal_country', 
+               'personal_fax', 'personal_gender', 'personal_icq', 'personal_mailbox', 'personal_mobile', 
+               'personal_notes', 'personal_pager', 'personal_phone', 'personal_photo', 'personal_profession',
+               'personal_state', 'personal_street', 'personal_www', 'personal_zip', 'stored_hash', 
+               'time_zone', 'time_zone_offset', 'title', 'work_city', 'work_company', 'work_country', 
+               'work_department', 'work_fax', 'work_logo', 'work_mailbox', 'work_notes', 'work_pager', 
+               'work_phone', 'work_position', 'work_profile', 'work_state', 'work_street', 'work_www', 
+               'work_zip']
 
         df = pd.DataFrame(res, columns= kol)
         del res, rows
@@ -560,7 +560,7 @@ def siteInsertFuser(date1, date2):
 
         with connection.cursor() as cursor:
             query = f"""
-                    SELECT id, date_insert, date_update, user_id, code
+                    SELECT id, date_insert, date_update, user_id
                       FROM b_sale_fuser
                      where date(date_insert) BETWEEN {date1} AND {date2}
                     """
@@ -573,7 +573,7 @@ def siteInsertFuser(date1, date2):
     
         tunnel.close()
         
-        kol = ['id', 'date_insert', 'date_update', 'user_id', 'code']
+        kol = ['id', 'date_insert', 'date_update', 'user_id']
 
         df = pd.DataFrame(res, columns= kol)
         del res, rows
@@ -619,7 +619,7 @@ def siteUpdateFuser(date1, date2):
 
         with connection.cursor() as cursor:
             query = f"""
-                    SELECT id, date_insert, date_update, user_id, code
+                    SELECT id, date_insert, date_update, user_id
                       FROM b_sale_fuser
                      where date(date_update) BETWEEN {date1} AND {date2}
                     """
@@ -632,7 +632,7 @@ def siteUpdateFuser(date1, date2):
     
         tunnel.close()
         
-        kol = ['id', 'date_insert', 'date_update', 'user_id', 'code']
+        kol = ['id', 'date_insert', 'date_update', 'user_id']
 
         df = pd.DataFrame(res, columns= kol)
         del res, rows

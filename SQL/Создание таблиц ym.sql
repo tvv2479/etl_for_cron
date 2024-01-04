@@ -11,7 +11,7 @@ values
 
 -----------------------------------------
 
-create table ym_hits_stranitsi_new (
+create table ym_hits_stranitsi2 (
   id serial PRIMARY KEY,
   counter_user_id_hash varchar(50),
   client_id varchar(50),
@@ -25,15 +25,16 @@ create table ym_hits_stranitsi_new (
   );
  
 
-select * from ym_hits_stranitsi_new;
+select * from ym_hits_stranitsi2;
 SELECT count(*) FROM ym_hits_stranitsi; -- количество строк
 SELECT pg_size_pretty( pg_total_relation_size( 'ym_hits_stranitsi' ) ); -- размер таблицы
 delete from ym_hits_stranitsi_new; -- удалить строки
 drop table ym_hits_stranitsi_new;
 
+TRUNCATE ym_hits_stranitsi2 RESTART IDENTITY;
 ----------------------------------------
 
-create table ym_hits_obshee_new (
+create table ym_hits_obshee2 (
   id serial,
   counter_user_id_hash varchar(50),
   client_id varchar(50),
@@ -57,18 +58,18 @@ create table ym_hits_obshee_new (
   on delete set null
   );
  
- select * from ym_hits_obshee_new;
+ select * from ym_hits_obshee2;
 delete from ym_hits_obshee_new;
 SELECT count(*) FROM ym_hits_obshee; -- ���������� �������
 SELECT pg_size_pretty( pg_total_relation_size( 'ym_hits_obshee' ) ); -- ������ �������
 drop table ym_hits_obshee_new;
 
-
+TRUNCATE ym_hits_obshee2 RESTART IDENTITY;
 
 ----------------------------------------------
  
 
-create table ym_hits_deystviya_new (
+create table ym_hits_deystviya2 (
   id serial PRIMARY KEY,
   counter_user_id_hash varchar(50),
   client_id varchar(50),
@@ -87,17 +88,17 @@ create table ym_hits_deystviya_new (
   );
  
  
-select * from ym_hits_deystviya_new;
+select * from ym_hits_deystviya2;
  SELECT count(*) FROM ym_hits_deystviya; -- ���������� �������
 SELECT pg_size_pretty( pg_total_relation_size( 'ym_hits_deystviya' ) ); -- ������ ������� 
 delete from ym_hits_deystviya_new;
 drop table ym_hits_deystviya_new;
 
-
+TRUNCATE ym_hits_deystviya2 RESTART IDENTITY;
 --------------------------------------------
 
  
- create table ym_hits_ad_new (
+ create table ym_hits_ad2(
   id serial PRIMARY KEY,
   counter_user_id_hash varchar(50),
   client_id varchar(50),
@@ -116,16 +117,16 @@ drop table ym_hits_deystviya_new;
   last_adv_engine varchar(2000)
   );
  
-   select * from ym_hits_prosmotri;
+   select * from ym_hits_ad2;
  SELECT count(*) FROM ym_hits_prosmotri; -- ���������� �������
 SELECT pg_size_pretty( pg_total_relation_size( 'ym_hits_prosmotri' ) ); -- ������ �������
 delete from ym_hits_prosmotri_new;
 
-
+TRUNCATE ym_hits_ad2 RESTART IDENTITY;
 ------------------------------------------------
 
 
- create table ym_visits_obshee_new (
+ create table ym_visits_obshee2(
     id serial,
     counter_user_id_hash varchar(50),
     client_id varchar(50),
@@ -151,15 +152,17 @@ delete from ym_hits_prosmotri_new;
     on delete set null
     );
    
-    select * from ym_visits_obshee_new;
+    select * from ym_visits_obshee2;
   SELECT count(*) FROM ym_visits_obshee; -- ���������� �������
 SELECT pg_size_pretty( pg_total_relation_size( 'ym_visits_obshee' ) ); -- ������ ������� 
 delete from ym_visits_obshee;
 drop table ym_visits_obshee_new;
+
+TRUNCATE ym_visits_obshee2 RESTART IDENTITY;
 ------------------------------------------------
 
  
-create table ym_visits_detali_new (
+create table ym_visits_detali2(
   id serial primary KEY,
   counter_user_id_hash varchar(50),
   client_id varchar(50),
@@ -177,8 +180,18 @@ create table ym_visits_detali_new (
   impressions_product_coupon text
   );
  
- select * from ym_visits_detali_new;
+ select * from ym_visits_detali2;
 SELECT count(*) FROM ym_visits_zakazi; -- ���������� �������
 SELECT pg_size_pretty( pg_total_relation_size( 'ym_visits_zakazi' ) ); -- ������ ������� 
-TRUNCATE ym_visits_detali_new RESTART IDENTITY;
 
+TRUNCATE ym_visits_detali2 RESTART IDENTITY;
+
+
+
+
+-- ТЕХНИЧЕСКАЯ ЧАСТЬ
+
+
+drop table ym_hits_stranitsi1, ym_hits_obshee1, 
+ym_hits_obshee1, ym_hits_deystviya1, 
+ym_hits_ad1, ym_visits_obshee1, ym_visits_detali1 ;
