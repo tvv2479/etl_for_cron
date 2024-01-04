@@ -1,0 +1,133 @@
+root 2024-01-02 09:41:22,235 INFO Step_1_hits. Creating a log.
+root 2024-01-02 09:41:23,063 INFO Code status 200
+NoneType: None
+root 2024-01-02 09:41:23,064 INFO Step_1_hits. Successful log request.
+root 2024-01-02 09:41:23,064 INFO Step_1_hits. Request number 33253645.
+root 2024-01-02 09:41:23,064 INFO Step_1_hits. Request status created.
+root 2024-01-02 09:41:23,065 INFO Step_2_hits. Log processing status.
+root 2024-01-02 09:41:23,306 INFO Step_2_hits. Loading data. Code 200.
+root 2024-01-02 09:42:16,101 INFO Step_2_hits. Number of parts - 1.
+root 2024-01-02 09:42:16,101 INFO Step_2_hits. Request status processed.
+root 2024-01-02 09:42:16,113 INFO Step_3_hits. Loading the log.
+root 2024-01-02 09:42:16,916 INFO Step_3_hits. Loading a log from one part.
+root 2024-01-02 09:42:16,916 INFO Step_4_hits. Deleting a log.
+root 2024-01-02 09:42:17,234 INFO Step_4_hits. Successful log deletion # 33253645.
+root 2024-01-02 09:42:17,234 INFO Step_4_hits. Deleting variables.
+root 2024-01-02 09:42:17,238 INFO Start clearing data HITS.
+root 2024-01-02 09:42:17,238 INFO Reading data HITS and writing to a dataframe.
+root 2024-01-02 09:42:17,491 INFO Renaming columns HITS.
+root 2024-01-02 09:42:17,561 INFO Clearing data HITS.
+root 2024-01-02 09:42:17,616 INFO Start zagruzka v bazu logs api HITS.
+root 2024-01-02 09:42:17,701 INFO Start zagruzka dannih - ym_hits_stranitsi_new.
+root 2024-01-02 09:42:18,180 INFO End zagruzka dannih - ym_hits_stranitsi_new.
+root 2024-01-02 09:42:18,180 INFO Start zagruzka dannih - ym_hits_obshee_new.
+root 2024-01-02 09:42:19,314 INFO End zagruzka dannih - ym_hits_obshee_new.
+root 2024-01-02 09:42:19,314 INFO Start zagruzka dannih - ym_hits_deystviya_new.
+root 2024-01-02 09:42:19,933 INFO End zagruzka dannih - ym_hits_deystviya_new.
+root 2024-01-02 09:42:19,933 INFO Start zagruzka dannih - ym_hits_ad_new.
+root 2024-01-02 09:42:20,438 INFO End zagruzka dannih - ym_hits_ad_new.
+root 2024-01-02 09:42:20,445 INFO Step_1_visit. Creating a log.
+root 2024-01-02 09:42:20,739 INFO Code status 200
+NoneType: None
+root 2024-01-02 09:42:20,739 INFO Step_1_visit. Successful log request.
+root 2024-01-02 09:42:20,740 INFO Step_1_visit. Request number 33253658.
+root 2024-01-02 09:42:20,740 INFO Step_1_visit. Request status created.
+root 2024-01-02 09:42:20,740 INFO Step_2_visit. Log processing status.
+root 2024-01-02 09:42:21,012 INFO Step_2_visit. Loading data. Code 200.
+root 2024-01-02 09:43:13,804 INFO Step_2_visit. Number of parts - 0.
+root 2024-01-02 09:43:13,804 INFO Step_2_visit. Request status processed.
+root 2024-01-02 09:43:13,804 INFO Step_3_visit. Loading the log.
+root 2024-01-02 09:43:14,384 INFO Step_3_visit. Loading a log from one part.
+root 2024-01-02 09:43:14,384 INFO Step_3_visit. Loading 0 parts of the log.
+root 2024-01-02 09:43:14,385 INFO Step_4_visit. Deleting a log.
+root 2024-01-02 09:43:14,684 INFO Step_4_visit. Successful log deletion # 33253658.
+root 2024-01-02 09:43:14,684 INFO Step_4_visit. Deleting variables.
+root 2024-01-02 09:43:14,685 INFO Start clearing data VISITS.
+root 2024-01-02 09:43:14,685 INFO Reading data VISITS and writing to a dataframe.
+root 2024-01-02 09:43:14,722 INFO Renaming columns VISITS.
+root 2024-01-02 09:43:14,727 INFO Clearing data VISITS.
+root 2024-01-02 09:43:14,955 INFO Start zagruzka v bazu logs api VISITS.
+root 2024-01-02 09:43:14,999 INFO Start zagruzka dannih - ym_visits_obshee_new.
+root 2024-01-02 09:43:15,297 INFO End zagruzka dannih - ym_visits_obshee_new.
+root 2024-01-02 09:43:15,297 INFO Start zagruzka dannih - # ym_visits_detali_new.
+root 2024-01-02 09:43:15,459 INFO End zagruzka dannih - ym_visits_detali_new.
+root 2024-01-02 09:43:15,460 INFO siteLocationCountry(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2024-01-02 09:43:15,527 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2024-01-02 09:43:16,232 INFO Authentication (password) successful!
+root 2024-01-02 09:43:16,722 INFO siteLocationCountry(). Uspeshnoe poluchenie dannih.
+root 2024-01-02 09:43:17,085 INFO siteLocationCity(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2024-01-02 09:43:17,111 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2024-01-02 09:43:17,695 INFO Authentication (password) successful!
+root 2024-01-02 09:43:18,140 INFO siteLocationCity(). Uspeshnoe poluchenie dannih.
+root 2024-01-02 09:43:18,157 INFO siteStatus(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2024-01-02 09:43:18,182 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2024-01-02 09:43:18,568 INFO Authentication (password) successful!
+root 2024-01-02 09:43:19,013 INFO siteStatus(). Uspeshnoe poluchenie dannih.
+root 2024-01-02 09:43:19,075 INFO siteUsers(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2024-01-02 09:43:19,102 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2024-01-02 09:43:19,510 INFO Authentication (password) successful!
+root 2024-01-02 09:43:20,350 INFO siteUsers(). Uspeshnoe poluchenie dannih.
+root 2024-01-02 09:43:20,378 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_user_new.
+root 2024-01-02 09:43:20,600 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_user_new.
+root 2024-01-02 09:43:20,603 INFO siteInsertOrders(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2024-01-02 09:43:20,623 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2024-01-02 09:43:21,043 INFO Authentication (password) successful!
+root 2024-01-02 09:43:24,439 INFO siteInsertOrders(). Uspeshnoe poluchenie dannih.
+root 2024-01-02 09:43:24,443 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_insert_order_new.
+root 2024-01-02 09:43:24,555 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_insert_order_new.
+root 2024-01-02 09:43:24,558 INFO siteUpdateOrders(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2024-01-02 09:43:24,574 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2024-01-02 09:43:24,982 INFO Authentication (password) successful!
+root 2024-01-02 09:43:28,511 INFO siteUpdateOrders(). Uspeshnoe poluchenie dannih.
+root 2024-01-02 09:43:28,513 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_update_order_new.
+root 2024-01-02 09:43:28,601 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_update_order_new.
+root 2024-01-02 09:43:28,643 INFO siteInsertFuser(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2024-01-02 09:43:28,669 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2024-01-02 09:43:29,092 INFO Authentication (password) successful!
+root 2024-01-02 09:43:29,779 INFO siteInsertFuser(). Uspeshnoe poluchenie dannih.
+root 2024-01-02 09:43:29,781 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_insert_fuser_new.
+root 2024-01-02 09:43:30,300 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_insert_fuser_new.
+root 2024-01-02 09:43:30,358 INFO siteUpdateFuser(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2024-01-02 09:43:30,386 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2024-01-02 09:43:30,745 INFO Authentication (password) successful!
+root 2024-01-02 09:43:31,577 INFO siteUpdateFuser(). Uspeshnoe poluchenie dannih.
+root 2024-01-02 09:43:31,583 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_update_fuser_new.
+root 2024-01-02 09:43:32,199 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_update_fuser_new.
+root 2024-01-02 09:43:32,227 INFO siteInsertBasket(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2024-01-02 09:43:32,247 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2024-01-02 09:43:32,584 INFO Authentication (password) successful!
+root 2024-01-02 09:43:35,760 INFO siteInsertBasket(). Uspeshnoe poluchenie dannih.
+root 2024-01-02 09:43:35,762 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_insert_basket_new.
+root 2024-01-02 09:43:35,881 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_insert_basket_new.
+root 2024-01-02 09:43:35,903 INFO siteUpdateBasket(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2024-01-02 09:43:35,938 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2024-01-02 09:43:36,337 INFO Authentication (password) successful!
+root 2024-01-02 09:43:39,425 INFO siteUpdateBasket(). Uspeshnoe poluchenie dannih.
+root 2024-01-02 09:43:39,429 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_update_basket_new.
+root 2024-01-02 09:43:39,746 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_update_basket_new.
+root 2024-01-02 09:43:39,774 INFO siteGuest(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2024-01-02 09:43:39,804 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2024-01-02 09:43:40,176 INFO Authentication (password) successful!
+root 2024-01-02 09:43:48,762 INFO siteGuest(). Uspeshnoe poluchenie dannih.
+root 2024-01-02 09:43:48,774 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_guest_new.
+root 2024-01-02 09:43:49,602 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_guest_new.
+root 2024-01-02 09:43:49,660 INFO siteSession(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2024-01-02 09:43:49,689 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2024-01-02 09:43:50,174 INFO Authentication (password) successful!
+root 2024-01-02 09:44:03,876 INFO siteSession(). Uspeshnoe poluchenie dannih.
+root 2024-01-02 09:44:03,895 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_session_new.
+root 2024-01-02 09:44:05,316 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_session_new.
+root 2024-01-02 09:44:05,380 INFO siteOrderPropsValue(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2024-01-02 09:44:05,410 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2024-01-02 09:44:05,767 INFO Authentication (password) successful!
+root 2024-01-02 09:44:09,605 INFO siteOrderPropsValue(). Uspeshnoe poluchenie dannih.
+root 2024-01-02 09:44:09,608 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_order_props_value_new.
+root 2024-01-02 09:44:09,679 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_order_props_value_new.
+root 2024-01-02 09:44:09,682 INFO siteTransact(). Podkluchenie k base site i otptavka zaprosa.
+paramiko.transport 2024-01-02 09:44:09,713 INFO Connected (version 2.0, client OpenSSH_7.4)
+paramiko.transport 2024-01-02 09:44:10,081 INFO Authentication (password) successful!
+root 2024-01-02 09:44:10,420 INFO siteTransact(). Uspeshnoe poluchenie dannih.
+root 2024-01-02 09:44:10,425 INFO site.dataSiteToBd(). Zapis dataframe v tablitsu site_user_transact_new.
+root 2024-01-02 09:44:10,524 INFO site.dataSiteToBd(). Dataframe uspeshno zapisan v tablitsu - site_user_transact_new.
+root 2024-01-02 09:44:10,719 INFO Otpravka soobsheniya v telegram.
+root 2024-01-02 09:44:11,170 INFO Soobshenie v telegram otpravleno.
